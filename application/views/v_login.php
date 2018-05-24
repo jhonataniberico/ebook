@@ -41,7 +41,7 @@
                 <div class="js-title">
                     <h1>Bienvenido a <br><strong>Marketing Services Directory eBook</strong></h1>
                     <p>Obtenga rápidamente una configuración personalizada de las acciones de marketing que necesita.</p>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Login</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
                 </div>
                 <div class="js-bar">
                     <div class="js-bar__children"></div>
@@ -60,9 +60,9 @@
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.js"></script>
-        <script src="<?php echo RUTA_JS?>jsutils.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>jsindex_es.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');

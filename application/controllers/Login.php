@@ -12,12 +12,12 @@ class Login extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-    	/*$this->session->set_userdata($session);
+    	$this->session->set_userdata($session);
 		$this->session->unset_userdata('user');
-	    $this->session->unset_userdata('Id_user');*/
+	    $this->session->unset_userdata('Id_user');
 		$this->load->view('v_login');
 	}
-	/*function ingresar(){
+	function ingresar(){
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
@@ -37,5 +37,5 @@ class Login extends CI_Controller {
            $data['msj'] = $e->getMessage();
         }
         echo json_encode($data);
-	}*/
+	}
 }

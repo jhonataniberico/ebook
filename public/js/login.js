@@ -1,13 +1,6 @@
 function ingresar(){
 	var usuario  = $('#usuario').val();
 	var password = $('#password').val();
-	if($('#checkbox-2').is(':checked') == true){
-		sessionStorage.setItem('CHECK', '1');
-		sessionStorage.setItem('USERNAME', 'sapadmin');
-		sessionStorage.setItem('PASS', 'admin');
-	}else{
-		sessionStorage.setItem('CHECK', '0');
-	}
 	if(usuario == null){
 		$('#usuario').parent().addClass('is-invalid');
 		return;
@@ -25,7 +18,7 @@ function ingresar(){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	location.href = 'admin'/*data.href*/;
+        	//location.href = 'admin';
         	$('#usuario').val("");
         	$('#password').val("");
         }else {
@@ -98,65 +91,4 @@ function verificarDatos(e){
 		e.preventDefault();
 		ingresar();
     }
-}
-function subirFactura(){
-  $( "#archivo" ).trigger( "click" );
-}
-var factura = '';
-$("#archivo").change(function() {
-  if(factura == undefined){
-    msj('error', 'Seleccione un logo');
-    return;
-  }else {
-  }
-});
-function agregarDatos(){
-  var datos = new FormData();
-  factura = $('#archivo')[0].files[0];
-  if(factura == undefined){
-    return;
-  }
-  datos.append('archivo',$('#archivo')[0].files[0]);
-    $.ajax({
-      type:"post",
-      dataType:"json",
-      url:"Admin/cargarFact",
-      contentType:false,
-      data:datos,
-      processData:false,
-    }).done(function(respuesta){
-      msj('error', respuesta.mensaje);
-      if(respuesta.mensaje == 'Su logo se subió correctamente'){
-        $('#btnSubirFact').text('Cargado');
-        $('#btnSubirFact').css('background-color','#5CB85C');
-        $('#btnSubirFact').css('color','#FFFFFF');
-      }
-      $('#fecha').val("");
-      $('#modelo').val("0");
-      $('.selectpicker').selectpicker('refresh');
-      $('#nro_factura').val("");
-      $('#monto').val("");
-      $('#cantidad').val("");
-      setTimeout(function(){ location.href = 'Factura'; }, 2000);
-    });
-}
-function subirEslogan(){
-  var eslogan = $('#eslogan').val();
-  $.ajax({
-    data : {eslogan : eslogan},
-    url  : 'admin/subirEslogan',
-    type : 'POST'
-  }).done(function(data){
-    try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-          $('#eslogan').val("");
-          msj('error', 'Se cambió su eslogan correctamente');
-        }else {
-          return;
-        }
-      }catch(err){
-        msj('error',err.message);
-      }
-  });
 }
