@@ -5,7 +5,6 @@ class Login extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->model('M_usuario');
         $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
