@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "BentonSansRegular";
+  src: url("BentonSans/b36a47f4-8876-40cb-b31a-d02f16a88d78-2.eot");
+  src: url("BentonSans/b36a47f4-8876-40cb-b31a-d02f16a88d78-2.eot?") format("embedded-opentype"),
+       url("BentonSans/b36a47f4-8876-40cb-b31a-d02f16a88d78-3.woff") format("woff"),
+       url("BentonSans/b36a47f4-8876-40cb-b31a-d02f16a88d78-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "BentonSansMedium";
+  src: url("BentonSans/71592d14-e584-4c00-bbb9-8f1da5b98bf9-2.eot");
+  src: url("BentonSans/71592d14-e584-4c00-bbb9-8f1da5b98bf9-2.eot?") format("embedded-opentype"),
+       url("BentonSans/71592d14-e584-4c00-bbb9-8f1da5b98bf9-3.woff") format("woff"),
+       url("BentonSans/71592d14-e584-4c00-bbb9-8f1da5b98bf9-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "BentonSansBold";
+  src: url("BentonSans/90a77a6d-79fe-4845-96a8-b6dadd7d52a4-2.eot");
+  src: url("BentonSans/90a77a6d-79fe-4845-96a8-b6dadd7d52a4-2.eot?") format("embedded-opentype"),
+       url("BentonSans/90a77a6d-79fe-4845-96a8-b6dadd7d52a4-3.woff") format("woff"),
+       url("BentonSans/90a77a6d-79fe-4845-96a8-b6dadd7d52a4-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}

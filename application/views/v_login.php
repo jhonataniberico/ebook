@@ -41,6 +41,7 @@
                 <div class="js-title">
                     <h1>Bienvenido a <br><strong>Marketing Services Directory eBook</strong></h1>
                     <p>Obtenga rápidamente una configuración personalizada de las acciones de marketing que necesita.</p>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Login</button>
                 </div>
                 <div class="js-bar">
                     <div class="js-bar__children"></div>
@@ -48,12 +49,6 @@
                     <div class="js-bar__children"></div>
                 </div>
                 <div class="js-fondo__imagen"></div>
-                <div class="js-minilogo"><img src="<?php echo RUTA_IMG?>logo/minilogo-home.png"></div>
-                <div class="js-button-next">
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" onclick="buttonNext()">
-                        <i class="mdi mdi-keyboard_arrow_down"></i>
-                    </button>
-                </div>
             </div>
         </section> 
 
