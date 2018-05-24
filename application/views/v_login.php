@@ -39,8 +39,8 @@
                     </div>
                 </div>
                 <div class="js-title">
-                    <h1>Bienvenido a <br><strong>Cloud Configurator</strong></h1>
-                    <p>Complete estas preguntas y descubra la soluci&oacute;n perfecta de SAP en funci&oacute;n a las necesidades de su negocio.</p>
+                    <h1>Bienvenido a <br><strong>Marketing Services Directory eBook</strong></h1>
+                    <p>Obtenga rápidamente una configuración personalizada de las acciones de marketing que necesita.</p>
                 </div>
                 <div class="js-bar">
                     <div class="js-bar__children"></div>
