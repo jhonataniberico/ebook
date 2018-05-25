@@ -16,8 +16,6 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>owl-carousel/owl.theme.default.min.css">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>bentonsans.css?v=<?php echo time();?>">
@@ -41,7 +39,7 @@
                 <div class="js-title">
                     <h1>Bienvenido a <br><strong>Marketing Services Directory eBook</strong></h1>
                     <p>Obtenga rápidamente una configuración personalizada de las acciones de marketing que necesita.</p>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Login</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="abrirModal()">Login</button>
                 </div>
                 <div class="js-bar">
                     <div class="js-bar__children"></div>
@@ -52,6 +50,65 @@
             </div>
         </section> 
 
+        <!-- Modal -->
+        <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content" style="background-color: #000000;border: 1px solid #FFFFFF;">
+                    <div class="mdl-card card-login" style="background-color: #000000;">
+                        <div class="mdl-card__supporting-text">
+                        	<!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-login.jpg" width="100" height="100"> -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
+                                <li><a href="#registro" aria-controls="registro" role="tab" data-toggle="tab">Register</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="login">
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="text" id="usuario" placeholder="Email, ID or User Name" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="password" id="password" placeholder="Password" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 mdl-card__actions text-right">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Registrarme</button>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="registro">
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="text" id="pais" placeholder="País" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="text" id="partnerId" placeholder="Partner ID" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="text" id="userRegis" placeholder="S User" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="email" id="emailRegis" placeholder="Email">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="password" id="passRegister" placeholder="Password" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="text" id="nombresRegis" placeholder="Nombres" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 form-group mdl-input">
+                                        <input type="text" id="apellidosRegis" placeholder="Apellidos" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 mdl-card__actions text-right">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Registrarme</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-js-button mdl-button--icon" onclick="closeModal()"><i class="mdi mdi-close"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -59,9 +116,7 @@
         <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_PLUGINS?>owl-carousel/owl.carousel.min.js"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {

@@ -12,13 +12,13 @@ function ingresar(){
 	$.ajax({
 		data : {usuario  : usuario,
 				    password : password},
-		url  : 'login/ingresar',
+		url  : 'Login/ingresar',
 		type : 'POST'
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	//location.href = 'admin';
+        	location.href = 'Servicios';
         	$('#usuario').val("");
         	$('#password').val("");
         }else {
@@ -31,7 +31,7 @@ function ingresar(){
       }
 	});
 }
-function cerrarCesion(){
+/*function cerrarCesion(){
 	$.ajax({
 		url  : 'admin/cerrarCesion',
 		type : 'POST'
@@ -47,7 +47,7 @@ function cerrarCesion(){
         msj('error',err.message);
       }
 	});
-}
+}*/
 $("#showpass").click(function(){
 	$(this).find('i').toggleClass("mdi-remove_red_eye mdi-visibility_off");
     var input = $(this).parent().find('.mdl-textfield__input');
@@ -91,4 +91,81 @@ function verificarDatos(e){
 		e.preventDefault();
 		ingresar();
     }
+}
+function abrirModal(){
+  modal('ModalLogin');
+}
+function registrar() {
+  var pais         = $('#pais').val();
+  var partner_id   = $('#partnerId').val();
+  var user         = $('#userRegis').val();
+  var email        = $('#emailRegis').val();
+  var pass         = $('#passRegister').val();
+  var nombre       = $('#nombresRegis').val();
+  var apellido     = $('#apellidosRegis').val();
+
+  if(pais == ''){
+    msj('error', 'Ingrese su país');
+    return;
+  }
+  if(partner_id == ''){
+    msj('error', 'Ingrese su partner ID');
+    return;
+  }
+  if(user == ''){
+    msj('error', 'Ingrese su usuario');
+    return;
+  }
+  if(email == ''){
+    msj('error', 'Ingrese su Email');
+    return;
+  }
+  if (!validateEmail(email)){
+    msj('error', 'El formato del correo es incorrecto');
+    return;
+  }
+  if(pass == ''){
+    msj('error', 'Ingrese su contraseña');
+    return;
+  }
+  if(nombre == null || nombre == undefined || nombre == ''){
+    msj('error', 'Ingrese su nombre');
+    return;
+  }
+  if(apellido == ''){
+    msj('error', 'Ingrese su apellido');
+    return;
+  }
+  $.ajax({
+    data : {partner_id : partner_id,
+            usuario    : user,
+            email      : email,
+            pass       : pass,
+            nombre     : nombre,
+            apellido   : apellido,
+            pais       : pais},
+    url  : 'Login/registrar',
+    type : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+          $('#pais').val("");
+          $('#partnerId').val("");
+          $('#userRegis').val("");
+          $('#emailRegis').val("");
+          $('#passRegister').val("");
+          $('#nombresRegis').val("");
+          $('#apellidosRegis').val("");
+          $('#passRegister').val("");
+          $('#pais').val("");
+          msj('error', 'Se registró correctamente');
+        }else {
+          msj('error', 'Su usuario o contraseña son incorrectos');
+          return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+  });
 }
