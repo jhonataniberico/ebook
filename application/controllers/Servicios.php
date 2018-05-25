@@ -15,7 +15,8 @@ class Servicios extends CI_Controller {
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         }
-		$this->load->view('v_servicios');
+        $data['nombre'] = $this->session->userdata('Nombre_user');
+		$this->load->view('v_servicios', $data);
 	}
     function guardarServicios(){
         $data['error'] = EXIT_ERROR;

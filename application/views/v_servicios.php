@@ -33,6 +33,12 @@
             <div id="home" class="js-window">
                 <div class="js-header">
                     <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
+                    <div class="text-right" style="position: absolute;right: 80px;">
+                    	<p><?php echo $nombre ?></p>
+                    </div>
+                    <div class="text-right" style="position: absolute;right: 10px;">
+                    	<a href="">English</a>
+                    </div>
                 </div>
                 <div class="js-header" style="border: 1px solid;border-right: #000000;border-left:  #000000;margin-top: 57px;">
                     <div class="text-center" style="position: relative;left: 800px;">

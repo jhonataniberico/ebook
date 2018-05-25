@@ -26,7 +26,8 @@ class Login extends CI_Controller {
 				if(strtolower($username[0]->Usuario) == strtolower($usuario)){
 					$session = array('usuario' 	   => $usuario,
 							 		 'Id_user' 	   => $username[0]->Id,
-							 		 'Nombre_user' => $username[0]->Nombres.' '.$username[0]->Apellidos,
+							 		 'Nombre_user' => $username[0]->Nombres,
+                                     'Apellid_user'=> $username[0]->Apellidos,
 							 		 'Pais_user'   => $username[0]->Pais,
 							 		 'Email_user'  => $username[0]->Email,
 							 		 'partner_id'  => $username[0]->partner_id,);
