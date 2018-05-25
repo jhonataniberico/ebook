@@ -17,4 +17,26 @@ class Servicios extends CI_Controller {
         }
 		$this->load->view('v_servicios');
 	}
+    function guardarServicios(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $tipo_servicio = $this->input->post('tipo_servicio');
+            $presupuesto   = $this->input->post('presupuesto');
+            $fondos        = $this->input->post('fondos');
+            $arrayInsert   = array('tipo_servicio' => $tipo_servicio,
+                                   'presupuesto'   => $presupuesto,
+                                   'fondos'        => $fondos);
+            $datoInsert = $this->M_usuario->insertarDatos($arrayInsert, 'servicios');
+            $session    = array('tipo_servicio' => $tipo_servicio,
+                                'presupuesto'   => $presupuesto,
+                                'fondos'        => $fondos,
+                                'Id_servicio'   => $datoInsert['Id']);
+            $this->session->set_userdata($session);
+            $data['error'] = EXIT_SUCCESS;
+        }catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }
