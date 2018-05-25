@@ -12,6 +12,9 @@ class Servicios extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
+        if($this->session->userdata('usuario') == null){
+            header("location: Login");
+        }
 		$this->load->view('v_servicios');
 	}
 }
