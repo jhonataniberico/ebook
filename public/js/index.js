@@ -797,3 +797,26 @@ function returnHome(){
       }
 	});
 }
+function guardarDatos(){
+	var servicio = $('#servicio').val();
+	var presupuesto = $('#presupuesto').val();
+	var fondos = $('#fondos').val();
+	$.ajax({
+		data : {tipo_servicio : tipo_servicio,
+				presupuesto   : presupuesto,
+				fondos		  : fondos},
+		url  : 'Home/guardarServicios',
+		type : 'POST'
+	}).done(function(data){
+		try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+        	//location.href = 'es';
+        }else{
+        	return;
+        }
+      } catch (err){
+        msj('error',err.message);
+      }
+	});
+}
