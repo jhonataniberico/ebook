@@ -104,7 +104,7 @@
                             </div>
                         </div>
                         <div class="mdl-card__menu">
-                            <button class="mdl-button mdl-js-button mdl-button--icon" onclick="closeModal()"><i class="mdi mdi-close"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
                         </div>
                     </div>
                 </div>
