@@ -65,10 +65,10 @@
                             </ul>
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="login">
-                                    <div class="col-xs-12 form-group mdl-input">
+                                    <div class="col-xs-12 js-input">
                                         <input type="text" id="usuario" class="form-control" placeholder="Email, ID or User Name" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12 form-group mdl-input">
+                                    <div class="col-xs-12 js-input">
                                         <input type="password" id="password" class="form-control" placeholder="Password" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
@@ -76,25 +76,25 @@
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="registro">
-                                    <div class="col-xs-12 col-sm-6 form-group mdl-input">
+                                    <div class="col-xs-12 col-sm-6 js-input">
                                         <input type="text" id="pais" class="form-control" placeholder="País" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12 col-sm-6 form-group mdl-input">
+                                    <div class="col-xs-12 col-sm-6 js-input">
                                         <input type="text" id="partnerId" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12 form-group mdl-input">
+                                    <div class="col-xs-12 js-input">
                                         <input type="text" id="userRegis" class="form-control" placeholder="S User" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12 form-group mdl-input">
+                                    <div class="col-xs-12 js-input">
                                         <input type="email" id="emailRegis" class="form-control" placeholder="Email">
                                     </div>
-                                    <div class="col-xs-12 form-group mdl-input">
+                                    <div class="col-xs-12 js-input">
                                         <input type="password" id="passRegister" class="form-control" placeholder="Password" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12 form-group mdl-input">
+                                    <div class="col-xs-12 js-input">
                                         <input type="text" id="nombresRegis" class="form-control" placeholder="Nombres" onkeyup="verificarDatos(event);">
                                     </div>
-                                    <div class="col-xs-12 form-group mdl-input">
+                                    <div class="col-xs-12 js-input">
                                         <input type="text" id="apellidosRegis" class="form-control" placeholder="Apellidos" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
