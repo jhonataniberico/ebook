@@ -54,9 +54,11 @@
         <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
-                    <div class="mdl-card js-card-login">
+                    <div class="js-card-login">
+                        <div class="js-card-login__imagen">
+                            <!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-login.jpg""> -->
+                        </div>
                         <div class="mdl-card__supporting-text">
-                        	<!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-login.jpg" width="100" height="100"> -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
                                 <li><a href="#registro" aria-controls="registro" role="tab" data-toggle="tab">Register</a></li>
@@ -70,7 +72,7 @@
                                         <input type="password" id="password" placeholder="Password" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="ingresar()">Registrarme</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Login</button>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="registro">
@@ -96,7 +98,7 @@
                                         <input type="text" id="apellidosRegis" placeholder="Apellidos" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="registrar()">Registrarme</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="registrar()">Registrarme</button>
                                     </div>
                                 </div>
                             </div>
