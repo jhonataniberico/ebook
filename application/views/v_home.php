@@ -36,80 +36,8 @@
                         </select>
                     </div>
                 </div>
-                <div class="js-title">
-                    <h1>Bienvenido a <br><strong>Marketing Services Directory eBook</strong></h1>
-                    <p>Obtenga rápidamente una configuración personalizada de las acciones de marketing que necesita.</p>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="abrirModal()">Login</button>
-                </div>
-                <div class="js-bar">
-                    <div class="js-bar__children"></div>
-                    <div class="js-bar__children"></div>
-                    <div class="js-bar__children"></div>
-                </div>
-                <div class="js-fondo__imagen"></div>
             </div>
-        </section> 
-
-        <!-- Modal -->
-        <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog modal-md" role="document">
-                <div class="modal-content">
-                    <div class="js-card-login">
-                        <div class="js-card-login__imagen">
-                            <!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-login.jpg""> -->
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
-                                <li><a href="#registro" aria-controls="registro" role="tab" data-toggle="tab">Register</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade in active" id="login">
-                                    <div class="col-xs-12 js-input">
-                                        <input type="text" id="usuario" class="form-control" placeholder="Email, ID or User Name" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 js-input">
-                                        <input type="password" id="password" class="form-control" placeholder="Password" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 mdl-card__actions text-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Login</button>
-                                    </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="registro">
-                                    <div class="col-xs-12 col-sm-6 js-input">
-                                        <input type="text" id="pais" class="form-control" placeholder="País" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 col-sm-6 js-input">
-                                        <input type="text" id="partnerId" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 js-input">
-                                        <input type="text" id="userRegis" class="form-control" placeholder="S User" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 js-input">
-                                        <input type="email" id="emailRegis" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="col-xs-12 js-input">
-                                        <input type="password" id="passRegister" class="form-control" placeholder="Password" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 js-input">
-                                        <input type="text" id="nombresRegis" class="form-control" placeholder="Nombres" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 js-input">
-                                        <input type="text" id="apellidosRegis" class="form-control" placeholder="Apellidos" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 mdl-card__actions text-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="registrar()">Registrarme</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mdl-card__menu">
-                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
 
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
