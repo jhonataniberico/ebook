@@ -66,36 +66,36 @@
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="login">
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <input type="text" id="usuario" placeholder="Email, ID or User Name" onkeyup="verificarDatos(event);">
+                                        <input type="text" id="usuario" class="form-control" placeholder="Email, ID or User Name" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <input type="password" id="password" placeholder="Password" onkeyup="verificarDatos(event);">
+                                        <input type="password" id="password" class="form-control" placeholder="Password" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Login</button>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="registro">
-                                    <div class="col-xs-12 form-group mdl-input">
-                                        <input type="text" id="pais" placeholder="País" onkeyup="verificarDatos(event);">
+                                    <div class="col-xs-12 col-sm-6 form-group mdl-input">
+                                        <input type="text" id="pais" class="form-control" placeholder="País" onkeyup="verificarDatos(event);">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 form-group mdl-input">
+                                        <input type="text" id="partnerId" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <input type="text" id="partnerId" placeholder="Partner ID" onkeyup="verificarDatos(event);">
+                                        <input type="text" id="userRegis" class="form-control" placeholder="S User" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <input type="text" id="userRegis" placeholder="S User" onkeyup="verificarDatos(event);">
+                                        <input type="email" id="emailRegis" class="form-control" placeholder="Email">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <input type="email" id="emailRegis" placeholder="Email">
+                                        <input type="password" id="passRegister" class="form-control" placeholder="Password" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <input type="password" id="passRegister" placeholder="Password" onkeyup="verificarDatos(event);">
+                                        <input type="text" id="nombresRegis" class="form-control" placeholder="Nombres" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 form-group mdl-input">
-                                        <input type="text" id="nombresRegis" placeholder="Nombres" onkeyup="verificarDatos(event);">
-                                    </div>
-                                    <div class="col-xs-12 form-group mdl-input">
-                                        <input type="text" id="apellidosRegis" placeholder="Apellidos" onkeyup="verificarDatos(event);">
+                                        <input type="text" id="apellidosRegis" class="form-control" placeholder="Apellidos" onkeyup="verificarDatos(event);">
                                     </div>
                                     <div class="col-xs-12 mdl-card__actions text-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="registrar()">Registrarme</button>
