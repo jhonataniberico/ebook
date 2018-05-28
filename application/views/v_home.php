@@ -38,7 +38,7 @@
                 </div>
                 <div class="js-container">
                     <div class="js-question--number">
-                        <span>02/05</span>
+                        <span>01/05</span>
                         <h2>¿C&oacute;mo podemos ayudarle?&#63;</h2>
                     </div>
                     <div class="js-carousel">
