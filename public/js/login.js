@@ -18,7 +18,7 @@ function ingresar(){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	location.href = 'Servicios';
+        	location.href = 'Home';
         	$('#usuario').val("");
         	$('#password').val("");
         }else {

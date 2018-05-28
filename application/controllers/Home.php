@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Servicios extends CI_Controller {
+class Home extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
@@ -16,7 +16,7 @@ class Servicios extends CI_Controller {
             header("location: Login");
         }
         $data['nombre'] = $this->session->userdata('Nombre_user');
-		$this->load->view('v_servicios', $data);
+		$this->load->view('v_home', $data);
 	}
     function guardarServicios(){
         $data['error'] = EXIT_ERROR;
