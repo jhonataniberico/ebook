@@ -70,10 +70,10 @@
                             <div class="js-card--large__select">
                                 <div class="js-select js-facturacion">
                                     <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-                                        <option value="10 - 30 Millones">10 - 30 Millones</option>
-                                        <option value="30 - 100 Millones">30 - 100 Millones</option>
-                                        <option value="100 Millones a más">100 Millones a m&aacute;s</option>
-                                        <option value="No poseo información">No poseo información</option>
+                                        <option value="PE Benefit">PE Benefit</option>
+                                        <option value="Budget < 5K Euros">Budget < 5K Euros</option>
+                                        <option value="Budget 5K - 10K Euros">Budget 5K - 10K Euros</option>
+                                        <option value="Budget > 10K Euros">Budget > 10K Euros</option>
                                     </select>
                                 </div>
                             </div>
