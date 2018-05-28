@@ -10,7 +10,7 @@
         <meta name="date"                   content="May 7, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>SAP Cloud Configurator</title>
+    	<title>SAP | Marketing Services Directory eBook</title>
         <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
@@ -53,8 +53,8 @@
         <!-- Modal -->
         <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-md" role="document">
-                <div class="modal-content" style="background-color: #000000;border: 1px solid #FFFFFF;">
-                    <div class="mdl-card card-login" style="background-color: #000000;">
+                <div class="modal-content">
+                    <div class="mdl-card js-card-login">
                         <div class="mdl-card__supporting-text">
                         	<!-- <img src="<?php echo RUTA_IMG?>fondo/fondo-login.jpg" width="100" height="100"> -->
                             <ul class="nav nav-tabs" role="tablist">
