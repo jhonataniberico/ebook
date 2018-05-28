@@ -50,10 +50,10 @@
                             <div class="js-card--large__select">
                                 <div class="js-select js-facturacion">
                                     <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-                                        <option value="10 - 30 Millones">10 - 30 Millones</option>
-                                        <option value="30 - 100 Millones">30 - 100 Millones</option>
-                                        <option value="100 Millones a más">100 Millones a m&aacute;s</option>
-                                        <option value="No poseo información">No poseo información</option>
+                                        <option value="Digital Optimization">Digital Optimization</option>
+                                        <option value="Demand Generation">Demand Generation</option>
+                                        <option value="Digital Content">Digital Content</option>
+                                        <option value="Marketing Strategy">Marketing Strategy</option>
                                     </select>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                         <div class="js-card--large">
                             <div class="js-card--large__content">
                                 <div class="js-card--large__content-tipo">
-                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <img src="<?php echo RUTA_IMG?>cards/inversion.png">
                                 </div>
                                 <div class="js-card--large__content-name">
                                     <small>Qué presupuesto maneja para su inversión?</small>
