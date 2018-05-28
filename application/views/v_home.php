@@ -48,12 +48,12 @@
                                     <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                 </div>
                                 <div class="js-card--large__content-name">
-                                    <small>Qué tipo de servicio deseas realizas?</small>
+                                    <small>Que tipo de servicio deseas realizas?</small>
                                 </div>
                             </div>
                             <div class="js-card--large__select">
                                 <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="servicio" name="servicio" title="Seleccione" onchange="selectFacturacion(this.id);guardarDatos()">
+                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
                                         <option value="Digital Optimization">Digital Optimization</option>
                                         <option value="Demand Generation">Demand Generation</option>
                                         <option value="Digital Content">Digital Content</option>
@@ -73,11 +73,34 @@
                             </div>
                             <div class="js-card--large__select">
                                 <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id);guardarDatos()">
+                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
                                         <option value="PE Benefit">PE Benefit</option>
                                         <option value="Budget < 5K Euros">Budget < 5K Euros</option>
                                         <option value="Budget 5K - 10K Euros">Budget 5K - 10K Euros</option>
                                         <option value="Budget > 10K Euros">Budget > 10K Euros</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-card--large">
+                            <div class="js-card--large__content">
+                                <div class="js-card--large__content-tipo">
+                                    <img src="<?php echo RUTA_IMG?>cards/inversion.png">
+                                </div>
+                                <div class="js-card--large__content-name">
+                                    <small>Qué presupuesto maneja para su inversión?</small>
+                                </div>
+                            </div>
+                            <div class="js-card--large__select">
+                                <div class="js-select js-facturacion">
+                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
+                                        <option value="Grow you Pipeline with Virtual Agency">Grow you Pipeline with Virtual Agency</option>
+                                        <option value="Social Selling Program ">Social Selling Program </option>
+                                        <option value="Link Bulding">Link Bulding</option>
+                                        <option value="Customer Success Stories">Customer Success Stories</option>
+                                        <option value="Always On - Webinar On24">Always On - Webinar On24</option>
+                                        <option value="EveryOne Social">EveryOne Social</option>
+                                        <option value="Marketing Development Funds Training">Marketing Development Funds Training</option>
                                     </select>
                                 </div>
                             </div>
@@ -93,7 +116,7 @@
                             </div>
                             <div class="js-card--large__select">
                                 <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id);guardarDatos()">
+                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
                                         <option value="PE Benefit">PE Benefit</option>
                                         <option value="Budget < 5K Euros">Budget < 5K Euros</option>
                                         <option value="Budget 5K - 10K Euros">Budget 5K - 10K Euros</option>
