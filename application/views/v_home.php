@@ -44,7 +44,7 @@
                                     <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                 </div>
                                 <div class="js-card--large__content-name">
-                                    <small>Facturaci&oacute;n anual en d&oacute;lares</small>
+                                    <small>Que tipo de servicio deseas realizas?</small>
                                 </div>
                             </div>
                             <div class="js-card--large__select">
@@ -64,7 +64,7 @@
                                     <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                 </div>
                                 <div class="js-card--large__content-name">
-                                    <small>Facturaci&oacute;n anual en d&oacute;lares</small>
+                                    <small>Qué presupuesto maneja para su inversión?</small>
                                 </div>
                             </div>
                             <div class="js-card--large__select">
