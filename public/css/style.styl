@@ -312,18 +312,13 @@ body
 				strong
 					color $color
 					font-family $medium
-			.form-group
-				textarea
-					background-color transparent
-					border-radius 0
-					border 1px solid #FFFFFF
-					color #FFFFFF
 		.js-card--large__content-tipo
 			flexEnd()
 			height 145px
 			justify-content center
 			img
-				width initial
+				width 100%
+				max-width 100px
 		.js-card--large__content-name
 			flexEnd()
 			justify-content center
@@ -331,7 +326,8 @@ body
 			height 32px
 			small
 				font-size 16px
-				line-height 18px	
+				line-height 18px
+				color #000000
 	.js-card--large__button
 		padding 10px 0
 		button
@@ -623,9 +619,10 @@ body
 	opacity .3
 	pointer-events none
 .js-carousel
+	flexCenter()
+	justify-content center
 	position relative
 	width 100%
-	max-width 1000px
 .owl-theme 
 	.owl-nav
 		flexCenter()
@@ -679,12 +676,7 @@ body
 ::-webkit-scrollbar-thumb
 	background-color #AAAAAA
 	border-radius 10px
-@media ( max-width: 1400px )
-	.js-carousel
-		max-width 750px
 @media ( max-width: 1200px )
-	.js-carousel
-		max-width 500px
 	.js-minilogo
 		left 30px 
 		&.js-minilogo__right
@@ -734,9 +726,6 @@ body
 @media ( max-width: 600px )
 	.js-container
 		align-items center
-	.js-carousel
-		max-width 300px
-		margin auto
 	.js-title
 		max-width 240px
 		margin-left 20px
