@@ -82,6 +82,26 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="js-card--large">
+                            <div class="js-card--large__content">
+                                <div class="js-card--large__content-tipo">
+                                    <img src="<?php echo RUTA_IMG?>cards/fondo.png">
+                                </div>
+                                <div class="js-card--large__content-name">
+                                    <small>Cuanto puede cubrir con fondos MDF?</small>
+                                </div>
+                            </div>
+                            <div class="js-card--large__select">
+                                <div class="js-select js-facturacion">
+                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
+                                        <option value="PE Benefit">PE Benefit</option>
+                                        <option value="Budget < 5K Euros">Budget < 5K Euros</option>
+                                        <option value="Budget 5K - 10K Euros">Budget 5K - 10K Euros</option>
+                                        <option value="Budget > 10K Euros">Budget > 10K Euros</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
