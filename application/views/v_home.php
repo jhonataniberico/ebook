@@ -29,8 +29,8 @@
                 <div class="js-header">
                     <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
                     <div class="js-user">
-                        <p>Mauricio</p>
-                        <a>Logout</a>
+                        <p><?php echo $nombre ?></p>
+                        <a onclick="cerrarCesion()">Logout</a>
                     </div>
                 </div>
                 <div class="js-container">
