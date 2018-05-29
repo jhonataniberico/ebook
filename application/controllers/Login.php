@@ -19,11 +19,11 @@ class Login extends CI_Controller {
 		$data['error'] = EXIT_ERROR;
         $data['msj']   = null;
          try {
-			$usuario  = $this->input->post('usuario');
-			$username = $this->M_usuario->verificarUsuario($usuario);
+			$id_partner  = $this->input->post('id_partner');
+			$username = $this->M_usuario->verificarUsuario(intval($id_partner));
 			if(count($username) != 0){
-				if(strtolower($username[0]->Usuario) == strtolower($usuario)){
-					$session = array('usuario' 	   => $usuario,
+				if($username[0]->partner_id == strval($id_partner)){
+					$session = array('usuario' 	   => $id_partner,
 							 		 'Id_user' 	   => $username[0]->Id,
 							 		 'Nombre_user' => $username[0]->Nombres,
                                      'Apellid_user'=> $username[0]->Apellidos,

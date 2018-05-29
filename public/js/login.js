@@ -1,17 +1,12 @@
 function ingresar(){
 	var usuario  = $('#usuario').val();
-	var password = $('#password').val();
 	if(usuario == null){
 		$('#usuario').parent().addClass('is-invalid');
 		return;
 	}
-	if(password == null){
-		$('#password').parent().addClass('is-invalid');
-		return;
-	}
+  console.log(usuario);
 	$.ajax({
-		data : {usuario  : usuario,
-				    password : password},
+		data : {id_partner  : usuario},
 		url  : 'Login/ingresar',
 		type : 'POST'
 	}).done(function(data){
