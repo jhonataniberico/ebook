@@ -46,17 +46,17 @@ class M_usuario extends  CI_Model{
       return $result->result();
     }
     function getIdDatosByPais($pais){
-      $sql = "SELECT Id FROM paises WHERE Nombre LIKE '".$pais."'";
+      $sql = "SELECT Id FROM paises WHERE Nombre LIKE '%".$pais."%'";
       $result = $this->db->query($sql);
       return $result->row()->Id;
     }
     function getIdDatosByTipo($tipo){
-      $sql = "SELECT t.Id FROM tipo_servicio t WHERE t.Tipo LIKE '".$tipo."'";
+      $sql = "SELECT t.Id FROM tipo_servicio t WHERE t.Tipo LIKE '%".$tipo."%'";
       $result = $this->db->query($sql);
       return $result->row()->Id;
     }
     function getIdDatosByCosto($costo){
-      $sql = "SELECT c.Id FROM costo c WHERE c.precio LIKE '".$costo."'";
+      $sql = "SELECT c.Id FROM costo c WHERE c.precio LIKE '%".$costo."%'";
       $result = $this->db->query($sql);
       return $result->row()->Id;
     }

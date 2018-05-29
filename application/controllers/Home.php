@@ -26,14 +26,20 @@ class Home extends CI_Controller {
             $html          = '';
             $cont          = 1;
             $tipo_servicio = $this->input->post('tipo_servicio');
-            $presupuesto   = $this->input->post('presupuesto');
+            $id_costo   = intval($this->input->post('presupuesto'));
             $pais          = $this->session->userdata('Pais_user');
             $id_pais       = $this->M_usuario->getIdDatosByPais($pais);
             $id_tipo       = $this->M_usuario->getIdDatosByTipo($tipo_servicio);
-            $id_costo      = $this->M_usuario->getIdDatosByCosto($presupuesto);
+            //$id_costo      = $this->M_usuario->getIdDatosByCosto($presupuesto);
+            if($id_tipo == '' || $id_tipo == null){
+                return;
+            }
             $datos = $this->M_usuario->getDatosServicio($id_pais, $id_tipo, $id_costo);
             if(count($datos) == 0){
-                return;
+                $html  = '<tr>
+                            <td>1</td>
+                            <td>-</td>
+                          </tr>';
             }else {
                 foreach ($datos as $key) {
                     $html .= '<tr>
