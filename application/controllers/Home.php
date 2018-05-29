@@ -17,6 +17,7 @@ class Home extends CI_Controller {
             header("location: Login");
         }
         $data['nombre'] = $this->session->userdata('Nombre_user');
+        $data['pais']   = $this->session->userdata('Pais_user');
 		$this->load->view('v_home', $data);
 	}
     function guardarServicios(){
@@ -26,7 +27,7 @@ class Home extends CI_Controller {
             $html          = '';
             $cont          = 1;
             $tipo_servicio = $this->input->post('tipo_servicio');
-            $id_costo   = intval($this->input->post('presupuesto'));
+            $id_costo      = intval($this->input->post('presupuesto'));
             $pais          = $this->session->userdata('Pais_user');
             $id_pais       = $this->M_usuario->getIdDatosByPais($pais);
             $id_tipo       = $this->M_usuario->getIdDatosByTipo($tipo_servicio);

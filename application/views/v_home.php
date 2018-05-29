@@ -37,7 +37,7 @@
                     <div class="js-question--number">
                         <h2>¿C&oacute;mo podemos ayudarle&#63;</h2>
                         <div class="js-partner">
-                            <p><span>Pa&iacute;s: </span> Colombia</p>
+                            <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
                         </div>
                     </div>
                     <div class="js-carousel">
