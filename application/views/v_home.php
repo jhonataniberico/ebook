@@ -82,29 +82,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="js-card--large">
-                            <div class="js-card--large__content">
-                                <div class="js-card--large__content-tipo">
-                                    <img src="<?php echo RUTA_IMG?>cards/inversion.png">
-                                </div>
-                                <div class="js-card--large__content-name">
-                                    <small>Qué presupuesto maneja para su inversión?</small>
-                                </div>
-                            </div>
-                            <div class="js-card--large__select">
-                                <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-                                        <option value="Grow you Pipeline with Virtual Agency">Grow you Pipeline with Virtual Agency</option>
-                                        <option value="Social Selling Program ">Social Selling Program</option>
-                                        <option value="Link Bulding">Link Bulding</option>
-                                        <option value="Customer Success Stories">Customer Success Stories</option>
-                                        <option value="Always On - Webinar On24">Always On - Webinar On24</option>
-                                        <option value="EveryOne Social">EveryOne Social</option>
-                                        <option value="Marketing Development Funds Training">Marketing Development Funds Training</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div> -->
                         <div class="js-card--large">
                             <div class="js-card--large__content">
                                 <div class="js-card--large__content-tipo">
