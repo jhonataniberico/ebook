@@ -1,7 +1,8 @@
 $regular = 'BentonSansRegular'
 $medium  = 'BentonSansMedium'
 $bold    = 'BentonSansBold'
-$color   = #FDB913;
+$color   = #FDB913
+$Tcenter = translate(-50% , -50%)
 flexCenter()
 	display flex
 	display -webkit-flex
@@ -56,6 +57,18 @@ relative()
 	left 0
 	right 0
 	bottom 0
+transform()
+	-webkit-transform $Tcenter
+    -moz-transform $Tcenter
+    -ms-transform $Tcenter
+    -o-transform $Tcenter
+    transform $Tcenter
+scale()
+	-webkit-transform scale(1)
+    -moz-transform scale(1)
+    -ms-transform scale(1)
+    -o-transform scale(1)
+    transform scale(1)
 flipCard()
 	-moz-backface-visibility hidden
 	-webkit-backface-visibility hidden
@@ -696,10 +709,16 @@ table
 /*MODAL*/
 .modal
 	&.fade
+		.modal-dialog
+			position absolute
+			top 50%
+			left 50%
+			transform()
 		&.in
-			display flex !important
-			display -webkit-flex !important
-			align-items center
+			.modal-dialog
+				opacity 1
+				scale()
+				transform()
 @media ( max-width: 1200px )
 	.js-minilogo
 		left 30px 
