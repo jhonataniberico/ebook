@@ -106,30 +106,6 @@
                                     </tr>
                                 </thead>
                                 <tbody class="tabla">
-                                    <tr>
-                                        <td>1</td>
-                                        <td><a href="">Social Selling Program</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td><a href="">Link Bulding</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td><a href="">Customer Success Stories</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td><a href="">Always On - Webinar On24</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td><a href="">EveryOne Social</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td><a href="">Marketing Development Funds Training</a></td>
-                                    </tr>
                                 </tbody>                                
                             </table>
                         </div>

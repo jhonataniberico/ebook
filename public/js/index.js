@@ -1,7 +1,6 @@
 function getServicios(){
 	var servicio 	= $('#servicio').val();
 	var presupuesto = $('#presupuesto').val();
-	$('.opacity-done').addClass('animated fadeInRight');
 	if(servicio == null || servicio == ''){
 		// $('.opacity-done').removeClass('animated fadeInRight');
 		// $('.opacity-done').addClass('animated fadeOutRight');
@@ -12,6 +11,7 @@ function getServicios(){
 		// $('.opacity-done').addClass('animated fadeOutRight');
 		return;
 	}
+	$('.opacity-done').addClass('animated fadeInRight');
 	$.ajax({
 		data : {tipo_servicio : servicio,
 				presupuesto   : presupuesto},
