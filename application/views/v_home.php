@@ -28,12 +28,9 @@
             <div id="home" class="js-window">
                 <div class="js-header">
                     <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
-                    <div class="js-idioma">
-                        <select class="selectpicker" id="IdiomaHome"  name="Idioma" onchange="cambiarIdioma()">
-                            <option value="Español">Espa&ntilde;ol</option>
-                            <option value="Inglés" disabled="true">English</option>
-                            <option value="Portugués" disabled="true">Portugu&ecirc;s</option>
-                        </select>
+                    <div class="js-user">
+                        <p>Mauricio</p>
+                        <a>Logout</a>
                     </div>
                 </div>
                 <div class="js-container">
