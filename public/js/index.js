@@ -1,10 +1,15 @@
 function getServicios(){
 	var servicio 	= $('#servicio').val();
 	var presupuesto = $('#presupuesto').val();
+	$('.opacity-done').addClass('animated fadeInRight');
 	if(servicio == null || servicio == ''){
+		// $('.opacity-done').removeClass('animated fadeInRight');
+		// $('.opacity-done').addClass('animated fadeOutRight');
 		return;
 	}
 	if(presupuesto == null || presupuesto == ''){
+		// $('.opacity-done').removeClass('animated fadeInRight');
+		// $('.opacity-done').addClass('animated fadeOutRight');
 		return;
 	}
 	$.ajax({
