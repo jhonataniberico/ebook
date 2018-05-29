@@ -6,6 +6,7 @@ function getServicios(){
 		// $('.opacity-done').addClass('animated fadeOutRight');
 		return;
 	}
+	$('#cardPresupuesto').addClass('animated fadeInRight');
 	if(presupuesto == null || presupuesto == ''){
 		// $('.opacity-done').removeClass('animated fadeInRight');
 		// $('.opacity-done').addClass('animated fadeOutRight');

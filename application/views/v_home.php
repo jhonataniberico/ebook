@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="js-card--large">
+                        <div id="cardPresupuesto" class="js-card--large opacity-done">
                             <div class="js-card--large__content">
                                 <div class="js-card--large__content-tipo">
                                     <img src="<?php echo RUTA_IMG?>cards/inversion.png">
