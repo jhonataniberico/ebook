@@ -24,9 +24,7 @@ class M_usuario extends  CI_Model{
     function verificarUsuario($user){
       $sql = "SELECT *
                 FROM usuarios
-               WHERE Email LIKE '%".$user."%'
-                  OR Usuario LIKE '%".$user."%'
-                  OR partner_id LIKE '%".$user."%'";
+               WHERE partner_id LIKE '%".$user."%'";
       $result = $this->db->query($sql);
       return $result->result();
     }

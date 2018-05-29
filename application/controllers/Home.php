@@ -13,9 +13,9 @@ class Home extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        if($this->session->userdata('usuario') == null){
-            header("location: Login");
-        }
+        // if($this->session->userdata('usuario') == null){
+        //     header("location: Login");
+        // }
         $data['nombre'] = $this->session->userdata('Nombre_user');
 		$this->load->view('v_home', $data);
 	}

@@ -20,8 +20,7 @@ class Login extends CI_Controller {
         $data['msj']   = null;
          try {
 			$usuario  = $this->input->post('usuario');
-			$password = $this->input->post('password');
-			$username = $this->M_usuario->verificarUsuario($usuario, $password);
+			$username = $this->M_usuario->verificarUsuario($usuario);
 			if(count($username) != 0){
 				if(strtolower($username[0]->Usuario) == strtolower($usuario)){
 					$session = array('usuario' 	   => $usuario,
