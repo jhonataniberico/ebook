@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     <div class="js-carousel">
-                        <div class="table-responsive">
+                        <div class="table-responsive opacity-done">
                             <table class="table">
                                 <thead>
                                     <tr>
