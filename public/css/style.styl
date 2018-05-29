@@ -121,7 +121,7 @@ body
 	top 0
 	width 100%
 	background-color #000000
-	z-index 2
+	z-index 20
 	padding 15px 25px
 	transitionOpacity()
 	flexCenter()
@@ -218,13 +218,14 @@ body
 	flexStart()
 	width 100%
 	max-width 1100px
-	height 100vh
+	height 100%
 	justify-content flex-start
+	align-content flex-start
 	margin auto
-	flex-direction column
 	position relative
-	margin-top 60px
+	margin-top 45px
 	padding 30px
+	flex-wrap wrap
 .js-card__flex
 	flexStart()
 	width 100%
@@ -283,24 +284,23 @@ body
 					background-color #000000
 					color $color
 					border-radius 5px
-.js-card-content
-	padding 20px 5px 20px 0
-	p
-		color #FFFFFF
-		font-size 16px
-		line-height 20px
-		margin 0
 .js-question--title
 	font-size 18px
 	margin-bottom 20px
 .js-question--number
 	font-size 32px
 	line-height 34px
-	margin-bottom 10px
+	margin-bottom 5px
 	color $color
 	h2
 		color #000000
 		margin 3px 0
+	.js-partner
+		p
+			margin 0
+			font-size 18px
+			span
+				font-family $bold
 .js-card--large
 	-webkit-transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
 	-moz-transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
@@ -370,7 +370,7 @@ body
 		height 36px
 		justify-content center
 		border 1px solid $color
-		margin 10px 0
+		margin-top 10px
 		#textOperar
 			font-family $medium
 			font-size 16px
@@ -403,6 +403,7 @@ body
 					margin 0
 					padding 0
 					border none
+					margin-top 1px
 					li
 						border 1px solid $color
 						margin 5px 0
@@ -425,99 +426,6 @@ body
 			font-family $medium
 			margin 0
 			font-size 16px
-.js-card-confirmacion
-	transitionMaxWidth()
-	width 100%
-	max-width 400px
-	border-radius 10px
-	border 1px solid $color
-	padding 25px
-	margin 5px
-.js-formulario
-	transitionMaxWidth()
-	width 100%
-	max-width calc(100% - 500px)
-	border-radius 10px
-	border 1px solid $color
-	padding 25px
-	margin 5px
-	.col-sm-6
-		padding 0 5px
-	.js-contacto
-		font-size 15px
-		margin 5px 0
-		line-height 18px
-	.mdl-radio__outer-circle
-		border 2px solid #FFFFFF
-		border-radius 0
-	.mdl-radio
-		font-size 13px
-		font-family $regular
-		font-weight 100
-.js-contenedor-respuestas
-	overflow-y scroll
-	height 295px
-	.js-respuestas
-		flexCenter()
-		background-color #FFFFFF
-		color #000000
-		margin 5px 0
-		padding 8px 5px 8px 15px 
-		ul
-			transitionMaxWidth()
-			max-width calc(100% - 85px)
-			width 100%
-			margin 0
-			padding-left 15px
-			li
-				font-size 15px
-		button
-			transitionBgColor()
-			color #4983B6
-			text-transform initial
-			font-size 15px
-			box-shadow none
-			height 30px
-			line-height 32px
-			background-color transparent
-			font-family $bold
-			&:hover
-				background-color #4983B6
-				color #FFFFFF
-.js-datos
-	flexCenter()
-	padding 5px
-	.js-datos__personal
-		background-color #F6F6F6
-		color #000000
-		padding 7px 10px
-		p
-			flexCenter()
-			margin 0
-			i
-				margin-right 5px
-				color #4983B6
-				font-size 18px
-	.js-datos__separacion
-		padding 7px 10px
-		p
-			margin 0
-	.js-datos__linkedin
-		a
-			background-color #008FCC
-			font-size 16px
-			text-decoration none !important
-			color #FFFFFF !important
-			padding 10px
-			position relative
-			padding-left 45px
-			i
-				background-color #0076B3
-				font-size 20px
-				position absolute
-				top: 0; 
-				left 0;
-				padding 10px
 .js-input
 	margin 5px 0
 	padding 0 5px
@@ -572,35 +480,6 @@ body
 		font-weight 100
 	.mdl-checkbox__box-outline
 		border 2px solid #FFFFFF
-.js-button--confirmar
-	background-color #4983B6
-	color #FFFFFF
-	text-transform initial
-	font-family $bold
-	height 30px
-	line-height 32px
-.js-card-confirmacion
-	h2
-		color #FFFFFF
-		font-size 30px
-		margin 0 0 7px 0
-		strong
-			background linear-gradient(to right, #EFAB1F 0%, #E35500 100%)
-			-webkit-background-clip text
-			-webkit-text-fill-color transparent
-			font-family $bold
-.js-agradecimiento
-	max-width 650px
-	margin auto
-	text-align center
-	h2
-		font-family $bold
-		color $color
-		font-size 60px
-		margin-bottom 20px
-	p
-		font-size 28px
-		line-height 32px
 .opacity-done
 	relative()
 	opacity 0
@@ -615,45 +494,20 @@ body
 	&.js-selected
 	&:hover
 		background-color $color !important
-.js-card__flex--relative
-	position relative
-	flex-wrap wrap
-	height 100%
-	max-height 285px
-.js-card--large__tipo
-	transitionTransform()
-	transform translate3d(-100%, 0, 0)
-	opacity 0
-	margin 0
-	z-index -5
-	width 0 !important
-.js-card--transform
-	transitionTransform()
-	-webkit-transform translate3d(0px, 0px, 0px) !important
-	-moz-transform translate3d(0px, 0px, 0px) !important
-	-ms-transform translate3d(0px, 0px, 0px) !important
-	-o-transform translate3d(0px, 0px, 0px) !important
-	transform translate3d(0px, 0px, 0px) !important
-.js-card--tipo
-	flexCenter()
-	&.js-card--show
-		max-width 240px
-		width 100%
-.js-card--empresa
-	flexCenter center()
-	position relative
-	align-items flex-start
-	&.fadeInLeft
-		opacity 1
-		z-index 5
-.js-disabled
-	opacity .3
-	pointer-events none
 .js-carousel
 	flexCenter()
 	justify-content flex-start
 	position relative
 	width 100%
+	max-width 675px
+	.table-responsive
+		width 100%
+		max-width 205px
+		margin auto
+		border 1px solid $color
+		border-radius 10px
+		table
+			margin 0
 .js-button
 	background-color $color
 	color #FFFFFF
@@ -716,7 +570,8 @@ table
 		&>tr
 			&>td
 				color #000000
-				padding 5px !important
+				padding 5px 10px !important
+				line-height 16px !important
 	&>thead
 		&>tr
 			&>th
@@ -735,26 +590,6 @@ table
 				scale()
 				transform()
 @media ( max-width: 1200px )
-	.js-minilogo
-		left 30px 
-		&.js-minilogo__right
-			img
-				max-width 155px
-		img
-			max-width 100px
-	.js-window5
-		.js-container
-			height 100%
-			overflow-y scroll
-			display inherit
-			padding 75px 30px
-			.js-card__flex
-				display inherit
-				.js-formulario
-				.js-card-confirmacion
-					float left
-				.js-formulario
-					max-width 100%
 	.js-title
 		max-width 550px
 		margin-left 30px
@@ -769,10 +604,6 @@ table
 			.owl-prev
 				margin-left -20px
 @media ( max-width: 768px )
-	.js-minilogo 
-		&.js-minilogo__right
-			img
-				display none
 	.js-title
 		max-width 420px
 		h1
@@ -793,14 +624,6 @@ table
 		p
 			font-size 16px
 			line-height 20px
-	.js-minilogo
-		left 20px
-		img
-			max-width 75px
-	.js-window1 
-		h2
-			font-size 40px
-			line-height 42px
 	.js-question--title
 		margin-bottom 5px
 	.js-question--number
@@ -817,4 +640,8 @@ table
 				margin-left 0
 			.owl-next
 				margin-right 0
+@media ( max-height: 768px )
+	body
+		overflow-y scroll
+			
 					

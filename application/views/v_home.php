@@ -33,10 +33,12 @@
                         <a onclick="cerrarCesion()">Logout</a>
                     </div>
                 </div>
-                <div class="js-container">
+                <div class="js-container js-container--responsive">
                     <div class="js-question--number">
-                        <!-- <span>01/02</span> -->
                         <h2>¿C&oacute;mo podemos ayudarle&#63;</h2>
+                        <div class="js-partner">
+                            <p><span>Pa&iacute;s: </span> Colombia</p>
+                        </div>
                     </div>
                     <div class="js-carousel">
                         <div class="js-card--large">
@@ -45,7 +47,7 @@
                                     <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                 </div>
                                 <div class="js-card--large__content-name">
-                                    <small>Que tipo de servicio deseas realizas?</small>
+                                    <small>Que tipo de servicio deseas realizar?</small>
                                 </div>
                             </div>
                             <div class="js-card--large__select">
@@ -65,7 +67,7 @@
                                     <img src="<?php echo RUTA_IMG?>cards/inversion.png">
                                 </div>
                                 <div class="js-card--large__content-name">
-                                    <small>Qué presupuesto maneja para su inversión?</small>
+                                    <small>Qué presupuesto maneja para su inversi&oacute;n?</small>
                                 </div>
                             </div>
                             <div class="js-card--large__select">
@@ -93,13 +95,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="js-carousel">
+                    <div class="js-carousel m-b-20">
                         <div class="table-responsive opacity-done">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Tipos de Servicio</th>
+                                        <th>Tipos de Servicios</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tabla">
