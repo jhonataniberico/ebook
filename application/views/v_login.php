@@ -57,18 +57,21 @@
                     <div class="js-card-login">
                         <div class="js-card-login__imagen"></div>
                         <div class="mdl-card__supporting-text">
-                            <div class="col-xs-12 p-0">
-                                <div class="col-xs-7">
+                            <div class="col-xs-12 p-0 js-login">
+                                <div class="col-xs-8 p-l-0">
                                     <h2>Marketing Services Directory eBook</h2>
                                 </div>
-                                <div class="col-xs-5">
+                                <div class="col-xs-4 p-0 text-center">
                                     <img src="<?php echo RUTA_IMG?>cards/login.png">
                                 </div>
                             </div>
-                            <div class="col-xs-12 js-input">
+                            <div class="col-xs-12 p-0">
+                                <p>Login</p>
+                            </div>
+                            <div class="col-xs-12 js-input p-0">
                                 <input type="text" id="usuario" class="form-control" placeholder="ID or User Name" onkeyup="verificarDatos(event);">
                             </div>
-                            <div class="col-xs-12 mdl-card__actions text-right">
+                            <div class="col-xs-12 mdl-card__actions text-right p-r-0">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Login</button>
                             </div>
                         </div>
