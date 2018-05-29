@@ -30,4 +30,34 @@ class M_usuario extends  CI_Model{
       $result = $this->db->query($sql);
       return $result->result();
     }
+    function getDatosServicio($pais, $tipo_servicio, $presupuesto){
+      $sql = "SELECT s.*
+                FROM servicio s,
+                     paises p,
+                     tipo_servicio t,
+                     costo c
+               WHERE s.Id_pais = p.Id
+                 AND s.Id_costo = c.Id
+                 AND s.id_tipo_servi = t.Id
+                 AND s.Id_pais = ?
+                 AND s.Id_costo = ?
+                 AND s.id_tipo_servi = ?";
+      $result = $this->db->query($sql, array($pais, $presupuesto, $tipo_servicio));
+      return $result->result();
+    }
+    function getIdDatosByPais($pais){
+      $sql = "SELECT Id FROM paises WHERE Nombre LIKE '".$pais."'";
+      $result = $this->db->query($sql);
+      return $result->row()->Id;
+    }
+    function getIdDatosByTipo($tipo){
+      $sql = "SELECT t.Id FROM tipo_servicio t WHERE t.Tipo LIKE '".$tipo."'";
+      $result = $this->db->query($sql);
+      return $result->row()->Id;
+    }
+    function getIdDatosByCosto($costo){
+      $sql = "SELECT c.Id FROM costo c WHERE c.precio LIKE '".$costo."'";
+      $result = $this->db->query($sql);
+      return $result->row()->Id;
+    }
 }

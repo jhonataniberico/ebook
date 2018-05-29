@@ -53,7 +53,7 @@
                             </div>
                             <div class="js-card--large__select">
                                 <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
+                                    <select class="selectpicker" id="servicio" name="servicio" title="Seleccione" onchange="getServicios();">
                                         <option value="Digital Optimization">Digital Optimization</option>
                                         <option value="Demand Generation">Demand Generation</option>
                                         <option value="Digital Content">Digital Content</option>
@@ -73,7 +73,7 @@
                             </div>
                             <div class="js-card--large__select">
                                 <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
+                                    <select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios();">
                                         <option value="PE Benefit">PE Benefit</option>
                                         <option value="Budget < 5K Euros">Budget < 5K Euros</option>
                                         <option value="Budget 5K - 10K Euros">Budget 5K - 10K Euros</option>
@@ -128,7 +128,7 @@
                                         <th>Tipos de Servicio</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="tabla">
                                     <tr>
                                         <td>1</td>
                                         <td><a href="">Social Selling Program</a></td>

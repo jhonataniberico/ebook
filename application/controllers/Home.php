@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 	function __construct() {
         parent::__construct();
         $this->load->helper("url");//BORRAR CACHÉ DE LA PÁGINA
+        $this->load->model('M_usuario');
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
         $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
         $this->output->set_header('Cache-Control: post-check=0, pre-check=0',false);
@@ -22,18 +23,27 @@ class Home extends CI_Controller {
         $data['error'] = EXIT_ERROR;
         $data['msj']   = null;
         try {
+            $html          = '';
+            $cont          = 1;
             $tipo_servicio = $this->input->post('tipo_servicio');
             $presupuesto   = $this->input->post('presupuesto');
-            $fondos        = $this->input->post('fondos');
-            $arrayInsert   = array('tipo_servicio' => $tipo_servicio,
-                                   'presupuesto'   => $presupuesto,
-                                   'fondos'        => $fondos);
-            $datoInsert = $this->M_usuario->insertarDatos($arrayInsert, 'servicios');
-            $session    = array('tipo_servicio' => $tipo_servicio,
-                                'presupuesto'   => $presupuesto,
-                                'fondos'        => $fondos,
-                                'Id_servicio'   => $datoInsert['Id']);
-            $this->session->set_userdata($session);
+            $pais          = $this->session->userdata('Pais_user');
+            $id_pais       = $this->M_usuario->getIdDatosByPais($pais);
+            $id_tipo       = $this->M_usuario->getIdDatosByTipo($tipo_servicio);
+            $id_costo      = $this->M_usuario->getIdDatosByCosto($presupuesto);
+            $datos = $this->M_usuario->getDatosServicio($id_pais, $id_tipo, $id_costo);
+            if(count($datos) == 0){
+                return;
+            }else {
+                foreach ($datos as $key) {
+                    $html .= '<tr>
+                                <td>'.$cont.'</td>
+                                <td><a href="">'.$key->Nombre.'</a></td>
+                              </tr>';
+                    $cont++;
+                }
+            }
+            $data['tabla'] = $html;
             $data['error'] = EXIT_SUCCESS;
         }catch (Exception $e){
             $data['msj'] = $e->getMessage();
