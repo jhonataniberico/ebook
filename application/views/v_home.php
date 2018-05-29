@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="js-card--large">
+                        <!-- <div class="js-card--large">
                             <div class="js-card--large__content">
                                 <div class="js-card--large__content-tipo">
                                     <img src="<?php echo RUTA_IMG?>cards/inversion.png">
@@ -95,7 +95,7 @@
                                 <div class="js-select js-facturacion">
                                     <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
                                         <option value="Grow you Pipeline with Virtual Agency">Grow you Pipeline with Virtual Agency</option>
-                                        <option value="Social Selling Program ">Social Selling Program </option>
+                                        <option value="Social Selling Program ">Social Selling Program</option>
                                         <option value="Link Bulding">Link Bulding</option>
                                         <option value="Customer Success Stories">Customer Success Stories</option>
                                         <option value="Always On - Webinar On24">Always On - Webinar On24</option>
@@ -104,7 +104,7 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="js-card--large">
                             <div class="js-card--large__content">
                                 <div class="js-card--large__content-tipo">
@@ -115,15 +115,46 @@
                                 </div>
                             </div>
                             <div class="js-card--large__select">
-                                <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="facturacion" name="facturacion" title="Seleccione" onchange="selectFacturacion(this.id)">
-                                        <option value="PE Benefit">PE Benefit</option>
-                                        <option value="Budget < 5K Euros">Budget < 5K Euros</option>
-                                        <option value="Budget 5K - 10K Euros">Budget 5K - 10K Euros</option>
-                                        <option value="Budget > 10K Euros">Budget > 10K Euros</option>
-                                    </select>
-                                </div>
+                                <p>35,000 Euros</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="js-carousel">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Tipos de Servicio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Social Selling Program</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Link Bulding</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Customer Success Stories</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Always On - Webinar On24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>EveryOne Social</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Marketing Development Funds Training</td>
+                                    </tr>
+                                </tbody>                                
+                            </table>
                         </div>
                     </div>
                 </div>
