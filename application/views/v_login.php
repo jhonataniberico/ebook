@@ -69,7 +69,7 @@
                                 <p>Login</p>
                             </div>
                             <div class="col-xs-12 js-input p-0">
-                                <input type="text" id="usuario" class="form-control" placeholder="ID or User Name" onkeyup="verificarDatos(event);">
+                                <input type="text" id="usuario" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="col-xs-12 mdl-card__actions text-right p-r-0">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Login</button>
