@@ -50,6 +50,12 @@ absolute()
 	left 0
 	right 0
 	bottom 0
+relative()
+	position relative
+	top 0
+	left 0
+	right 0
+	bottom 0
 flipCard()
 	-moz-backface-visibility hidden
 	-webkit-backface-visibility hidden
@@ -583,7 +589,7 @@ body
 		font-size 28px
 		line-height 32px
 .opacity-done
-	absolute()
+	relative()
 	opacity 0
 	z-index -5
 	&.fadeInUp
@@ -633,28 +639,6 @@ body
 	justify-content flex-start
 	position relative
 	width 100%
-.owl-theme 
-	.owl-nav
-		flexCenter()
-		position absolute
-		top 0
-		bottom 0
-		z-index -1
-		width 100%
-		.owl-prev
-			position absolute
-			left 0
-			margin-left -40px
-			background-color $color
-			&:hover
-				background-color $color
-		.owl-next
-			position absolute
-			right 0
-			margin-right -20px
-			background-color $color
-			&:hover
-				background-color $color
 .js-button
 	background-color $color
 	color #FFFFFF
