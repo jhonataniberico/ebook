@@ -29,7 +29,8 @@ class M_usuario extends  CI_Model{
       return $result->result();
     }
     function getDatosServicio($pais, $tipo_servicio, $presupuesto){
-      $sql = "SELECT s.*
+      $sql = "SELECT s.*,
+                     p.link
                 FROM servicio s,
                      paises p,
                      tipo_servicio t,
