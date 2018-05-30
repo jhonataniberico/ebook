@@ -115,6 +115,7 @@
                                         <option value="2">Budget < 5K Euros</option>
                                         <option value="3">Budget 5K - 10K Euros</option>
                                         <option value="4">Budget > 10K Euros</option>
+                                        <option value="5">EUR 728</option>
                                     </select>
                                 </div>
                             </div>
