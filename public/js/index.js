@@ -6,6 +6,18 @@ function getServicios(id){
 	if(servicio == null || servicio == ''){
 		return;
 	}
+	if(servicio == 'Innovation Program4Partners'){
+		$('.quitar').html('');
+		$('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">'+
+                                '<option value="5">EUR 728</option>'+
+                            '</select>');
+		componentHandler.upgradeAllRegistered();
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            $('select').selectpicker('mobile');
+        } else {
+            $('select').selectpicker();
+        }
+	}
 	$('#cardPresupuesto').addClass('animated fadeInRight');
 	if(presupuesto == null || presupuesto == ''){
 		return;
