@@ -65,7 +65,7 @@
                     </div>
                     <div class="form-group js-input">
                         <label for="mdf">Fondos MDF disponibles</label>
-                        <input type="email" class="form-control" id="mdf" readonly="readonly" value="<?php echo $mdf ?>">
+                        <input type="email" class="form-control js-input-color" id="mdf" readonly="readonly" value="<?php echo $mdf ?>">
                     </div>
                 </div>
             </div>
