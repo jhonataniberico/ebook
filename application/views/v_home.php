@@ -94,6 +94,7 @@
                                         <option value="Demand Generation">Demand Generation</option>
                                         <option value="Digital Content">Digital Content</option>
                                         <option value="Marketing Strategy">Marketing Strategy</option>
+                                        <option value="Innovation Program4Partners">Innovation Program4Partners</option>
                                     </select>
                                 </div>
                             </div>
