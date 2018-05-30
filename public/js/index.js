@@ -17,6 +17,20 @@ function getServicios(id){
         } else {
             $('select').selectpicker();
         }
+	}else {
+		$('.quitar').html('');
+		$('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">'+
+                                '<option value="1">PE Benefit</option>'+
+                                '<option value="2">Budget < 5K Euros</option>'+
+                                '<option value="3">Budget 5K - 10K Euros</option>'+
+                                '<option value="4">Budget > 10K Euros</option>'+
+                            '</select>');
+		componentHandler.upgradeAllRegistered();
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            $('select').selectpicker('mobile');
+        } else {
+            $('select').selectpicker();
+        }
 	}
 	$('#cardPresupuesto').addClass('animated fadeInRight');
 	if(presupuesto == null || presupuesto == ''){
