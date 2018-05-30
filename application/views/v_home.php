@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group js-input">
                         <label for="user">S User</label>
-                        <input type="email" class="form-control" id="user" readonly="readonly" value="<?php echo $name_user ?>">
+                        <input type="email" class="form-control" id="user" readonly="readonly" value="N/A">
                     </div>
                     <div class="form-group js-input">
                         <label for="nombre">Nombre</label>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="form-group js-input">
                         <label for="mdf">Fondos MDF disponibles</label>
-                        <input type="email" class="form-control js-input-color" id="mdf" readonly="readonly" value="<?php echo $mdf ?>">
+                        <input type="email" class="form-control js-input-color" id="mdf" readonly="readonly" value="USD <?php echo $mdf ?>">
                     </div>
                 </div>
             </div>

@@ -109,6 +109,37 @@ flipCardBackHover()
 	-o-transform perspective(600) rotateY(0)
 	transform perspective(600) rotateY(0)
 	z-index 950
+/*TABLE*/
+table
+	&>tbody
+		&>tr
+			&>td
+				color #000000
+				padding 5px 10px !important
+				line-height 16px !important
+				vertical-align middle !important
+	&>thead
+		&>tr
+			&>th
+				color #000000
+				font-size 18px
+				font-family $medium
+/*MODAL*/
+.modal
+	&.fade
+		.modal-dialog
+			position absolute
+			top 50%
+			left 50%
+			transform()
+		&.in
+			.modal-dialog
+				opacity 1
+				scale()
+				transform()
+/*MATERIAL DESIGN LITE*/
+.mdl-card__supporting-text
+	width 100%
 body
 	margin 0
 	padding 0
@@ -573,34 +604,6 @@ body
 ::-webkit-scrollbar-thumb
 	background-color #AAAAAA
 	border-radius 10px
-/*TABLE*/
-table
-	&>tbody
-		&>tr
-			&>td
-				color #000000
-				padding 5px 10px !important
-				line-height 16px !important
-				vertical-align middle !important
-	&>thead
-		&>tr
-			&>th
-				color #000000
-				font-size 18px
-				font-family $medium
-/*MODAL*/
-.modal
-	&.fade
-		.modal-dialog
-			position absolute
-			top 50%
-			left 50%
-			transform()
-		&.in
-			.modal-dialog
-				opacity 1
-				scale()
-				transform()
 @media ( max-width: 1200px )
 	.js-title
 		max-width 550px
@@ -624,6 +627,8 @@ table
 		p
 			font-size 20px
 			line-height 24px
+	.js-card-login
+		display block
 @media ( max-width: 600px )
 	.js-container
 		align-items center
