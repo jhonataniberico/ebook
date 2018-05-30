@@ -386,6 +386,8 @@ body
 			i
 				color #FFFFFF
 		.js-select
+			&.selected
+				background-color $color
 			.bootstrap-select
 				width 205px !important
 				background-color transparent
@@ -451,16 +453,6 @@ body
 		font-family $regular
 		box-shadow none !important
 		border-color transparent !important
-.js-select
-	&.js-standar
-		margin 5px 0
-		.bootstrap-select
-			width 100% !important
-			.btn-default
-				background-color #FFFFFF
-				color #757575
-				height 46px
-				border-radius 0	
 .js-label
 	flexCenter()
 	.js-input-label

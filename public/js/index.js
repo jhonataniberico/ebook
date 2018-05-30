@@ -1,15 +1,13 @@
-function getServicios(){
+function getServicios(id){
+	var idSelect    = $('#'+id);
 	var servicio 	= $('#servicio').val();
 	var presupuesto = $('#presupuesto').val();
+	idSelect.parents('.js-select').addClass('selected');
 	if(servicio == null || servicio == ''){
-		// $('.opacity-done').removeClass('animated fadeInRight');
-		// $('.opacity-done').addClass('animated fadeOutRight');
 		return;
 	}
 	$('#cardPresupuesto').addClass('animated fadeInRight');
 	if(presupuesto == null || presupuesto == ''){
-		// $('.opacity-done').removeClass('animated fadeInRight');
-		// $('.opacity-done').addClass('animated fadeOutRight');
 		return;
 	}
 	$('.opacity-done').addClass('animated fadeInRight');

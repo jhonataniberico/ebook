@@ -84,12 +84,12 @@
                                     <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                 </div>
                                 <div class="js-card--large__content-name">
-                                    <small>Que tipo de servicio deseas realizar?</small>
+                                    <small>¿Que tipo de servicio deseas realizar?</small>
                                 </div>
                             </div>
                             <div class="js-card--large__select">
-                                <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="servicio" name="servicio" title="Seleccione" onchange="getServicios();">
+                                <div class="js-select">
+                                    <select class="selectpicker" id="servicio" name="servicio" title="Seleccione" onchange="getServicios(this.id);">
                                         <option value="Digital Optimization">Digital Optimization</option>
                                         <option value="Demand Generation">Demand Generation</option>
                                         <option value="Digital Content">Digital Content</option>
@@ -104,12 +104,12 @@
                                     <img src="<?php echo RUTA_IMG?>cards/inversion.png">
                                 </div>
                                 <div class="js-card--large__content-name">
-                                    <small>Qué presupuesto maneja para su inversi&oacute;n?</small>
+                                    <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
                                 </div>
                             </div>
                             <div class="js-card--large__select">
-                                <div class="js-select js-facturacion">
-                                    <select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios();">
+                                <div class="js-select">
+                                    <select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">
                                         <option value="1">PE Benefit</option>
                                         <option value="2">Budget < 5K Euros</option>
                                         <option value="3">Budget 5K - 10K Euros</option>

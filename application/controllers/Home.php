@@ -49,8 +49,8 @@ class Home extends CI_Controller {
             }else {
                 foreach ($datos as $key) {
                     $html .= '<tr>
-                                <td>'.$key->Nombre.'</td>
-                                <td><a class="mdl-button mdl-js-button mdl-button--icon">
+                                <td><a href="">'.$key->Nombre.'</a></td>
+                                <td><a href="" class="mdl-button mdl-js-button mdl-button--icon">
                                         <i class="fa fa-arrow-right"></i>
                                     </a></td>
                               </tr>';
