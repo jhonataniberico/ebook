@@ -24,18 +24,55 @@
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
     <body>
-        <section id="principal">
-            <div id="home" class="js-window">
-                <div class="js-header">
-                    <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
-                    <div class="js-user">
-                        <p><?php echo $nombre ?></p>
-                        <a onclick="cerrarCesion()">Logout</a>
+        <div class="js-header">
+            <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
+            <div class="js-user">
+                <p>Directorio de Servicios SAP LAC</p>
+                <a onclick="cerrarCesion()">Logout</a>
+            </div>
+        </div>
+        <section id="principal" class="section">
+            <div class="js-fondo-datos"></div>
+            <div class="js-container">
+                <div class=" js-carousel">
+                    <div class="form-group js-input">
+                        <label for="partner">Partner ID</label>
+                        <input type="email" class="form-control" id="partner" readonly="readonly" value="<?php echo $partner ?>">
+                    </div>
+                    <div class="form-group js-input">
+                        <label for="name_partner">Partner Name</label>
+                        <input type="email" class="form-control" id="name_partner" readonly="readonly" value="<?php echo $name_partner ?>">
+                    </div>
+                    <div class="form-group js-input">
+                        <label for="pais">País</label>
+                        <input type="email" class="form-control" id="pais" readonly="readonly" value="<?php echo $pais ?>">
+                    </div>
+                    <div class="form-group js-input">
+                        <label for="user">S User</label>
+                        <input type="email" class="form-control" id="user" readonly="readonly" value="<?php echo $name_user ?>">
+                    </div>
+                    <div class="form-group js-input">
+                        <label for="nombre">Nombre</label>
+                        <input type="email" class="form-control" id="nombre" readonly="readonly" value="<?php echo $nombre ?>">
+                    </div>
+                    <div class="form-group js-input">
+                        <label for="apellido">Apellido</label>
+                        <input type="email" class="form-control" id="apellido" readonly="readonly" value="<?php echo $apellido ?>">
+                    </div>
+                    <div class="form-group js-input">
+                        <label for="email">email</label>
+                        <input type="email" class="form-control" id="email" readonly="readonly" value="<?php echo $email ?>">
+                    </div>
+                    <div class="form-group js-input">
+                        <label for="mdf">Fondos MDF disponibles</label>
+                        <input type="email" class="form-control" id="mdf" readonly="readonly" value="<?php echo $mdf ?>">
                     </div>
                 </div>
-                <div class="js-container js-container--responsive">
-                    <div class="js-question--number">
-                        <h2>¿C&oacute;mo podemos ayudarle&#63;</h2>
+            </div>
+        </section>
+        <section class="">
+            <div class="js-container js-container--responsive">
+                    <div class="col-xs-12 js-question--number">
                         <div class="js-partner">
                             <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
                         </div>
@@ -81,36 +118,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="js-card--large opacity-done">
-                            <div class="js-card--large__content">
-                                <div class="js-card--large__content-tipo">
-                                    <img src="<?php echo RUTA_IMG?>cards/fondo.png">
-                                </div>
-                                <div class="js-card--large__content-name">
-                                    <small>Cuanto puede cubrir con fondos MDF?</small>
-                                </div>
-                            </div>
-                            <div class="js-card--large__select">
-                                <p>35,000 Euros</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="js-carousel m-b-20">
                         <div class="table-responsive opacity-done">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <th>Tipos de Servicios</th>
+                                        <th>Los paquetes disponibles en tu pa&iacute;s son:</th>
                                     </tr>
                                 </thead>
-                                <tbody class="tabla">
-                                </tbody>                                
+                                <tbody class="tabla"></tbody>                                
                             </table>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>

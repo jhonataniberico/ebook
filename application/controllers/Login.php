@@ -29,7 +29,10 @@ class Login extends CI_Controller {
                                      'Apellid_user'=> $username[0]->Apellidos,
 							 		 'Pais_user'   => $username[0]->Pais,
 							 		 'Email_user'  => $username[0]->Email,
-							 		 'partner_id'  => $username[0]->partner_id,);
+                                     'Name_user'   => $username[0]->Usuario,
+							 		 'partner_id'  => $username[0]->partner_id,
+                                     'Name_partner'=> $username[0]->partner_name,
+                                     'MDF_monto'   => $username[0]->monto,);
 					$this->session->set_userdata($session);
 		          	$data['error'] = EXIT_SUCCESS;
 				}

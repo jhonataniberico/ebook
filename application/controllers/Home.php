@@ -16,8 +16,14 @@ class Home extends CI_Controller {
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         }
-        $data['nombre'] = $this->session->userdata('Nombre_user');
-        $data['pais']   = $this->session->userdata('Pais_user');
+        $data['nombre']       = $this->session->userdata('Nombre_user');
+        $data['pais']         = $this->session->userdata('Pais_user');
+        $data['apellido']     = $this->session->userdata('Apellid_user');
+        $data['email']        = $this->session->userdata('Email_user');
+        $data['partner']      = $this->session->userdata('partner_id');
+        $data['name_user']    = $this->session->userdata('Name_user');
+        $data['name_partner'] = $this->session->userdata('Name_partner');
+        $data['mdf']          = $this->session->userdata('MDF_monto');
 		$this->load->view('v_home', $data);
 	}
     function guardarServicios(){
@@ -25,7 +31,6 @@ class Home extends CI_Controller {
         $data['msj']   = null;
         try {
             $html          = '';
-            $cont          = 1;
             $tipo_servicio = $this->input->post('tipo_servicio');
             $id_costo      = intval($this->input->post('presupuesto'));
             $pais          = $this->session->userdata('Pais_user');
@@ -38,16 +43,17 @@ class Home extends CI_Controller {
             $datos = $this->M_usuario->getDatosServicio($id_pais, $id_tipo, $id_costo);
             if(count($datos) == 0){
                 $html  = '<tr>
-                            <td>1</td>
+                            <td>-</td>
                             <td>-</td>
                           </tr>';
             }else {
                 foreach ($datos as $key) {
                     $html .= '<tr>
-                                <td>'.$cont.'</td>
-                                <td><a href="">'.$key->Nombre.'</a></td>
+                                <td>'.$key->Nombre.'</td>
+                                <td><a class="mdl-button mdl-js-button mdl-button--icon">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a></td>
                               </tr>';
-                    $cont++;
                 }
             }
             $data['tabla'] = $html;

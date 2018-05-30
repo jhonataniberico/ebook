@@ -143,6 +143,10 @@ body
 					background-color rgba(240, 171, 0, 0.7)
 				&:nth-child(3)
 					background-color rgba(240, 171, 0, 1)
+.js-fondo-datos
+	absolute()
+	background url(../img/fondo/fondo-datos.jpg) no-repeat center center
+	background-size cover
 .js-fondo__imagen
 	background url(../img/fondo/fondo-imagen.jpg) no-repeat center center
 	background-size cover
@@ -152,6 +156,8 @@ body
 		background-color #000000
 		opacity .2
 		absolute()
+.section
+	position relative
 .js-bar
 	height 100vh
 	width 25%
@@ -171,13 +177,8 @@ body
 			background-color rgba(240, 171, 0, 0.7)
 		&:nth-child(3)
 			background-color rgba(240, 171, 0, 1)
-.js-window
-	absolute()
-	flexCenter()
-	transitionOpacity()
-	width 100%
-	height 100vh
-	z-index 5
+#principal
+	margin-top 56px
 .js-title
 	z-index: 5
 	color #FFFFFF
@@ -223,7 +224,6 @@ body
 	align-content flex-start
 	margin auto
 	position relative
-	margin-top 45px
 	padding 30px
 	flex-wrap wrap
 .js-card__flex
@@ -298,9 +298,11 @@ body
 	.js-partner
 		p
 			margin 0
-			font-size 18px
+			font-size 24px
+			font-family $bold
 			span
-				font-family $bold
+				color #000000
+				font-family $regular
 .js-card--large
 	-webkit-transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
 	-moz-transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
@@ -426,15 +428,26 @@ body
 			font-family $medium
 			margin 0
 			font-size 16px
+.js-window
+	absolute()
+	flexCenter()
+	transitionOpacity()
+	width 100%
+	height 100vh
+	z-index 5
 .js-input
 	margin 5px 0
-	padding 0 5px
+	padding 0 10px
+	width 100%
+	max-width 260px
 	.form-control
-		border-radius 0
+		border-radius 5px
 		height 42px
 		padding 6px 10px
 		font-size 15px
 		font-family $regular
+		box-shadow none !important
+		border-color transparent !important
 .js-select
 	&.js-standar
 		margin 5px 0
@@ -495,17 +508,15 @@ body
 	&:hover
 		background-color $color !important
 .js-carousel
-	flexCenter()
+	flexStart()
 	justify-content flex-start
 	position relative
 	width 100%
-	max-width 675px
+	flex-wrap wrap
 	.table-responsive
 		width 100%
-		max-width 205px
-		margin auto
-		border 1px solid $color
-		border-radius 10px
+		max-width 525px
+		margin 10px
 		table
 			margin 0
 .js-button
@@ -572,6 +583,7 @@ table
 				color #000000
 				padding 5px 10px !important
 				line-height 16px !important
+				vertical-align middle !important
 	&>thead
 		&>tr
 			&>th
