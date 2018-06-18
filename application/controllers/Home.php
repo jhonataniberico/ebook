@@ -43,8 +43,8 @@ class Home extends CI_Controller {
             $datos = $this->M_usuario->getDatosServicio($id_pais, $id_tipo, $id_costo);
             if(count($datos) == 0){
                 $html  = '<tr>
-                            <td>-</td>
-                            <td>-</td>
+                            <td>No se encontraron paquetes disponibles.</td>
+                            <td></td>
                           </tr>';
             }else {
                 foreach ($datos as $key) {

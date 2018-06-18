@@ -32,6 +32,10 @@ function getServicios(id){
         }
         componentHandler.upgradeAllRegistered();
 	}
+    setTimeout( function(){ 
+        $('#presupuestoSelect').addClass('open');
+        $('#presupuestoSelect').find('.bootstrap-select').addClass('open');
+    } , 1000);
 	$('#cardPresupuesto').addClass('animated fadeInRight');
 	if(presupuesto == null || presupuesto == ''){
 		return;
@@ -45,6 +49,7 @@ function getServicios(id){
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
+        console.log(data.tabla);
         if(data.error == 0){
         	$('.tabla').html('');
         	$('.tabla').append(data.tabla);
