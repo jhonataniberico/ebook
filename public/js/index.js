@@ -32,12 +32,12 @@ function getServicios(id){
         }
         componentHandler.upgradeAllRegistered();
 	}
-    setTimeout( function(){ 
-        $('#presupuestoSelect').addClass('open');
-        $('#presupuestoSelect').find('.bootstrap-select').addClass('open');
-    } , 1000);
 	$('#cardPresupuesto').addClass('animated fadeInRight');
 	if(presupuesto == null || presupuesto == ''){
+        setTimeout( function(){ 
+            $('#presupuestoSelect').addClass('open');
+            $('#presupuestoSelect').find('.bootstrap-select').addClass('open');
+        } , 500);
 		return;
 	}
 	$('.opacity-done').addClass('animated fadeInRight');
