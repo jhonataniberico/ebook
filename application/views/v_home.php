@@ -48,8 +48,8 @@
                         <input type="email" class="form-control" id="pais" readonly="readonly" value="<?php echo $pais ?>">
                     </div>
                     <div class="form-group js-input">
-                        <label for="user">S User</label>
-                        <input type="email" class="form-control" id="user" readonly="readonly" value="<?php echo $name_user ?>">
+                        <!-- <label for="user">S User</label>
+                        <input type="email" class="form-control" id="user" readonly="readonly" value="<?php echo $name_user ?>"> -->
                     </div>
                     <div class="form-group js-input">
                         <label for="nombre">Nombre</label>
