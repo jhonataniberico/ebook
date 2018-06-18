@@ -11,12 +11,12 @@ function getServicios(id){
 		$('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">'+
                                 '<option value="5">EUR 728</option>'+
                             '</select>');
-		componentHandler.upgradeAllRegistered();
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
             $('select').selectpicker('mobile');
         } else {
             $('select').selectpicker();
         }
+        componentHandler.upgradeAllRegistered();
 	}else {
 		$('.quitar').html('');
 		$('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">'+
@@ -25,12 +25,13 @@ function getServicios(id){
                                 '<option value="3">Budget 5K - 10K Euros</option>'+
                                 '<option value="4">Budget > 10K Euros</option>'+
                             '</select>');
-		componentHandler.upgradeAllRegistered();
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+		//componentHandler.upgradeAllRegistered();
+		/*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
             $('select').selectpicker('mobile');
         } else {
             $('select').selectpicker();
-        }
+        }*/
+        componentHandler.upgradeAllRegistered();
 	}
 	$('#cardPresupuesto').addClass('animated fadeInRight');
 	if(presupuesto == null || presupuesto == ''){

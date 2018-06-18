@@ -37,9 +37,9 @@
                     </div>
                 </div>
                 <div class="js-title">
-                    <h1>Bienvenido a <br><strong>Marketing Services Directory eBook</strong></h1>
+                    <h1>Bienvenido al <br><strong>Directorio de Servicios para Partners SAP LAC</strong></h1>
                     <p>Obtenga rápidamente una configuración personalizada de las acciones de marketing que necesita.</p>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="abrirModal()">Login</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="abrirModal()">Ingresar</button>
                 </div>
                 <div class="js-bar">
                     <div class="js-bar__children"></div>
@@ -59,14 +59,14 @@
                         <div class="mdl-card__supporting-text">
                             <div class="col-xs-12 p-0 js-login">
                                 <div class="col-xs-8 p-l-0">
-                                    <h2>Marketing Services Directory eBook</h2>
+                                    <h2>Directorio de Servicios para Partners SAP LAC</h2>
                                 </div>
                                 <div class="col-xs-4 p-0 text-center">
                                     <img src="<?php echo RUTA_IMG?>cards/login.png">
                                 </div>
                             </div>
                             <div class="col-xs-12 p-0">
-                                <p>Login</p>
+                                <p>Acceso Partners</p>
                             </div>
                             <div class="col-xs-12 js-input p-0">
                                 <input type="text" id="usuario" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
