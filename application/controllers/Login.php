@@ -20,7 +20,9 @@ class Login extends CI_Controller {
         $data['msj']   = null;
          try {
 			$id_partner  = $this->input->post('id_partner');
-			$username = $this->M_usuario->verificarUsuario(intval($id_partner));
+            $email       = $this->input->post('email');
+            $pais        = $this->input->post('pais');
+			$username = $this->M_usuario->verificarUsuario(intval($id_partner), $email, $pais);
 			if(count($username) != 0){
 				if($username[0]->partner_id == strval($id_partner)){
 					$session = array('usuario' 	   => $id_partner,
