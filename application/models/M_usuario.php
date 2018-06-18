@@ -21,10 +21,12 @@ class M_usuario extends  CI_Model{
       }
       return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
-    function verificarUsuario($id_partner){
+    function verificarUsuario($id_partner, $email, $pais){
       $sql = "SELECT *
                 FROM usuarios
-               WHERE partner_id = ".$id_partner."";
+               WHERE partner_id = ".$id_partner."
+                 AND pais = ".$pais."
+                 AND AND email LIKE '%".$email."%'";
       $result = $this->db->query($sql);
       return $result->result();
     }

@@ -1,11 +1,23 @@
 function ingresar(){
 	var usuario  = $('#usuario').val();
+  var email    = $('#email').val();
+  var pais     = $('#pais').val();
+  if(email == null){
+    $('#email').parent().addClass('is-invalid');
+    return;
+  }
 	if(usuario == null){
 		$('#usuario').parent().addClass('is-invalid');
 		return;
 	}
+  if(pais == null){
+    $('#pais').parent().addClass('is-invalid');
+    return;
+  }
 	$.ajax({
-		data : {id_partner  : usuario},
+		data : {id_partner  : usuario,
+            email       : email,
+            pais        : pais},
 		url  : 'Login/ingresar',
 		type : 'POST'
 	}).done(function(data){
