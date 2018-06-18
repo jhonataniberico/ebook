@@ -75,7 +75,7 @@
                                 <input type="text" id="usuario" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="col-xs-12 js-input js-select p-0">
-                                <select class="selectpicker" id="pais" name="pais" title="País" onchange="getServicios(this.id);">
+                                <select class="selectpicker" id="pais" name="pais" title="País">
                                     <option value="Peru">Peru</option>
                                     <option value="Colombia">Colombia</option>
                                     <option value="Brasil">Brasil</option>

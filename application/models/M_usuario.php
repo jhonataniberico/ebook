@@ -25,8 +25,8 @@ class M_usuario extends  CI_Model{
       $sql = "SELECT *
                 FROM usuarios
                WHERE partner_id = ".$id_partner."
-                 AND pais = ".$pais."
-                 AND AND email LIKE '%".$email."%'";
+                 AND pais = '".$pais."'
+                 AND email LIKE '%".$email."%'";
       $result = $this->db->query($sql);
       return $result->result();
     }
