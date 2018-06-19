@@ -64,8 +64,10 @@
                         <input type="email" class="form-control" id="email" readonly="readonly" value="<?php echo $email ?>">
                     </div>
                     <div class="form-group js-input">
-                        <label for="mdf">Ver MDFs disponibles</label>
-                        <input type="email" class="form-control js-input-color" id="mdf" readonly="readonly" value="USD <?php echo $mdf ?>">
+                        <!-- NO BORRAR -->
+                        <!-- <label for="mdf">Ver MDFs disponibles</label> -->
+                        <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="exportExcel()">Ver MDFs disponibles</button> -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Ver MDFs disponibles</button>
                     </div>
                 </div>
             </div>
@@ -134,6 +136,9 @@
                     </div>
                 </div>
         </section>
+        <form action="home/exportarExcel" id="exportarExcel" name="exportarExcel" method="post">
+            <input type="hidden" name="mi_archivo">
+        </form>
 
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>

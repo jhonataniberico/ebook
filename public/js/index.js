@@ -93,6 +93,8 @@ function cerrarCesion(){
         }
 	});
 }
+
+// NO BORRAR 
 // function exportExcel() {
 //     $.ajax({
 
