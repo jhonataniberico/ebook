@@ -185,7 +185,37 @@
                                     <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
                                 </div>
                             </div>
-                            <div class="js-card--large__select" id="presupuestoSelect">
+                            <div class="js-flex">
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>PE Benefit</p>
+                                    </div>
+                                    <button id="Table1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Budget < 5K Euros</p>
+                                    </div>
+                                    <button id="Table2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Budget 5K - 10K Euros</p>
+                                    </div>
+                                    <button id="Table3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Budget > 10K Euros</p>
+                                    </div>
+                                    <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                </div>
+                            </div>
+                            <!-- <div class="js-card--large__select" id="presupuestoSelect">
                                 <div class="js-select quitar">
                                     <select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">
                                         <option value="1">PE Benefit</option>
@@ -194,7 +224,7 @@
                                         <option value="4">Budget > 10K Euros</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="table-responsive opacity-done">
                             <table class="table">
