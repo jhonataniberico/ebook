@@ -1,9 +1,8 @@
 function getServicios(id){
 	var idSelect    = $('#'+id);
 	// var servicio 	= $('#servicio').val();
-    var servicio    = idSelect.text();
+    var servicio    = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
 	var presupuesto = $('#presupuesto').val();
-    console.log(idSelect);
     console.log(id);
     console.log(servicio);
 	idSelect.parents('.js-select').addClass('selected');
