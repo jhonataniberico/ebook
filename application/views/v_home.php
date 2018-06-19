@@ -124,15 +124,25 @@
                             </div>
                         </div> -->
                         <div class="js-card--large">
-                            <div class="js-card--large__content">
-                                <div class="js-card--large__content-tipo">
-                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                            <div class="js-flex">
+                                <div class="js-card--large__content">
+                                    <div class="js-card--large__content-tipo">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    </div>
+                                    <div class="js-card--large__content-name">
+                                        <small>¿Que tipo de servicio deseas realizar?</small>
+                                    </div>
                                 </div>
-                                <div class="js-card--large__content-name">
-                                    <small>¿Que tipo de servicio deseas realizar?</small>
+                                <div class="js-card--large__content">
+                                    <div class="js-card--large__content-tipo">
+                                        <img src="<?php echo RUTA_IMG?>cards/inversion.png">
+                                    </div>
+                                    <div class="js-card--large__content-name">
+                                        <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="js-flex">
+                            <div class="js-flex js-absolute">
                                 <div class="js-card__servicio">
                                     <div class="js-card__servicio--contenido">
                                         <img src="<?php echo RUTA_IMG?>cards/servicio.png">
@@ -177,14 +187,6 @@
                             </div> -->
                         </div>
                         <div id="cardPresupuesto" class="js-card--large opacity-done">
-                            <div class="js-card--large__content">
-                                <div class="js-card--large__content-tipo">
-                                    <img src="<?php echo RUTA_IMG?>cards/inversion.png">
-                                </div>
-                                <div class="js-card--large__content-name">
-                                    <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
-                                </div>
-                            </div>
                             <div class="js-flex">
                                 <div class="js-card__servicio">
                                     <div class="js-card__servicio--contenido">
