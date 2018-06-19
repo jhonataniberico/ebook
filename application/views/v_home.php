@@ -171,7 +171,7 @@
                                     </div>
                                     <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                                 </div>
-                                <?php ($pais == 'Colombia') {?>
+                                <?php if($pais == 'Colombia') {?>
                                     <div class="js-card__servicio">
                                         <div class="js-card__servicio--contenido">
                                             <img src="<?php echo RUTA_IMG?>cards/servicio.png">
