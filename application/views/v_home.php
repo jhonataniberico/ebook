@@ -171,6 +171,15 @@
                                     </div>
                                     <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                                 </div>
+                                <?php ($pais == 'Colombia') {?>
+                                    <div class="js-card__servicio">
+                                        <div class="js-card__servicio--contenido">
+                                            <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                            <p>Innovation Program4Partners</p>
+                                        </div>
+                                        <button id="button5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                                    </div>
+                                <?php } ?>
                             </div>
                             <!-- <div class="js-card--large__select">
                                 <div class="js-select">
