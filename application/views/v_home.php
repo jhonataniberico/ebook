@@ -138,28 +138,28 @@
                                         <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                         <p>Digital Optimization</p>
                                     </div>
-                                    <button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+                                    <button id="button1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                                 </div>
                                 <div class="js-card__servicio">
                                     <div class="js-card__servicio--contenido">
                                         <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                         <p>Demand Generation</p>
                                     </div>
-                                    <button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+                                    <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                                 </div>
                                 <div class="js-card__servicio">
                                     <div class="js-card__servicio--contenido">
                                         <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                         <p>Digital Content</p>
                                     </div>
-                                    <button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+                                    <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                                 </div>
                                 <div class="js-card__servicio">
                                     <div class="js-card__servicio--contenido">
                                         <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                         <p>Marketing Strategy</p>
                                     </div>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+                                    <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                                 </div>
                             </div>
                             <!-- <div class="js-card--large__select">
