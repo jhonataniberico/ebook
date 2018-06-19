@@ -37,6 +37,7 @@ function getServicios(id){
 	}
 	
     $('#cardPresupuesto').addClass('animated fadeInRight');
+    $('#servicioFilter').text('Servicio: '+servicio);
     if(presupuesto == null || presupuesto == ''){
         setTimeout( function(){ 
             $('#presupuestoSelect').find('.bootstrap-select').addClass('open');
@@ -72,6 +73,7 @@ function getTable(id){
             if(data.error == 0){
                 $('.tabla').html('');
                 $('.tabla').append(data.tabla);
+                $('#presupuestoFilter').text('Presupuesto: '+presupuesto);
             }else{
                 return;
             }

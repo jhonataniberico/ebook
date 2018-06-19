@@ -78,6 +78,10 @@
                         <div class="js-partner">
                             <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
                         </div>
+                        <div class="js-filter">
+                            <p id="servicioFilter"></p>
+                            <p id="presupuestoFilter"> </p>
+                        </div>
                     </div>
                     <div class="js-carousel">
                         <!-- <div class="js-card--large">
