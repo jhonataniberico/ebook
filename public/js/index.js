@@ -1,7 +1,11 @@
 function getServicios(id){
 	var idSelect    = $('#'+id);
-	var servicio 	= $('#servicio').val();
+	// var servicio 	= $('#servicio').val();
+    var servicio    = idSelect.text();
 	var presupuesto = $('#presupuesto').val();
+    console.log(idSelect);
+    console.log(id);
+    console.log(servicio);
 	idSelect.parents('.js-select').addClass('selected');
 	if(servicio == null || servicio == ''){
 		return;
