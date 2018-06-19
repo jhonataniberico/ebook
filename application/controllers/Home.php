@@ -33,11 +33,12 @@ class Home extends CI_Controller {
         try {
             $html          = '';
             $tipo_servicio = $this->input->post('tipo_servicio');
-            $id_costo      = intval($this->input->post('presupuesto'));
+            $presupuesto   = $this->input->post('presupuesto');
+            // $id_costo      = intval($this->input->post('presupuesto'));
             $pais          = $this->session->userdata('Pais_user');
             $id_pais       = $this->M_usuario->getIdDatosByPais($pais);
             $id_tipo       = $this->M_usuario->getIdDatosByTipo($tipo_servicio);
-            //$id_costo      = $this->M_usuario->getIdDatosByCosto($presupuesto);
+            $id_costo      = $this->M_usuario->getIdDatosByCosto($presupuesto);
             if($id_tipo == '' || $id_tipo == null){
                 return;
             }

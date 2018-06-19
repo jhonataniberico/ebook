@@ -1,10 +1,10 @@
+var servicio    = null;
+var presupuesto = null;
 function getServicios(id){
 	var idSelect    = $('#'+id);
 	// var servicio 	= $('#servicio').val();
-    var servicio    = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
-	var presupuesto = $('#presupuesto').val();
-    console.log(id);
-    console.log(servicio);
+    servicio    = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
+	// var presupuesto = $('#presupuesto').val();
 	idSelect.parents('.js-select').addClass('selected');
 	if(servicio == null || servicio == ''){
 		return;
@@ -48,9 +48,14 @@ function getServicios(id){
 
 function getTable(id){
     var idSelect    = $('#'+id);
-    var servicio    = $('#servicio').val();
-    var presupuesto = $('#presupuesto').val();
+    // var servicio    = $('#servicio').val();
+    // var presupuesto = $('#presupuesto').val();
+    // servicio    = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
+    presupuesto = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
     idSelect.parents('.js-select').addClass('selected');
+
+    console.log(servicio);
+    console.log(presupuesto);
     $('#cardPresupuesto').addClass('animated fadeInRight');
     if(presupuesto == null || presupuesto == ''){
         setTimeout( function(){ 
@@ -67,6 +72,7 @@ function getTable(id){
     }).done(function(data){
         try{
             data = JSON.parse(data);
+            console.log(data.tabla);
             if(data.error == 0){
                 $('.tabla').html('');
                 $('.tabla').append(data.tabla);
