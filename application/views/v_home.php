@@ -18,7 +18,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>bentonsans.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
@@ -63,7 +63,7 @@
                         <label for="email">email</label>
                         <input type="email" class="form-control" id="email" readonly="readonly" value="<?php echo $email ?>">
                     </div>
-                    <div class="form-group js-input">
+                    <div class="form-group js-input js-button--form">
                         <!-- NO BORRAR -->
                         <!-- <label for="mdf">Ver MDFs disponibles</label> -->
                         <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="exportExcel()">Ver MDFs disponibles</button> -->
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="js-carousel">
-                        <div class="js-card--large">
+                        <!-- <div class="js-card--large">
                             <div class="js-card--large__content">
                                 <div class="js-card--large__content-tipo">
                                     <img src="<?php echo RUTA_IMG?>cards/servicio.png">
@@ -102,6 +102,79 @@
                                     </select>
                                 </div>
                             </div>
+                        </div>
+                        <div id="cardPresupuesto" class="js-card--large opacity-done">
+                            <div class="js-card--large__content">
+                                <div class="js-card--large__content-tipo">
+                                    <img src="<?php echo RUTA_IMG?>cards/inversion.png">
+                                </div>
+                                <div class="js-card--large__content-name">
+                                    <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
+                                </div>
+                            </div>
+                            <div class="js-card--large__select" id="presupuestoSelect">
+                                <div class="js-select quitar">
+                                    <select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">
+                                        <option value="1">PE Benefit</option>
+                                        <option value="2">Budget < 5K Euros</option>
+                                        <option value="3">Budget 5K - 10K Euros</option>
+                                        <option value="4">Budget > 10K Euros</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="js-card--large">
+                            <div class="js-card--large__content">
+                                <div class="js-card--large__content-tipo">
+                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                </div>
+                                <div class="js-card--large__content-name">
+                                    <small>¿Que tipo de servicio deseas realizar?</small>
+                                </div>
+                            </div>
+                            <div class="js-flex">
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Digital Optimization</p>
+                                    </div>
+                                    <button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Demand Generation</p>
+                                    </div>
+                                    <button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Digital Content</p>
+                                    </div>
+                                    <button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Marketing Strategy</p>
+                                    </div>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccione</button>
+                                </div>
+                            </div>
+                            <!-- <div class="js-card--large__select">
+                                <div class="js-select">
+                                    <select class="selectpicker" id="servicio" name="servicio" title="Seleccione" onchange="getServicios(this.id);">
+                                        <option value="Digital Optimization">Digital Optimization</option>
+                                        <option value="Demand Generation">Demand Generation</option>
+                                        <option value="Digital Content">Digital Content</option>
+                                        <option value="Marketing Strategy">Marketing Strategy</option>
+                                        <?php if($pais == 'Colombia'){ ?>
+                                        <option value="Innovation Program4Partners">Innovation Program4Partners</option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div> -->
                         </div>
                         <div id="cardPresupuesto" class="js-card--large opacity-done">
                             <div class="js-card--large__content">

@@ -1,6 +1,6 @@
-$regular = 'BentonSansRegular'
-$medium  = 'BentonSansMedium'
-$bold    = 'BentonSansBold'
+$regular = 'RobotoRegular'
+$medium  = 'RobotoMedium'
+$bold    = 'RobotoBold'
 $color   = #FDB913
 $Tcenter = translate(-50% , -50%)
 flexCenter()
@@ -109,6 +109,8 @@ flipCardBackHover()
 	-o-transform perspective(600) rotateY(0)
 	transform perspective(600) rotateY(0)
 	z-index 950
+.js-flex
+	flexCenter()
 /*TABLE*/
 table
 	&>tbody
@@ -146,7 +148,9 @@ body
 	overflow hidden
 	font-family $regular
 	color #FFFFFF
-	background-color #FFFFFF
+	background-color #F8F8F8
+img
+	width 100%
 .js-header
 	position fixed
 	top 0
@@ -344,16 +348,19 @@ body
 	-o-transition width 0.3s linear, margin 0.4s linear, opacity 0.1s linear, transform .3s linear
 	transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
 	width 100%
-	max-width 205px
 	margin 10px
 	flex none
 	&.js-card--large__flex
 		margin 10px auto
 	.js-card--large__content
+		flexCenter()
+		justify-content center
 		border 1px solid $color
 		border-radius 10px
-		padding 5px 20px
+		padding 5px 10px
 		text-align center
+		width 100%
+		max-width 205px
 		.js-card--large__content-imagen
 			flexCenter()
 			justify-content center
@@ -370,22 +377,17 @@ body
 					color $color
 					font-family $medium
 		.js-card--large__content-tipo
-			flexEnd()
-			height 100px
-			justify-content center
 			img
 				width 100%
-				max-width 85px
+				max-width 120px
 		.js-card--large__content-name
-			flexEnd()
-			justify-content center
-			margin 12px 0 10px 0
-			height 60px
+			margin 0 10px
+			text-align left
 			small
-				font-size 18px
-				line-height 20px
+				font-size 16px
+				line-height 18px
+				display inline-block
 				color #000000
-				text-align left
 	.js-card--large__button
 		padding 10px 0
 		button
@@ -464,6 +466,20 @@ body
 			font-family $medium
 			margin 0
 			font-size 16px
+.js-card__servicio
+	width 100%
+	max-width 200px
+	margin 10px
+	text-align center
+	background-color #FFFFFF
+	border-radius 10px
+	box-shadow 5px 5px 10px rgba(0,0,0,0.2)
+	padding 15px
+	.js-card__servicio--contenido
+		img
+			max-width 100px
+		p
+			color #000000
 .js-window
 	absolute()
 	flexCenter()
@@ -568,6 +584,16 @@ body
 	width 100%
 	&:hover
 		background-color $color
+.js-button--form
+	flexEnd()
+	height 67px
+	button
+		background-color $color !important
+		text-transform initial
+		color #FFFFFF
+		height 42px
+		font-family $medium
+		border-radius 5px
 .js-card-login
 	flexCenter()
 	background-color #000000
