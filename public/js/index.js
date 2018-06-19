@@ -8,7 +8,7 @@ function getServicios(id){
 	}
 	if(servicio == 'Innovation Program4Partners'){
 		$('.quitar').html('');
-		$('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">'+
+		$('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getTable(this.id);">'+
                                 '<option value="5">EUR 728</option>'+
                             '</select>');
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
@@ -19,7 +19,7 @@ function getServicios(id){
         componentHandler.upgradeAllRegistered();
 	}else {
 		$('.quitar').html('');
-		$('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">'+
+		$('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getTable(this.id);">'+
                                 '<option value="1">PE Benefit</option>'+
                                 '<option value="2">Budget < 5K Euros</option>'+
                                 '<option value="3">Budget 5K - 10K Euros</option>'+
@@ -32,49 +32,76 @@ function getServicios(id){
         }
         componentHandler.upgradeAllRegistered();
 	}
-	$('#cardPresupuesto').addClass('animated fadeInRight');
-	if(presupuesto == null || presupuesto == ''){
+	
+    $('#cardPresupuesto').addClass('animated fadeInRight');
+    if(presupuesto == null || presupuesto == ''){
         setTimeout( function(){ 
-            $('#presupuestoSelect').addClass('open');
             $('#presupuestoSelect').find('.bootstrap-select').addClass('open');
         } , 500);
-		return;
-	}
-	$('.opacity-done').addClass('animated fadeInRight');
-	$.ajax({
-		data : {tipo_servicio : servicio,
-				presupuesto   : presupuesto},
-		url  : 'Home/guardarServicios',
-		type : 'POST'
-	}).done(function(data){
-		try{
-        data = JSON.parse(data);
-        console.log(data.tabla);
-        if(data.error == 0){
-        	$('.tabla').html('');
-        	$('.tabla').append(data.tabla);
-        }else{
-        	return;
-        }
-      } catch (err){
-        msj('error',err.message);
-      }
-	});
+        return;
+    }
+    $('.opacity-done').addClass('animated fadeInRight');
 }
+
+function getTable(id){
+    var idSelect    = $('#'+id);
+    var servicio    = $('#servicio').val();
+    var presupuesto = $('#presupuesto').val();
+    idSelect.parents('.js-select').addClass('selected');
+    $('#cardPresupuesto').addClass('animated fadeInRight');
+    if(presupuesto == null || presupuesto == ''){
+        setTimeout( function(){ 
+            $('#presupuestoSelect').find('.bootstrap-select').addClass('open');
+        } , 500);
+        return;
+    }
+    $('.opacity-done').addClass('animated fadeInRight');
+    $.ajax({
+        data : {tipo_servicio : servicio,
+                presupuesto   : presupuesto},
+        url  : 'Home/guardarServicios',
+        type : 'POST'
+    }).done(function(data){
+        try{
+            data = JSON.parse(data);
+            if(data.error == 0){
+                $('.tabla').html('');
+                $('.tabla').append(data.tabla);
+            }else{
+                return;
+            }
+        } catch (err){
+            msj('error',err.message);
+        }
+    });    
+}
+
 function cerrarCesion(){
 	$.ajax({
 		url  : 'Home/cerrarCesion',
 		type : 'POST'
 	}).done(function(data){
 		try{
-        data = JSON.parse(data);
-        if(data.error == 0){
-        	location.href = 'Login';
-        }else {
-        	return;
+            data = JSON.parse(data);
+            if(data.error == 0){
+            	location.href = 'Login';
+            }else {
+            	return;
+            }
+        }catch(err){
+            msj('error',err.message);
         }
-      }catch(err){
-        msj('error',err.message);
-      }
 	});
 }
+// function exportExcel() {
+//     $.ajax({
+
+//     }).done(function(data){
+//         try{
+
+//         } catch (err){
+//             msj('error', err.message);
+//         }
+//     });
+//     // 
+// }
