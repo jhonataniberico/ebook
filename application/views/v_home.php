@@ -187,7 +187,7 @@
                                     <?php } ?>
                                 </div>
                                 <div id="cardPresupuesto" class="js-card--large opacity-done js-right">
-                                    <div class="js-flex">
+                                    <div id="cardServicios" class="js-flex js-absolute">
                                         <div class="js-card__servicio">
                                             <div class="js-card__servicio--contenido">
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
@@ -213,6 +213,15 @@
                                             <div class="js-card__servicio--contenido">
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                                 <p>Budget > 10K Euros</p>
+                                            </div>
+                                            <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                        </div>
+                                    </div>
+                                    <div id="cardEur" class="js-flex js-absolute opacity-done">
+                                        <div class="js-card__servicio">
+                                            <div class="js-card__servicio--contenido">
+                                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                                <p>EUR 728</p>
                                             </div>
                                             <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                         </div>
