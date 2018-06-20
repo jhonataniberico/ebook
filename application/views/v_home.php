@@ -133,7 +133,7 @@
                                         <small>¿Que tipo de servicio deseas realizar?</small>
                                     </div>
                                 </div>
-                                <div class="js-card--large__content">
+                                <div class="js-card--large__content opacity-done js-right">
                                     <div class="js-card--large__content-tipo">
                                         <img src="<?php echo RUTA_IMG?>cards/inversion.png">
                                     </div>
@@ -143,7 +143,7 @@
                                 </div>
                             </div>
                             <div class="js-relative">
-                                <div class="js-flex js-absolute">
+                                <div class="js-flex js-absolute js-left">
                                     <div class="js-card__servicio">
                                         <div class="js-card__servicio--contenido">
                                             <img src="<?php echo RUTA_IMG?>cards/servicio.png">
@@ -182,7 +182,7 @@
                                         </div>
                                     <?php } ?>
                                 </div>
-                                <div id="cardPresupuesto" class="js-card--large opacity-done">
+                                <div id="cardPresupuesto" class="js-card--large opacity-done js-right">
                                     <div class="js-flex">
                                         <div class="js-card__servicio">
                                             <div class="js-card__servicio--contenido">

@@ -35,7 +35,9 @@ function getServicios(id){
         }
         componentHandler.upgradeAllRegistered();
 	}
-    $('#cardPresupuesto').addClass('animated fadeInRight');
+    // $('#cardPresupuesto').addClass('animated fadeInRight');
+    $('.js-left').addClass('animated fadeOutLeft');
+    $('.js-right').addClass('animated fadeInRight');
     $('#servicioFilter').text('Servicio: '+servicio);
     if(presupuesto == null || presupuesto == ''){
         setTimeout( function(){ 
