@@ -23,7 +23,7 @@
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
-    <body>
+    <body style="overflow-y:scroll; overflow-x:hidden;">
         <div class="js-header">
             <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
             <div class="js-user">
@@ -129,7 +129,7 @@
                         </div> -->
                         <div class="js-card--large">
                             <div class="js-flex">
-                                <div class="js-card--large__content">
+                                <div class="js-card--large__content" onclick="obtenerServicios();">
                                     <div class="js-card--large__content-tipo">
                                         <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                     </div>
@@ -146,7 +146,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="js-relative">
+                            <div class="js-relative" style="margin-top: 110px">
                                 <div class="js-flex js-absolute js-left">
                                     <div class="js-card__servicio">
                                         <div class="js-card__servicio--contenido">
@@ -216,44 +216,18 @@
                                             </div>
                                             <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                         </div>
-                                    </div>
-                                    <div id="cardEur" class="js-flex js-absolute opacity-done">
-                                        <div class="js-card__servicio">
+                                        <div class="js-card__servicio" id="cardEur">
                                             <div class="js-card__servicio--contenido">
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                                 <p>EUR 728</p>
                                             </div>
-                                            <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                            <button id="Table5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                         </div>
                                     </div>
-                                    <!-- <div class="js-card--large__select" id="presupuestoSelect">
-                                        <div class="js-select quitar">
-                                            <select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">
-                                                <option value="1">PE Benefit</option>
-                                                <option value="2">Budget < 5K Euros</option>
-                                                <option value="3">Budget 5K - 10K Euros</option>
-                                                <option value="4">Budget > 10K Euros</option>
-                                            </select>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
-                            
-                            <!-- <div class="js-card--large__select">
-                                <div class="js-select">
-                                    <select class="selectpicker" id="servicio" name="servicio" title="Seleccione" onchange="getServicios(this.id);">
-                                        <option value="Digital Optimization">Digital Optimization</option>
-                                        <option value="Demand Generation">Demand Generation</option>
-                                        <option value="Digital Content">Digital Content</option>
-                                        <option value="Marketing Strategy">Marketing Strategy</option>
-                                        <?php if($pais == 'Colombia'){ ?>
-                                        <option value="Innovation Program4Partners">Innovation Program4Partners</option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div> -->
                         </div>
-                        <div class="table-responsive opacity-done">
+                        <div class="table-responsive opacity-done" style="margin-top: 110px">
                             <table class="table">
                                 <thead>
                                     <tr>

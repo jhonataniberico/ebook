@@ -4,6 +4,12 @@ class M_usuario extends  CI_Model{
     function __construct(){
         parent::__construct();
     }
+    function getPaises() {
+        $sql = "SELECT * 
+                  FROM paises";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
     function insertarDatos($arrayInsert, $tabla){
       $this->db->insert($tabla, $arrayInsert);
       $sol = $this->db->insert_id();
@@ -31,8 +37,7 @@ class M_usuario extends  CI_Model{
       return $result->result();
     }
     function getDatosServicio($pais, $tipo_servicio, $presupuesto){
-      $sql = "SELECT s.*,
-                     p.link
+      $sql = "SELECT s.*
                 FROM servicio s,
                      paises p,
                      tipo_servicio t,

@@ -13,7 +13,13 @@ class Login extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-		$this->load->view('v_login');
+        $combo     = $this->M_usuario->getPaises();
+        $htmlCombo = '';
+        foreach($combo as $key) {
+            $htmlCombo .= '<option value="'.$key->Nombre.'">'.$key->Nombre.'</option>';
+        }
+        $data['combo'] = $htmlCombo;
+		$this->load->view('v_login', $data);
 	}
 	function ingresar(){
 		$data['error'] = EXIT_ERROR;

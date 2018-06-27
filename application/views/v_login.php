@@ -76,9 +76,10 @@
                             </div>
                             <div class="col-xs-12 js-input js-select p-0">
                                 <select class="selectpicker" id="pais" name="pais" title="País">
-                                    <option value="Peru">Peru</option>
+                                    <?php echo $combo; ?>
+                                    <!-- <option value="Peru">Peru</option>
                                     <option value="Colombia">Colombia</option>
-                                    <option value="Brasil">Brasil</option>
+                                    <option value="Brasil">Brasil</option> -->
                                 </select>
                             </div>
                             <div class="col-xs-12 mdl-card__actions text-right p-r-0">

@@ -2,55 +2,26 @@ var servicio    = null;
 var presupuesto = null;
 function getServicios(id){
 	var idSelect    = $('#'+id);
-	// var servicio 	= $('#servicio').val();
     servicio    = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
-	// var presupuesto = $('#presupuesto').val();
 	idSelect.parents('.js-select').addClass('selected');
 	if(servicio == null || servicio == ''){
 		return;
 	}
 	if(servicio == 'Innovation Program4Partners'){
-        $('#cardServicios').addClass('animated fadeOutLeft');
-        $('#cardEur').addClass('animated fadeInRight');
-		// $('.quitar').html('');
-		// $('.quitar').append('<select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getTable(this.id);">'+
-  //                               '<option value="5">EUR 728</option>'+
-  //                           '</select>');
-		// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-  //           $('select').selectpicker('mobile');
-  //       } else {
-  //           $('select').selectpicker();
-  //       }
-  //       componentHandler.upgradeAllRegistered();
-	}
-    // $('#cardPresupuesto').addClass('animated fadeInRight');
+        $('#cardEur').css('display', 'block');
+	} else {
+        $('#cardEur').css('display', 'none');
+    }
     $('.js-left').addClass('animated fadeOutLeft');
     $('.js-right').addClass('animated fadeInRight');
     $('#servicioFilter').text('Servicio: '+servicio);
-    if(presupuesto == null || presupuesto == ''){
-        setTimeout( function(){ 
-            $('#presupuestoSelect').find('.bootstrap-select').addClass('open');
-        } , 500);
-        return;
-    }
-    $('.opacity-done').addClass('animated fadeInRight');
 }
 
 function getTable(id){
     var idSelect    = $('#'+id);
-    // var servicio    = $('#servicio').val();
-    // var presupuesto = $('#presupuesto').val();
-    // servicio    = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
     presupuesto = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
     idSelect.parents('.js-select').addClass('selected');
-    // $('#cardPresupuesto').addClass('animated fadeInRight');
-    if(presupuesto == null || presupuesto == ''){
-        setTimeout( function(){ 
-            $('#presupuestoSelect').find('.bootstrap-select').addClass('open');
-        } , 500);
-        return;
-    }
-    $('.opacity-done').addClass('animated fadeInRight');
+    $('.table-responsive ').addClass('animated fadeInRight');
     $.ajax({
         data : {tipo_servicio : servicio,
                 presupuesto   : presupuesto},
@@ -70,6 +41,16 @@ function getTable(id){
             msj('error',err.message);
         }
     });    
+}
+
+function obtenerServicios(){
+    servicio    = null;
+    presupuesto = null;
+    $('.js-left').removeClass('animated fadeOutLeft');
+    $('.js-right').removeClass('animated fadeInRight');
+    $('#cardServicios').removeClass('animated fadeInRight');
+    $('.table-responsive').removeClass('animated fadeInRight');
+    $('.js-filter').find('p').text('')
 }
 
 function cerrarCesion(){
