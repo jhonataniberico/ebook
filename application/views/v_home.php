@@ -176,40 +176,47 @@
                                         </div>
                                         <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                                     </div>
+                                    <div class="js-card__servicio">
+                                        <div class="js-card__servicio--contenido">
+                                            <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                            <p>Partner Solution Packages (Package4Growth)</p>
+                                        </div>
+                                        <button id="button5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                                    </div>
                                     <?php if($pais == 'Colombia') {?>
                                         <div class="js-card__servicio">
                                             <div class="js-card__servicio--contenido">
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                                 <p>Innovation Program4Partners</p>
                                             </div>
-                                            <button id="button5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                                            <button id="button6" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                                         </div>
                                     <?php } ?>
                                 </div>
                                 <div id="cardPresupuesto" class="js-card--large opacity-done js-right">
                                     <div id="cardServicios" class="js-flex js-absolute">
-                                        <div class="js-card__servicio">
+                                        <div class="js-card__servicio" id="PEBenefit">
                                             <div class="js-card__servicio--contenido">
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                                 <p>PE Benefit</p>
                                             </div>
                                             <button id="Table1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                         </div>
-                                        <div class="js-card__servicio">
+                                        <div class="js-card__servicio" id="low">
                                             <div class="js-card__servicio--contenido">
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                                 <p>Budget < 5K Euros</p>
                                             </div>
                                             <button id="Table2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                         </div>
-                                        <div class="js-card__servicio">
+                                        <div class="js-card__servicio" id="medium">
                                             <div class="js-card__servicio--contenido">
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                                 <p>Budget 5K - 10K Euros</p>
                                             </div>
                                             <button id="Table3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                         </div>
-                                        <div class="js-card__servicio">
+                                        <div class="js-card__servicio" id="high">
                                             <div class="js-card__servicio--contenido">
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                                 <p>Budget > 10K Euros</p>

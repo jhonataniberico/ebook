@@ -50,12 +50,19 @@ class Home extends CI_Controller {
                           </tr>';
             }else {
                 foreach ($datos as $key) {
-                    $html .= '<tr>
-                                <td><a href="'.$key->link.'">'.$key->Nombre.'</a></td>
-                                <td><a href="'.$key->link.'" class="mdl-button mdl-js-button mdl-button--icon">
-                                        <i class="fa fa-arrow-right"></i>
-                                    </a></td>
-                              </tr>';
+                    if($key->link == '' || $key->link == null) {
+                        $html .= '<tr>
+                                    <td><p>'.$key->Nombre.'</p></td>
+                                    <td> </td>
+                                  </tr>';
+                    } else {
+                        $html .= '<tr>
+                                    <td><a href="'.$key->link.'">'.$key->Nombre.'</a></td>
+                                    <td><a href="'.$key->link.'" class="mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </a></td>
+                                  </tr>';
+                    }
                 }
             }
             $data['tabla'] = $html;
