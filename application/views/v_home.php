@@ -23,7 +23,7 @@
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
     	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
     </head>
-    <body style="overflow-y:scroll; overflow-x:hidden;">
+    <body>
         <div class="js-header">
             <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
             <div class="js-user">
@@ -31,10 +31,10 @@
                 <a onclick="cerrarCesion()">Logout</a>
             </div>
         </div>
-        <section id="principal" class="section">
+        <section id="principal" class="js-section m-t-50">
             <div class="js-fondo-datos"></div>
             <div class="js-container">
-                <div class=" js-carousel">
+                <div class="js-carousel">
                     <div class="form-group js-input">
                         <label for="partner">Partner ID</label>
                         <input type="email" class="form-control" id="partner" readonly="readonly" value="<?php echo $partner ?>">
@@ -64,188 +64,142 @@
                         <input type="email" class="form-control" id="email" readonly="readonly" value="<?php echo $email ?>">
                     </div>
                     <div class="form-group js-input js-button--form">
-                        <!-- NO BORRAR -->
-                        <!-- <label for="mdf">Ver MDFs disponibles</label> -->
-                        <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="exportExcel()">Ver MDFs disponibles</button> -->
                         <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Ver MDFs disponibles</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="">
+        <section class="js-section">
             <div class="js-container js-container--responsive">
-                    <div class="col-xs-12 js-question--number">
-                        <div class="js-partner">
-                            <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
-                        </div>
-                        <div class="js-filter">
-                            <p id="servicioFilter"></p>
-                            <p id="presupuestoFilter"></p>
-                        </div>
+                <div class="col-xs-12 js-question--number">
+                    <div class="js-partner">
+                        <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
                     </div>
-                    <div class="js-carousel">
-                        <!-- <div class="js-card--large">
-                            <div class="js-card--large__content">
-                                <div class="js-card--large__content-tipo">
-                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                </div>
-                                <div class="js-card--large__content-name">
-                                    <small>¿Que tipo de servicio deseas realizar?</small>
-                                </div>
-                            </div>
-                            <div class="js-card--large__select">
-                                <div class="js-select">
-                                    <select class="selectpicker" id="servicio" name="servicio" title="Seleccione" onchange="getServicios(this.id);">
-                                        <option value="Digital Optimization">Digital Optimization</option>
-                                        <option value="Demand Generation">Demand Generation</option>
-                                        <option value="Digital Content">Digital Content</option>
-                                        <option value="Marketing Strategy">Marketing Strategy</option>
-                                        <?php if($pais == 'Colombia'){ ?>
-                                        <option value="Innovation Program4Partners">Innovation Program4Partners</option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="cardPresupuesto" class="js-card--large opacity-done">
-                            <div class="js-card--large__content">
-                                <div class="js-card--large__content-tipo">
-                                    <img src="<?php echo RUTA_IMG?>cards/inversion.png">
-                                </div>
-                                <div class="js-card--large__content-name">
-                                    <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
-                                </div>
-                            </div>
-                            <div class="js-card--large__select" id="presupuestoSelect">
-                                <div class="js-select quitar">
-                                    <select class="selectpicker" id="presupuesto" name="presupuesto" title="Seleccione" onchange="getServicios(this.id);">
-                                        <option value="1">PE Benefit</option>
-                                        <option value="2">Budget < 5K Euros</option>
-                                        <option value="3">Budget 5K - 10K Euros</option>
-                                        <option value="4">Budget > 10K Euros</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="js-card--large">
-                            <div class="js-flex">
-                                <div class="js-card--large__content" onclick="obtenerServicios();">
-                                    <div class="js-card--large__content-tipo">
-                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                    </div>
-                                    <div class="js-card--large__content-name">
-                                        <small>¿Que tipo de servicio deseas realizar?</small>
-                                    </div>
-                                </div>
-                                <div class="js-card--large__content opacity-done js-right">
-                                    <div class="js-card--large__content-tipo">
-                                        <img src="<?php echo RUTA_IMG?>cards/inversion.png">
-                                    </div>
-                                    <div class="js-card--large__content-name">
-                                        <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="js-relative" style="margin-top: 110px">
-                                <div class="js-flex js-absolute js-left">
-                                    <div class="js-card__servicio">
-                                        <div class="js-card__servicio--contenido">
-                                            <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                            <p>Digital Optimization</p>
-                                        </div>
-                                        <button id="button1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                                    </div>
-                                    <div class="js-card__servicio">
-                                        <div class="js-card__servicio--contenido">
-                                            <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                            <p>Demand Generation</p>
-                                        </div>
-                                        <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                                    </div>
-                                    <div class="js-card__servicio">
-                                        <div class="js-card__servicio--contenido">
-                                            <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                            <p>Digital Content</p>
-                                        </div>
-                                        <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                                    </div>
-                                    <div class="js-card__servicio">
-                                        <div class="js-card__servicio--contenido">
-                                            <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                            <p>Marketing Strategy</p>
-                                        </div>
-                                        <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                                    </div>
-                                    <div class="js-card__servicio">
-                                        <div class="js-card__servicio--contenido">
-                                            <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                            <p>Partner Solution Packages (Package4Growth)</p>
-                                        </div>
-                                        <button id="button5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                                    </div>
-                                    <?php if($pais == 'Colombia') {?>
-                                        <div class="js-card__servicio">
-                                            <div class="js-card__servicio--contenido">
-                                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                                <p>Innovation Program4Partners</p>
-                                            </div>
-                                            <button id="button6" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                                        </div>
-                                    <?php } ?>
-                                </div>
-                                <div id="cardPresupuesto" class="js-card--large opacity-done js-right">
-                                    <div id="cardServicios" class="js-flex js-absolute">
-                                        <div class="js-card__servicio" id="PEBenefit">
-                                            <div class="js-card__servicio--contenido">
-                                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                                <p>PE Benefit</p>
-                                            </div>
-                                            <button id="Table1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
-                                        </div>
-                                        <div class="js-card__servicio" id="low">
-                                            <div class="js-card__servicio--contenido">
-                                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                                <p>Budget < 5K Euros</p>
-                                            </div>
-                                            <button id="Table2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
-                                        </div>
-                                        <div class="js-card__servicio" id="medium">
-                                            <div class="js-card__servicio--contenido">
-                                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                                <p>Budget 5K - 10K Euros</p>
-                                            </div>
-                                            <button id="Table3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
-                                        </div>
-                                        <div class="js-card__servicio" id="high">
-                                            <div class="js-card__servicio--contenido">
-                                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                                <p>Budget > 10K Euros</p>
-                                            </div>
-                                            <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
-                                        </div>
-                                        <div class="js-card__servicio" id="cardEur">
-                                            <div class="js-card__servicio--contenido">
-                                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                                                <p>EUR 728</p>
-                                            </div>
-                                            <a id="Table5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-responsive opacity-done" style="margin-top: 110px">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Los paquetes disponibles en tu pa&iacute;s son:</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="tabla"></tbody>                                
-                            </table>
-                        </div>
+                    <div class="js-filter">
+                        <ul class="breadcrumb">
+                            <li><a id="servicioFilter" onclick="obtenerServicios();">Servicio</a></li>
+                            <li><a id="presupuestoFilter">Presupuesto</a></li>
+                        </ul>
                     </div>
                 </div>
+                <div class="js-carousel">
+                    <div class="js-servicio js-flex">
+                        <div class="js-card--large__content" onclick="obtenerServicios();">
+                            <div class="js-card--large__content-tipo">
+                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                            </div>
+                            <div class="js-card--large__content-name">
+                                <small>¿Que tipo de servicio deseas realizar?</small>
+                            </div>
+                        </div>
+                        <div class="js-card--large__content opacity-done js-right">
+                            <div class="js-card--large__content-tipo">
+                                <img src="<?php echo RUTA_IMG?>cards/inversion.png">
+                            </div>
+                            <div class="js-card--large__content-name">
+                                <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-cards">
+                        <div class="js-flex js-absolute js-left js-width">
+                            <div class="js-card__servicio">
+                                <div class="js-card__servicio--contenido">
+                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <p>Digital Optimization</p>
+                                </div>
+                                <button id="button1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                            </div>
+                            <div class="js-card__servicio">
+                                <div class="js-card__servicio--contenido">
+                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <p>Demand Generation</p>
+                                </div>
+                                <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                            </div>
+                            <div class="js-card__servicio">
+                                <div class="js-card__servicio--contenido">
+                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <p>Digital Content</p>
+                                </div>
+                                <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                            </div>
+                            <div class="js-card__servicio">
+                                <div class="js-card__servicio--contenido">
+                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <p>Marketing Strategy</p>
+                                </div>
+                                <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                            </div>
+                            <div class="js-card__servicio">
+                                <div class="js-card__servicio--contenido">
+                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <p>Partner Solution Packages (Package4Growth)</p>
+                                </div>
+                                <button id="button5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                            </div>
+                            <?php if($pais == 'Colombia') {?>
+                                <div class="js-card__servicio">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Innovation Program4Partners</p>
+                                    </div>
+                                    <button id="button6" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
+                                </div>
+                            <?php } ?>
+                        </div>
+                        <div id="cardPresupuesto" class="opacity-done js-right">
+                            <div id="cardServicios" class="js-flex js-width">
+                                <div class="js-card__servicio" id="PEBenefit">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>PE Benefit</p>
+                                    </div>
+                                    <button id="Table1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio" id="low">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Budget < 5K Euros</p>
+                                    </div>
+                                    <button id="Table2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio" id="medium">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Budget 5K - 10K Euros</p>
+                                    </div>
+                                    <button id="Table3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio" id="high">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>Budget > 10K Euros</p>
+                                    </div>
+                                    <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                </div>
+                                <div class="js-card__servicio" id="cardEur">
+                                    <div class="js-card__servicio--contenido">
+                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <p>EUR 728</p>
+                                    </div>
+                                    <a id="Table5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive opacity-done">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Los paquetes disponibles en tu pa&iacute;s son:</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tabla"></tbody>                                
+                        </table>
+                    </div>
+                </div>
+            </div>
         </section>
         <form action="home/exportarExcel" id="exportarExcel" name="exportarExcel" method="post">
             <input type="hidden" name="mi_archivo">

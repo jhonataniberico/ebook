@@ -113,44 +113,16 @@ flipCardBackHover()
 	flexCenter()
 	flex-wrap wrap
 .js-relative
-	relative()
+	position relative
 .js-absolute
-	absolute()
-/*TABLE*/
-table
-	&>tbody
-		&>tr
-			&>td
-				color #000000
-				padding 5px 10px !important
-				line-height 16px !important
-				vertical-align middle !important
-	&>thead
-		&>tr
-			&>th
-				color #000000
-				font-size 18px
-				font-family $medium
-/*MODAL*/
-.modal
-	&.fade
-		.modal-dialog
-			position absolute
-			top 50%
-			left 50%
-			transform()
-		&.in
-			.modal-dialog
-				opacity 1
-				scale()
-				transform()
-/*MATERIAL DESIGN LITE*/
-.mdl-card__supporting-text
+	position absolute
+.js-width
 	width 100%
 body
 	margin 0
 	padding 0
 	overflow hidden
+	overflow-y scroll
 	font-family $regular
 	color #FFFFFF
 	background-color #F8F8F8
@@ -196,8 +168,9 @@ img
 		background-color #000000
 		opacity .2
 		absolute()
-.section
+.js-section
 	position relative
+	padding 40px 20px
 .js-bar
 	height 100vh
 	width 25%
@@ -259,16 +232,10 @@ img
 			outline 0 !important
 .js-container
 	transitionMaxWidth()
-	flexStart()
 	width 100%
 	max-width 1150px
 	height 100%
-	justify-content flex-start
-	align-content flex-start
 	margin auto
-	position relative
-	padding 30px
-	flex-wrap wrap
 .js-card__flex
 	flexStart()
 	width 100%
@@ -333,7 +300,6 @@ img
 .js-question--number
 	font-size 32px
 	line-height 34px
-	margin-bottom 5px
 	color $color
 	h2
 		color #000000
@@ -346,132 +312,134 @@ img
 			span
 				color #000000
 				font-family $regular
-.js-card--large
-	-webkit-transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
-	-moz-transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
-	-ms-transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
-	-o-transition width 0.3s linear, margin 0.4s linear, opacity 0.1s linear, transform .3s linear
-	transition width 0.3s linear, margin 0.3s linear, opacity 0.1s linear, transform .3s linear
+.js-filter
+	margin-top 10px
+	p
+		margin 0
+		color #000000
+	.breadcrumb
+		margin-bottom 0
+		a
+			cursor pointer
+.js-cards
+	position relative
 	width 100%
-	margin 10px
-	flex none
-	&.js-card--large__flex
-		margin 10px auto
-	.js-card--large__content
+.js-card--large__content
+	flexCenter()
+	justify-content center
+	border 1px solid $color
+	border-radius 10px
+	padding 5px 10px
+	text-align center
+	width 100%
+	max-width 225px
+	margin 5px
+	cursor pointer
+	.js-card--large__content-imagen
 		flexCenter()
 		justify-content center
-		border 1px solid $color
-		border-radius 10px
-		padding 5px 10px
-		text-align center
-		width 100%
-		max-width 225px
-		margin 5px
-		.js-card--large__content-imagen
-			flexCenter()
-			justify-content center
-			height 120px
-			img
-				width initial !important
-		.js-card--large__content-text
-			height 150px
-			p
-				font-size 17px
-				text-align left
-				line-height 21px
-				strong
-					color $color
-					font-family $medium
-		.js-card--large__content-tipo
-			img
-				width 100%
-				max-width 120px
-		.js-card--large__content-name
-			margin 0 10px
-			text-align left
-			small
-				font-size 16px
-				line-height 18px
-				display inline-block
-				color #000000
-	.js-card--large__button
-		padding 10px 0
-		button
-			border 1px solid $color
-			background-color transparent
-			color #FFFFFF
-			text-transform initial
-			width 100%
-			border-radius 0
-			font-family $medium
-			font-size 18px
-			&:hover
-				transitionBgColor()
-				background-color $color
-	.js-card--large__select
-		flexCenter()
-		transitionBgColor()
-		height 36px
-		justify-content center
-		border 1px solid $color
-		margin-top 10px
-		#textOperar
-			font-family $medium
-			font-size 16px
-			width 100%
-			max-width 115px
-			text-align center
-		.mdl-button--icon
-			i
-				color #FFFFFF
-		.js-select
-			&.selected
-				background-color $color
-			.bootstrap-select
-				width 205px !important
-				background-color transparent
-				border 1px solid $color
-				color #FFFFFF
-				outline none !important
-				.dropdown-toggle
-					background-color transparent !important
-					color #FFFFFF
-					border none
-					outline 0 !important
-					box-shadow none !important
-					color #000000
-					font-family $medium
-					.filter-option
-						font-size 16px
-						text-align center
-				.dropdown-menu
-					background-color #FFFFFF !important
-					margin 0
-					padding 0
-					border none
-					margin-top 1px
-					li
-						border 1px solid $color
-						margin 5px 0
-						a
-							transitionBgColor()
-							text-align center
-							color #000000
-							font-size 15px
-							outline none
-							font-family $medium
-							background-color transparent
-							height 34px
-							line-height 30px
-							&:hover
-								background-color $color
-		&.js-selected
-			background-color $color
+		height 120px
+		img
+			width initial !important
+	.js-card--large__content-text
+		height 150px
 		p
-			color #000000
-			font-family $medium
-			margin 0
+			font-size 17px
+			text-align left
+			line-height 21px
+			strong
+				color $color
+				font-family $medium
+	.js-card--large__content-tipo
+		img
+			width 100%
+			max-width 120px
+	.js-card--large__content-name
+		margin 0 10px
+		text-align left
+		small
 			font-size 16px
+			line-height 18px
+			display inline-block
+			color #000000
+.js-card--large__button
+	padding 10px 0
+	button
+		border 1px solid $color
+		background-color transparent
+		color #FFFFFF
+		text-transform initial
+		width 100%
+		border-radius 0
+		font-family $medium
+		font-size 18px
+		&:hover
+			transitionBgColor()
+			background-color $color
+.js-card--large__select
+	flexCenter()
+	transitionBgColor()
+	height 36px
+	justify-content center
+	border 1px solid $color
+	margin-top 10px
+	#textOperar
+		font-family $medium
+		font-size 16px
+		width 100%
+		max-width 115px
+		text-align center
+	.mdl-button--icon
+		i
+			color #FFFFFF
+	.js-select
+		&.selected
+			background-color $color
+		.bootstrap-select
+			width 205px !important
+			background-color transparent
+			border 1px solid $color
+			color #FFFFFF
+			outline none !important
+			.dropdown-toggle
+				background-color transparent !important
+				color #FFFFFF
+				border none
+				outline 0 !important
+				box-shadow none !important
+				color #000000
+				font-family $medium
+				.filter-option
+					font-size 16px
+					text-align center
+			.dropdown-menu
+				background-color #FFFFFF !important
+				margin 0
+				padding 0
+				border none
+				margin-top 1px
+				li
+					border 1px solid $color
+					margin 5px 0
+					a
+						transitionBgColor()
+						text-align center
+						color #000000
+						font-size 15px
+						outline none
+						font-family $medium
+						background-color transparent
+						height 34px
+						line-height 30px
+						&:hover
+							background-color $color
+	&.js-selected
+		background-color $color
+	p
+		color #000000
+		font-family $medium
+		margin 0
+		font-size 16px
 .js-card__servicio
 	width 100%
 	max-width 200px
@@ -592,8 +560,9 @@ img
 	flex-wrap wrap
 	.table-responsive
 		width 100%
-		max-width 525px
 		margin 10px
+		max-width 600px
+		border none
 		table
 			margin 0
 .js-button
@@ -610,13 +579,15 @@ img
 .js-button--form
 	flexEnd()
 	height 67px
-	button
+	a
 		background-color $color !important
 		text-transform initial
 		color #FFFFFF
 		height 42px
 		font-family $medium
 		border-radius 5px
+		text-decoration none !important
+		line-height 42px
 .js-card-login
 	flexCenter()
 	background-color #000000
@@ -653,6 +624,46 @@ img
 	a
 		font-family $medium
 		cursor pointer
+/*TABLE*/
+table
+	&>tbody
+		&>tr
+			&>td
+				color #000000
+				padding 5px 10px !important
+				line-height 16px !important
+				vertical-align middle !important
+	&>thead
+		&>tr
+			&>th
+				color #000000
+				font-size 18px
+				font-family $medium
+/*MODAL*/
+.modal
+	&.fade
+		.modal-dialog
+			position absolute
+			top 50%
+			left 50%
+			transform()
+		&.in
+			.modal-dialog
+				opacity 1
+				scale()
+				transform()
+				.mdl-card__supporting-text
+					overflow inherit
+					.dropdown-menu 
+						&.open
+							max-height 215px !important
+							padding 0
+						.dropdown-menu 
+							&.inner
+								max-height 215px !important
+/*MATERIAL DESIGN LITE*/
+.mdl-card__supporting-text
+	width 100%
 /*SCROLL*/
 ::-webkit-scrollbar
 	width 8px
