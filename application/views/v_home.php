@@ -63,7 +63,7 @@
                             <input type="email" class="form-control" id="email" readonly="readonly" value="<?php echo $email ?>">
                         </div>
                         <div class="form-group js-input js-button--form">
-                            <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Ver MDFs disponibles</a>
+                            <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Revise sus MDFs disponibles Aquí</a>
                         </div>
                     </div>
                 </div>
