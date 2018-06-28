@@ -37,8 +37,9 @@
                     </div>
                 </div>
                 <div class="js-title">
-                    <h1>Bienvenido al <br><strong>Directorio de Servicios para Partners SAP LAC</strong></h1>
-                    <p>Obtenga rápidamente una configuración personalizada de las acciones de marketing que necesita.</p>
+                    <p>SAP Partner Marketing</p>
+                    <h1><strong>Directorio de Servicios</strong></h1>
+                    <span>Conozca las acciones de marketing listas para ser ejecutadas utlizando sus MDFs.</span>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="abrirModal()">Ingresar</button>
                 </div>
                 <div class="js-bar">
@@ -52,10 +53,9 @@
 
         <!-- Modal -->
         <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog modal-md" role="document">
+            <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="js-card-login">
-                        <div class="js-card-login__imagen"></div>
                         <div class="mdl-card__supporting-text">
                             <div class="col-xs-12 p-0 js-login">
                                 <div class="col-xs-8 p-l-0">
