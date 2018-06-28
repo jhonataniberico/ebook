@@ -35,36 +35,36 @@
             <div class="js-fondo-datos"></div>
             <div class="js-container">
                 <div class="js-carousel">
-                    <div class="form-group js-input">
-                        <label for="partner">Partner ID</label>
-                        <input type="email" class="form-control" id="partner" readonly="readonly" value="<?php echo $partner ?>">
+                    <div class="col-xs-12 js-flex p-0">
+                        <div class="form-group js-input">
+                            <label for="partner">Partner ID</label>
+                            <input type="email" class="form-control" id="partner" readonly="readonly" value="<?php echo $partner ?>">
+                        </div>
+                        <div class="form-group js-input">
+                            <label for="name_partner">Partner Name</label>
+                            <input type="email" class="form-control" id="name_partner" readonly="readonly" value="<?php echo $name_partner ?>">
+                        </div>
+                        <div class="form-group js-input">
+                            <label for="pais">País</label>
+                            <input type="email" class="form-control" id="pais" readonly="readonly" value="<?php echo $pais ?>">
+                        </div>
                     </div>
-                    <div class="form-group js-input">
-                        <label for="name_partner">Partner Name</label>
-                        <input type="email" class="form-control" id="name_partner" readonly="readonly" value="<?php echo $name_partner ?>">
-                    </div>
-                    <div class="form-group js-input">
-                        <label for="pais">País</label>
-                        <input type="email" class="form-control" id="pais" readonly="readonly" value="<?php echo $pais ?>">
-                    </div>
-                    <div class="form-group js-input">
-                        <!-- <label for="user">S User</label>
-                        <input type="email" class="form-control" id="user" readonly="readonly" value="<?php echo $name_user ?>"> -->
-                    </div>
-                    <div class="form-group js-input">
-                        <label for="nombre">Nombre</label>
-                        <input type="email" class="form-control" id="nombre" readonly="readonly" value="<?php echo $nombre ?>">
-                    </div>
-                    <div class="form-group js-input">
-                        <label for="apellido">Apellido</label>
-                        <input type="email" class="form-control" id="apellido" readonly="readonly" value="<?php echo $apellido ?>">
-                    </div>
-                    <div class="form-group js-input">
-                        <label for="email">email</label>
-                        <input type="email" class="form-control" id="email" readonly="readonly" value="<?php echo $email ?>">
-                    </div>
-                    <div class="form-group js-input js-button--form">
-                        <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Ver MDFs disponibles</a>
+                    <div class="col-xs-12 js-flex p-0">
+                        <div class="form-group js-input">
+                            <label for="nombre">Nombre</label>
+                            <input type="email" class="form-control" id="nombre" readonly="readonly" value="<?php echo $nombre ?>">
+                        </div>
+                        <div class="form-group js-input">
+                            <label for="apellido">Apellido</label>
+                            <input type="email" class="form-control" id="apellido" readonly="readonly" value="<?php echo $apellido ?>">
+                        </div>
+                        <div class="form-group js-input">
+                            <label for="email">email</label>
+                            <input type="email" class="form-control" id="email" readonly="readonly" value="<?php echo $email ?>">
+                        </div>
+                        <div class="form-group js-input js-button--form">
+                            <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Ver MDFs disponibles</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,35 +105,35 @@
                         <div class="js-flex js-absolute js-left js-width">
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <img src="<?php echo RUTA_IMG?>cards/optimization.png">
                                     <p>Digital Optimization</p>
                                 </div>
                                 <button id="button1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                             </div>
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <img src="<?php echo RUTA_IMG?>cards/generation.png">
                                     <p>Demand Generation</p>
                                 </div>
                                 <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                             </div>
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <img src="<?php echo RUTA_IMG?>cards/content.png">
                                     <p>Digital Content</p>
                                 </div>
                                 <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                             </div>
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <img src="<?php echo RUTA_IMG?>cards/strategy.png">
                                     <p>Marketing Strategy</p>
                                 </div>
                                 <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                             </div>
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                    <img src="<?php echo RUTA_IMG?>cards/solution.png">
                                     <p>Partner Solution Packages (Package4Growth)</p>
                                 </div>
                                 <button id="button5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
@@ -141,7 +141,7 @@
                             <?php if($pais == 'Colombia') {?>
                                 <div class="js-card__servicio">
                                     <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <img src="<?php echo RUTA_IMG?>cards/innovation.png">
                                         <p>Innovation Program4Partners</p>
                                     </div>
                                     <button id="button6" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
@@ -152,35 +152,35 @@
                             <div id="cardServicios" class="js-flex js-width">
                                 <div class="js-card__servicio" id="PEBenefit">
                                     <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <img src="<?php echo RUTA_IMG?>cards/benefit.png">
                                         <p>PE Benefit</p>
                                     </div>
                                     <button id="Table1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                 </div>
                                 <div class="js-card__servicio" id="low">
                                     <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <img src="<?php echo RUTA_IMG?>cards/5k.png">
                                         <p>Budget < 5K Euros</p>
                                     </div>
                                     <button id="Table2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                 </div>
                                 <div class="js-card__servicio" id="medium">
                                     <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <img src="<?php echo RUTA_IMG?>cards/10k.png">
                                         <p>Budget 5K - 10K Euros</p>
                                     </div>
                                     <button id="Table3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                 </div>
                                 <div class="js-card__servicio" id="high">
                                     <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <img src="<?php echo RUTA_IMG?>cards/15k.png">
                                         <p>Budget > 10K Euros</p>
                                     </div>
                                     <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                 </div>
                                 <div class="js-card__servicio" id="cardEur">
                                     <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/servicio.png">
+                                        <img src="<?php echo RUTA_IMG?>cards/728.png">
                                         <p>EUR 728</p>
                                     </div>
                                     <a id="Table5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</a>
@@ -192,7 +192,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Los paquetes disponibles en tu pa&iacute;s son:</th>
+                                    <th>Los paquetes disponibles en su pa&iacute;s son:</th>
                                 </tr>
                             </thead>
                             <tbody class="tabla"></tbody>                                

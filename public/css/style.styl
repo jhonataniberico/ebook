@@ -458,13 +458,15 @@ img
 			height 32px
 			color #000000
 			line-height 16px
+			font-family $bold
+	a
 	button
 		background-color $color !important
 		text-transform initial
-		width 100%
-		font-family $bold
-		height 32px
-		line-height 30px
+		font-family $medium
+		height 28px
+		line-height 28px
+		text-decoration none
 .js-window
 	absolute()
 	flexCenter()
@@ -545,8 +547,6 @@ img
 	&.fadeInRight
 	&.fadeInLeft
 		z-index 1
-// #cardPresupuesto
-// 	z-index 15
 .js-button-select
 	transitionBgColor()
 	&.js-selected
@@ -588,6 +588,7 @@ img
 		border-radius 5px
 		text-decoration none !important
 		line-height 42px
+		width 100%
 .js-card-login
 	flexCenter()
 	background-color #000000
@@ -615,6 +616,7 @@ img
 	flexCenter()
 	justify-content flex-end
 	width 100%
+	text-align right
 	p
 		margin 0
 		padding 0 10px
@@ -624,6 +626,13 @@ img
 	a
 		font-family $medium
 		cursor pointer
+.breadcrumb
+	&>li
+		&+li
+			&:before
+				content ">"
+				color #000000
+				font-family $bold
 /*TABLE*/
 table
 	&>tbody
@@ -684,6 +693,10 @@ table
 		p
 			font-size 24px
 			line-height 28px
+@media ( max-width: 1000px )
+	.js-flex
+	.js-carousel
+		justify-content center
 @media ( max-width: 768px )
 	.js-title
 		max-width 420px
@@ -723,6 +736,11 @@ table
 				margin-left 0
 			.owl-next
 				margin-right 0
+	.js-input
+		max-width 100%
+	.js-header
+		img
+			max-width 110px
 @media ( max-height: 768px )
 	body
 		overflow-y scroll
