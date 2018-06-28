@@ -228,7 +228,7 @@
                                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                                                 <p>EUR 728</p>
                                             </div>
-                                            <button id="Table5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
+                                            <a id="Table5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</a>
                                         </div>
                                     </div>
                                 </div>

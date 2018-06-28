@@ -57,8 +57,8 @@ class Home extends CI_Controller {
                                   </tr>';
                     } else {
                         $html .= '<tr>
-                                    <td><a href="'.$key->link.'">'.$key->Nombre.'</a></td>
-                                    <td><a href="'.$key->link.'" class="mdl-button mdl-js-button mdl-button--icon">
+                                    <td><a href="'.$key->link.'" target="_blank">'.$key->Nombre.'</a></td>
+                                    <td><a href="'.$key->link.'" target="_blank" class="mdl-button mdl-js-button mdl-button--icon">
                                             <i class="fa fa-arrow-right"></i>
                                         </a></td>
                                   </tr>';

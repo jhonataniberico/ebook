@@ -33,25 +33,32 @@ function getTable(id){
     presupuesto = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
     idSelect.parents('.js-select').addClass('selected');
     $('.table-responsive ').addClass('animated fadeInRight');
-    $.ajax({
-        data : {tipo_servicio : servicio,
-                presupuesto   : presupuesto},
-        url  : 'Home/guardarServicios',
-        type : 'POST'
-    }).done(function(data){
-        try{
-            data = JSON.parse(data);
-            if(data.error == 0){
-                $('.tabla').html('');
-                $('.tabla').append(data.tabla);
-                $('#presupuestoFilter').text('Presupuesto: '+presupuesto);
-            }else{
-                return;
+    if (presupuesto != 'EUR 728') {
+        $.ajax({
+            data : {tipo_servicio : servicio,
+                    presupuesto   : presupuesto},
+            url  : 'Home/guardarServicios',
+            type : 'POST'
+        }).done(function(data){
+            try{
+                data = JSON.parse(data);
+                if(data.error == 0){
+                    $('.tabla').html('');
+                    $('.tabla').append(data.tabla);
+                    $('#presupuestoFilter').text('Presupuesto: '+presupuesto);
+                }else{
+                    return;
+                }
+            } catch (err){
+                msj('error',err.message);
             }
-        } catch (err){
-            msj('error',err.message);
-        }
-    });    
+        });  
+    }else {
+        $('#Table5').attr({
+            href   : 'https://www.google.com',
+            target : '_blank'
+        });
+    }
 }
 
 function obtenerServicios(){
