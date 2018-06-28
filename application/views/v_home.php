@@ -67,7 +67,7 @@
                         <!-- NO BORRAR -->
                         <!-- <label for="mdf">Ver MDFs disponibles</label> -->
                         <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="exportExcel()">Ver MDFs disponibles</button> -->
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Ver MDFs disponibles</button>
+                        <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Ver MDFs disponibles</a>
                     </div>
                 </div>
             </div>

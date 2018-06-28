@@ -32,8 +32,12 @@ function getTable(id){
     var idSelect    = $('#'+id);
     presupuesto = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
     idSelect.parents('.js-select').addClass('selected');
-    $('.table-responsive ').addClass('animated fadeInRight');
-    if (presupuesto != 'EUR 728') {
+    if (presupuesto == 'EUR 728') {
+        $('#Table5').attr({
+            href   : 'https://www.google.com',
+            target : '_blank'
+        });
+    } else {
         $.ajax({
             data : {tipo_servicio : servicio,
                     presupuesto   : presupuesto},
@@ -52,12 +56,8 @@ function getTable(id){
             } catch (err){
                 msj('error',err.message);
             }
-        });  
-    }else {
-        $('#Table5').attr({
-            href   : 'https://www.google.com',
-            target : '_blank'
         });
+        $('.table-responsive ').addClass('animated fadeInRight');
     }
 }
 
@@ -88,17 +88,3 @@ function cerrarCesion(){
         }
 	});
 }
-
-// NO BORRAR 
-// function exportExcel() {
-//     $.ajax({
-
-//     }).done(function(data){
-//         try{
-
-//         } catch (err){
-//             msj('error', err.message);
-//         }
-//     });
-//     // 
-// }
