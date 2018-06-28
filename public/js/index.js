@@ -68,7 +68,8 @@ function obtenerServicios(){
     $('.js-right').removeClass('animated fadeInRight');
     $('#cardServicios').removeClass('animated fadeInRight');
     $('.table-responsive').removeClass('animated fadeInRight');
-    $('.js-filter').find('p').text('')
+    $('#servicioFilter').text('Servicio');
+    $('#presupuestoFilter').text('Presupuesto');
 }
 
 function cerrarCesion(){
