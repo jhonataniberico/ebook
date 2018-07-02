@@ -31,6 +31,7 @@ function getServicios(id){
 function getTable(id){
     var idSelect    = $('#'+id);
     presupuesto = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
+    presupuesto = (presupuesto == 'Gratuito' ) ? 'PE Benefit' : presupuesto ; 
     idSelect.parents('.js-select').addClass('selected');
     if (presupuesto == 'EUR 728') {
         $('#Table5').attr({
