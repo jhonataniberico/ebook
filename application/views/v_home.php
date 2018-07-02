@@ -202,7 +202,7 @@
             </div>
         </section>
         <div class="js-button--flat">
-            <a href="mailto:julia.maciel@sap.com,marina.mariotto@sap.com" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect js-button--animation"><i class="mdi mdi-email"></i></a>
+            <a href="mailto:julia.maciel@sap.com?cc=marina.mariotto@sap.com" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect js-button--animation"><i class="mdi mdi-email"></i></a>
         </div>
         <form action="home/exportarExcel" id="exportarExcel" name="exportarExcel" method="post">
             <input type="hidden" name="mi_archivo">
