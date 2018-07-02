@@ -153,7 +153,7 @@
                                 <div class="js-card__servicio" id="PEBenefit">
                                     <div class="js-card__servicio--contenido">
                                         <img src="<?php echo RUTA_IMG?>cards/benefit.png">
-                                        <p>PE Benefit</p>
+                                        <p>Gratuito</p>
                                     </div>
                                     <button id="Table1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                 </div>
