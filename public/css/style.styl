@@ -628,6 +628,17 @@ img
 	a
 		font-family $medium
 		cursor pointer
+.js-button--flat
+	position fixed
+	bottom 10px
+	right 10px
+	a
+		flexCenter()
+		justify-content center
+		text-decoration none !important
+		background-color #008FD3 !important
+		i
+			color #FFFFFF
 .breadcrumb
 	&>li
 		&+li
@@ -690,6 +701,24 @@ table
 ::-webkit-scrollbar-thumb
 	background-color #AAAAAA
 	border-radius 10px
+/*FAB-ANIMATION*/
+.js-button--animation
+	-webkit-animation ripple .5s linear infinite
+	animation ripple .5s linear infinite
+@-webkit-keyframes ripple
+	0%
+		-webkit-box-shadow 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 0 rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1)
+		box-shadow 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 0 rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1)
+	100%
+		-webkit-box-shadow 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1), 0 0 0 20px rgba(102, 102, 102, 0)	
+		box-shadow 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1), 0 0 0 20px rgba(102, 102, 102, 0)
+@keyframes ripple
+	0%
+		-webkit-box-shadow 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 0 rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1)
+		box-shadow 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 0 rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1)
+	100%
+		-webkit-box-shadow 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1), 0 0 0 20px rgba(102, 102, 102, 0)	
+		box-shadow 0 4px 10px rgba(102, 102, 102, 0.1), 0 0 0 5px rgba(102, 102, 102, 0.1), 0 0 0 10px rgba(102, 102, 102, 0.1), 0 0 0 20px rgba(102, 102, 102, 0)
 @media ( max-width: 1200px )
 	.js-title
 		max-width 550px
@@ -750,6 +779,4 @@ table
 			max-width 110px
 @media ( max-height: 768px )
 	body
-		overflow-y scroll
-			
-					
+		overflow-y scroll		
