@@ -62,8 +62,35 @@ class M_usuario extends  CI_Model{
       return $result->row()->Id;
     }
     function getIdDatosByCosto($costo){
-      $sql = "SELECT c.Id FROM costo c WHERE c.precio LIKE '%".$costo."%'";
-      $result = $this->db->query($sql);
-      return $result->row()->Id;
+        $sql = "SELECT c.Id FROM costo c WHERE c.precio LIKE '%".$costo."%'";
+        $result = $this->db->query($sql);
+        return $result->row()->Id;
+    }
+    function verificaMail ($mail) {
+        $sql = "SELECT *
+                  FROM usuarios
+                 WHERE email LIKE '%".$mail."%'";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function verificaId($mail, $id_partner){
+        $sql = "SELECT t.*
+                  FROM (SELECT * 
+                          FROM usuarios 
+                        WHERE email LIKE '%".$mail."%') as t
+                 WHERE partner_id LIKE '%".$id_partner."%'";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function verificaPais($mail, $id_partner, $pais) {
+        $sql = "SELECT tt.*
+                  FROM (SELECT t.*
+                          FROM (SELECT * 
+                                  FROM usuarios 
+                                 WHERE email LIKE '%".$mail."%') AS t
+                         WHERE partner_id LIKE '%".$id_partner."%') AS tt
+                 WHERE pais = '".$pais."'";
+        $result = $this->db->query($sql);
+        return $result->result();
     }
 }

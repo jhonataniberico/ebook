@@ -18,11 +18,6 @@ function getServicios(id){
         $('#medium').css('display', 'block');
         $('#high').css('display', 'block');
     }
-    if(servicio != 'Digital Optimization') {
-        $('#PEBenefit').css('display', 'none');
-    } else {
-        $('#PEBenefit').css('display', 'block');
-    }
     $('.js-left').addClass('animated fadeOutLeft');
     $('.js-right').addClass('animated fadeInRight');
     $('#servicioFilter').text('Servicio: '+servicio);

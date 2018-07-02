@@ -28,14 +28,11 @@ class Login extends CI_Controller {
 			$id_partner  = $this->input->post('id_partner');
             $email       = $this->input->post('email');
             $pais        = $this->input->post('pais');
+            $verificaMail= $this->M_usuario->verificaMail($email);
+            $verificaId  = $this->M_usuario->verificaId($email, $id_partner);
+            $verificaPais= $this->M_usuario->verificaPais($email, $id_partner, $pais);
 			$username    = $this->M_usuario->verificarUsuario(intval($id_partner), $email, $pais);
-			if(count($username) != 0){
-				if($username[0]->partner_id != strval($id_partner)){
-					$data['msj'] = 'El Usuario/Partner Id no existe';
-				}
-                if($username[0]->Pais != $pais){
-                    $data['msj'] = 'Pais incorrecto';
-                }
+            if(count($username) != 0){
                 if($username[0]->partner_id == strval($id_partner) && $username[0]->Pais == $pais){
                     $session = array('usuario'     => $id_partner,
                                      'Id_user'     => $username[0]->Id,
@@ -51,7 +48,15 @@ class Login extends CI_Controller {
                     $data['error'] = EXIT_SUCCESS;
                 }
 			}else{
-                $data['msj'] = 'El email no existe';
+                if(count($verificaMail) == 0){
+                    $data['msj'] = 'Email no registrado';
+                } else if(count($verificaId) == 0) {
+                    $data['msj'] = 'El Usuario/Partner ID es incorrecto';
+                }else if (count($verificaPais) == 0) {
+                    $data['msj'] = 'Pais incorrecto';
+                } else {
+                    $data['msj'] = 'Datos incorrectos';    
+                } 
             }
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
