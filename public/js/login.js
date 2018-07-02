@@ -24,12 +24,11 @@ function ingresar(){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	location.href = 'Home';
-        	$('#usuario').val("");
-        	$('#password').val("");
+          location.href = 'Home';
+          $('#usuario').val("");
+          $('#password').val("");
         }else {
-				$('#usuario').parent().addClass('is-invalid');
-				$('#password').parent().addClass('is-invalid');
+          msj('error', data.msj);
         	return;
         }
       }catch(err){

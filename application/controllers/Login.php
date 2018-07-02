@@ -28,23 +28,31 @@ class Login extends CI_Controller {
 			$id_partner  = $this->input->post('id_partner');
             $email       = $this->input->post('email');
             $pais        = $this->input->post('pais');
-			$username = $this->M_usuario->verificarUsuario(intval($id_partner), $email, $pais);
+			$username    = $this->M_usuario->verificarUsuario(intval($id_partner), $email, $pais);
 			if(count($username) != 0){
-				if($username[0]->partner_id == strval($id_partner)){
-					$session = array('usuario' 	   => $id_partner,
-							 		 'Id_user' 	   => $username[0]->Id,
-							 		 'Nombre_user' => $username[0]->Nombres,
+				if($username[0]->partner_id != strval($id_partner)){
+					$data['msj'] = 'El Usuario/Partner Id no existe';
+				}
+                if($username[0]->Pais != $pais){
+                    $data['msj'] = 'Pais incorrecto';
+                }
+                if($username[0]->partner_id == strval($id_partner) && $username[0]->Pais == $pais){
+                    $session = array('usuario'     => $id_partner,
+                                     'Id_user'     => $username[0]->Id,
+                                     'Nombre_user' => $username[0]->Nombres,
                                      'Apellid_user'=> $username[0]->Apellidos,
-							 		 'Pais_user'   => $username[0]->Pais,
-							 		 'Email_user'  => $username[0]->Email,
+                                     'Pais_user'   => $username[0]->Pais,
+                                     'Email_user'  => $username[0]->Email,
                                      'Name_user'   => $username[0]->Usuario,
-							 		 'partner_id'  => $username[0]->partner_id,
+                                     'partner_id'  => $username[0]->partner_id,
                                      'Name_partner'=> $username[0]->partner_name,
                                      'MDF_monto'   => $username[0]->monto,);
-					$this->session->set_userdata($session);
-		          	$data['error'] = EXIT_SUCCESS;
-				}
-			}
+                    $this->session->set_userdata($session);
+                    $data['error'] = EXIT_SUCCESS;
+                }
+			}else{
+                $data['msj'] = 'El email no existe';
+            }
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }
