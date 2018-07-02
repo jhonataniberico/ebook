@@ -74,9 +74,7 @@
                 <div class="col-xs-12 js-question--number">
                     <div class="js-partner">
                         <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
-                    </div>
-                    <div>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="obtenerServicios();">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--back" onclick="obtenerServicios();">
                             <i class="mdi mdi-arrow_back"></i>Retroceder
                         </button>
                     </div>

@@ -310,7 +310,9 @@ img
 		color #000000
 		margin 3px 0
 	.js-partner
+		flexStart()
 		p
+			width 100%
 			margin 0
 			font-size 24px
 			font-family $bold
@@ -582,6 +584,13 @@ img
 	width 100%
 	&:hover
 		background-color $color
+	&.js-button--back
+		flexCenter()
+		color #FFFFFF
+		i
+			font-size 16px
+			color #FFFFFF
+			margin-right 10px
 .js-button--form
 	flexEnd()
 	height 67px
