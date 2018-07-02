@@ -2,16 +2,16 @@ function ingresar(){
 	var usuario  = $('#usuario').val();
   var email    = $('#email').val();
   var pais     = $('#pais').val();
-  if(email == null){
-    $('#email').parent().addClass('is-invalid');
+  if(email == null || email == ''){
+    msj('error', 'Ingrese su email');
     return;
   }
-	if(usuario == null){
-		$('#usuario').parent().addClass('is-invalid');
+	if(usuario == null || usuario == ''){
+    msj('error', 'Ingrese su usuario');
 		return;
 	}
-  if(pais == null){
-    $('#pais').parent().addClass('is-invalid');
+  if(pais == null || pais == ''){
+    msj('error', 'Seleccione su pais');
     return;
   }
 	$.ajax({
