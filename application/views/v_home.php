@@ -75,6 +75,11 @@
                     <div class="js-partner">
                         <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
                     </div>
+                    <div>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="obtenerServicios();">
+                            <i class="mdi mdi-arrow_back"></i>Retroceder
+                        </button>
+                    </div>
                     <div class="js-filter">
                         <ul class="breadcrumb">
                             <li><a id="servicioFilter" onclick="obtenerServicios();">Servicio</a></li>
