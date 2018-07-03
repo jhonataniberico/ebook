@@ -9,11 +9,13 @@ function getServicios(id){
 	}
 	if(servicio == 'Innovation Program4Partners'){
         $('#cardEur').css('display', 'block');
+        $('#PEBenefit').css('display', 'none');
         $('#low').css('display', 'none');
         $('#medium').css('display', 'none');
         $('#high').css('display', 'none');
 	} else {
         $('#cardEur').css('display', 'none');
+        $('#PEBenefit').css('display', 'block');
         $('#low').css('display', 'block');
         $('#medium').css('display', 'block');
         $('#high').css('display', 'block');
