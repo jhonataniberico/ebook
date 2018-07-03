@@ -74,20 +74,17 @@
                 <div class="col-xs-12 js-question--number">
                     <div class="js-partner">
                         <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-button--back" onclick="obtenerServicios();">
-                            <i class="mdi mdi-arrow_back"></i>Retroceder
-                        </button>
                     </div>
                     <div class="js-filter">
                         <ul class="breadcrumb">
-                            <li><a id="servicioFilter" onclick="obtenerServicios();">Servicio</a></li>
+                            <li><a id="servicioFilter">Servicio</a></li>
                             <li><a id="presupuestoFilter">Presupuesto</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="js-carousel">
                     <div class="js-servicio js-flex">
-                        <div class="js-card--large__content" onclick="obtenerServicios();">
+                        <div class="js-card--large__content">
                             <div class="js-card--large__content-tipo">
                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                             </div>
@@ -95,13 +92,16 @@
                                 <small>¿Que tipo de servicio deseas realizar?</small>
                             </div>
                         </div>
-                        <div class="js-card--large__content opacity-done js-right">
-                            <div class="js-card--large__content-tipo">
-                                <img src="<?php echo RUTA_IMG?>cards/inversion.png">
+                        <div class="js-flex opacity-done js-right">
+                            <div class="js-card--large__content">
+                                <div class="js-card--large__content-tipo">
+                                    <img src="<?php echo RUTA_IMG?>cards/inversion.png">
+                                </div>
+                                <div class="js-card--large__content-name">
+                                    <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
+                                </div>
                             </div>
-                            <div class="js-card--large__content-name">
-                                <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
-                            </div>
+                            <img class="js-flecha" src="<?php echo RUTA_IMG?>cards/flecha.png" onclick="obtenerServicios();">
                         </div>
                     </div>
                     <div class="js-cards">
