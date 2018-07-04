@@ -45,7 +45,7 @@ class Login extends CI_Controller {
                                      'Nombre_user' => $username[0]->Nombres,
                                      'Apellid_user'=> $username[0]->Apellidos,
                                      'Pais_user'   => $username[0]->Pais,
-                                     'Email_user'  => $username[0]->Email,
+                                     'Email_user'  => $email,
                                      'Name_user'   => $username[0]->Usuario,
                                      'partner_id'  => $username[0]->partner_id,
                                      'Name_partner'=> $username[0]->partner_name,

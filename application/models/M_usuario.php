@@ -32,7 +32,7 @@ class M_usuario extends  CI_Model{
                 FROM usuarios
                WHERE partner_id = ".$id_partner."
                  AND pais = '".$pais."'
-                 AND email LIKE '%".$email."%'";
+                 ";//AND email LIKE '%".$email."%'
       $result = $this->db->query($sql);
       return $result->result();
     }
