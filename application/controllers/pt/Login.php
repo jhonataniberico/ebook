@@ -25,7 +25,7 @@ class Login extends CI_Controller {
         }
         $data['combo'] = $htmlCombo;*/
         $data['paises'] = $htmlPaises;
-		$this->load->view('v_login', $data);
+		$this->load->view('pt/v_login', $data);
 	}
 	function ingresar(){
 		$data['error'] = EXIT_ERROR;

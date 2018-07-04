@@ -24,7 +24,6 @@ function getServicios(id){
     $('.js-right').addClass('animated fadeInRight');
     $('#servicioFilter').text('Servicio: '+servicio);
 }
-
 function getTable(id){
     var idSelect    = $('#'+id);
     presupuesto = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
@@ -58,7 +57,6 @@ function getTable(id){
         $('.table-responsive ').addClass('animated fadeInRight');
     }
 }
-
 function obtenerServicios(){
     servicio    = null;
     presupuesto = null;
@@ -69,7 +67,6 @@ function obtenerServicios(){
     $('#servicioFilter').text('Servicio');
     $('#presupuestoFilter').text('Presupuesto');
 }
-
 function cerrarCesion(){
 	$.ajax({
 		url  : 'Home/cerrarCesion',

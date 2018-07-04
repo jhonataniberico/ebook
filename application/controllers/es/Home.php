@@ -24,7 +24,7 @@ class Home extends CI_Controller {
         $data['name_user']    = $this->session->userdata('Name_user');
         $data['name_partner'] = $this->session->userdata('Name_partner');
         $data['mdf']          = $this->session->userdata('MDF_monto');
-		$this->load->view('v_home', $data);
+		$this->load->view('es/v_home', $data);
 	}
     function guardarServicios(){
         $data['error'] = EXIT_ERROR;

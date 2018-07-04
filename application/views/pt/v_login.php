@@ -50,7 +50,6 @@
                 <div class="js-fondo__imagen"></div>
             </div>
         </section> 
-
         <!-- Modal -->
         <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-sm" role="document">
@@ -71,25 +70,15 @@
                             <div class="col-xs-12 js-input js-select p-0" id="divpais">
                                 <select class="selectpicker" id="pais" name="pais" title="País" onchange="getIdsPartner()">
                                     <?php echo $paises; ?>
-                                    <!-- <option value="Peru">Peru</option>
-                                    <option value="Colombia">Colombia</option>
-                                    <option value="Brasil">Brasil</option> -->
                                 </select>
                             </div>
                             <div class="col-xs-12 js-input js-select p-0" id="divusuario">
                                 <select class="selectpicker" id="usuario" name="usuario" title="Partner ID">
-                                    
-                                    <!-- <option value="Peru">Peru</option>
-                                    <option value="Colombia">Colombia</option>
-                                    <option value="Brasil">Brasil</option> -->
                                 </select>
                             </div>
                             <div class="col-xs-12 js-input p-0">
                                 <input type="text" id="email" class="form-control" placeholder="Email" onkeyup="verificarDatos(event);">
                             </div>
-                            <!-- <div class="col-xs-12 js-input p-0">
-                                <input type="text" id="usuario" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
-                            </div> -->
                             <div class="col-xs-12 mdl-card__actions text-right p-r-0">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Login</button>
                             </div>
@@ -101,7 +90,6 @@
                 </div>
             </div>
         </div>
-
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -110,7 +98,7 @@
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>login_pt.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
