@@ -4,13 +4,13 @@
     	<meta charset="ISO-8859-1">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
         <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <meta name="description"            content="Proyecto de desarrollo de un producto wizard online que tenga un quiz y con una unica solucion que es SAP Cloud Configurator">
-        <meta name="keywords"               content="SAP Cloud Configurator">
+        <meta name="description"            content="SAP Partner Marketing, Diret&oacute;rio de Serviços">
+        <meta name="keywords"               content="SAP Partner Marketing">
         <meta name="robots"                 content="Index,Follow">
         <meta name="date"                   content="May 7, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>SAP | Marketing Services Directory eBook</title>
+    	<title>SAP Partner Marketing | Diret&oacute;rio de Serviços</title>
         <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
@@ -45,11 +45,11 @@
                             <input type="email" class="form-control" id="name_partner" readonly="readonly" value="<?php echo $name_partner ?>">
                         </div>
                         <div class="form-group js-input">
-                            <label for="pais">País</label>
+                            <label for="pais">Pais</label>
                             <input type="email" class="form-control" id="pais" readonly="readonly" value="<?php echo $pais ?>">
                         </div>
                         <div class="form-group js-input js-button--form">
-                            <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Revise sus MDFs disponibles Aquí</a>
+                            <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Revise seus MDFs dispon&iacute;veis aqui</a>
                         </div>
                     </div>
                 </div>
@@ -63,12 +63,12 @@
                         <a href="mailto:julia.maciel@sap.com?cc=marina.mariotto@sap.com" class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-email"></i></a>
                     </div>
                     <div class="js-partner">
-                        <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
+                        <p><span>Pais: </span> <?php echo $pais ?></p>
                     </div>
                     <div class="js-filter">
                         <ul class="breadcrumb">
-                            <li><a id="servicioFilter">Servicio</a></li>
-                            <li><a id="presupuestoFilter">Presupuesto</a></li>
+                            <li><a id="servicioFilter">Serviço</a></li>
+                            <li><a id="presupuestoFilter">Orçamento</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                             </div>
                             <div class="js-card--large__content-name">
-                                <small>¿Que tipo de servicio deseas realizar?</small>
+                                <small>Que tipo de serviço você deseja realizar&63;</small>
                             </div>
                         </div>
                         <div class="js-flex opacity-done js-right">
@@ -88,7 +88,7 @@
                                     <img src="<?php echo RUTA_IMG?>cards/inversion.png">
                                 </div>
                                 <div class="js-card--large__content-name">
-                                    <small>¿Qué presupuesto maneja para su inversi&oacute;n?</small>
+                                    <small>Qual o orçamento disponível para o seu investimento&#63;</small>
                                 </div>
                             </div>
                             <img class="js-flecha" src="<?php echo RUTA_IMG?>cards/flecha.png" onclick="obtenerServicios();">
@@ -99,28 +99,28 @@
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
                                     <img src="<?php echo RUTA_IMG?>cards/optimization.png">
-                                    <p>Digital Optimization</p>
+                                    <p>Optimização Digital</p>
                                 </div>
                                 <button id="button1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                             </div>
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
                                     <img src="<?php echo RUTA_IMG?>cards/generation.png">
-                                    <p>Demand Generation</p>
+                                    <p>Geração de Demanda</p>
                                 </div>
                                 <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                             </div>
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
                                     <img src="<?php echo RUTA_IMG?>cards/content.png">
-                                    <p>Digital Content</p>
+                                    <p>Conteúdo Digital</p>
                                 </div>
                                 <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                             </div>
                             <div class="js-card__servicio">
                                 <div class="js-card__servicio--contenido">
                                     <img src="<?php echo RUTA_IMG?>cards/strategy.png">
-                                    <p>Marketing Strategy</p>
+                                    <p>Estrat&eacute;gia de Marketing</p>
                                 </div>
                                 <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
                             </div>
@@ -160,7 +160,7 @@
                                 <div class="js-card__servicio" id="medium">
                                     <div class="js-card__servicio--contenido">
                                         <img src="<?php echo RUTA_IMG?>cards/10k.png">
-                                        <p>Budget 5K - 10K Euros</p>
+                                        <p>Budget entre 5K - 10K Euros</p>
                                     </div>
                                     <button id="Table3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
                                 </div>
@@ -185,7 +185,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Los paquetes disponibles en su pa&iacute;s son:</th>
+                                    <th>Os pacotes disponíveis no seu país são:</th>
                                 </tr>
                             </thead>
                             <tbody class="tabla"></tbody>                                

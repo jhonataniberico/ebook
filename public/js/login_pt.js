@@ -186,3 +186,11 @@ function getIdsPartner(){
       }
   });
 }
+function cambiarIdioma(){
+    var idioma = $('#idioma').val();
+    if(idioma == 'Español'){
+        location.href = '../es/';
+    }else if(idioma == 'Portugués'){
+        location.href = '../pt/';
+    }
+}
