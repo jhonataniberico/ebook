@@ -14,6 +14,14 @@ function ingresar(){
     msj('error', 'Seleccione su pais');
     return;
   }
+  if(!validateEmail(email)){
+    msj('error', 'El formato de email es incorrecto');
+    return;
+  }
+  // if(validateEmailCorporative(email)){
+  //   msj('error', 'Ingrese su email corporativo');
+  //   return;
+  // }
 	$.ajax({
 		data : {id_partner  : usuario,
             email       : email,
@@ -72,6 +80,10 @@ function soloLetras(e){
 }
 function validateEmail(email){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+function validateEmailCorporative(email){
+    var re = /[a-z@]+(?=hotmail.com|yahoo.com)/;
     return re.test(email);
 }
 function verificarDatos(e){
