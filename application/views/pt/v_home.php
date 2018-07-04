@@ -27,7 +27,7 @@
         <div class="js-header">
             <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
             <div class="js-user">
-                <p>Directorio de Servicios SAP LAC</p>
+                <p>Diretório de Serviços SAP LAC</p>
                 <a onclick="cerrarCesion()">Logout</a>
             </div>
         </div>
@@ -79,7 +79,7 @@
                                 <img src="<?php echo RUTA_IMG?>cards/servicio.png">
                             </div>
                             <div class="js-card--large__content-name">
-                                <small>Que tipo de serviço você deseja realizar&63;</small>
+                                <small>Que tipo de serviço você deseja realizar&#63;</small>
                             </div>
                         </div>
                         <div class="js-flex opacity-done js-right">
