@@ -111,7 +111,7 @@ class Login extends CI_Controller {
             $paises = $this->M_usuario->getPaisesByPartner($pais);
             $htmlPaises .= '<select class="selectpicker" id="usuario" name="usuario" title="Partner ID">';
             foreach ($paises as $val) {
-               $htmlPaises .= '<option value="'.$val->id_partner.'">'.$val->id_partner.'</option>';
+               $htmlPaises .= '<option value="'.$val->id_partner.'">'.$val->id_partner.' - '.$val->nombre.'</option>';
             }
             $htmlPaises .= '</select>';
             /*foreach($combo as $key) {

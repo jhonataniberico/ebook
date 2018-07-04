@@ -94,7 +94,7 @@ class M_usuario extends  CI_Model{
         return $result->result();
     }
     function getPaisesPartner() {
-        $sql = "SELECT * FROM partners GROUP BY pais";
+        $sql = "SELECT *, nombre as partner FROM partners GROUP BY pais";
         $result = $this->db->query($sql);
         return $result->result();
     }
