@@ -4,6 +4,17 @@ function getServicios(id){
 	var idSelect    = $('#'+id);
     servicio    = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
 	idSelect.parents('.js-select').addClass('selected');
+    if(servicio == 'Optimização Digital') {
+        servicio = 'Digital Optimization';
+    }else if(servicio == 'Geração de Demanda') {
+        servicio = 'Demand Generation';
+    } else if (servicio == 'Conteúdo Digital') {
+        servicio = 'Digital Content';
+    } else if (servicio == 'Estratégia de Marketing') {
+        servicio = 'Marketing Strategy';
+    }else if (servicio == 'Partner Solution Packages (Package4Growth)') {
+        servicio = 'Partner Solution Packages (Package4Growth)';
+    }
 	if(servicio == null || servicio == ''){
 		return;
 	}
@@ -27,7 +38,12 @@ function getServicios(id){
 function getTable(id){
     var idSelect    = $('#'+id);
     presupuesto = idSelect.siblings('.js-card__servicio--contenido').find('p').text();
-    presupuesto = (presupuesto == 'Gratuito' ) ? 'PE Benefit' : presupuesto ; 
+    if(presupuesto == 'Gratuito' ) {
+        presupuesto = 'PE Benefit';
+    } else if (presupuesto == 'Budget entre 5K - 10K Euros'){
+        presupuesto = 'Budget 5K - 10K Euros';
+    }
+    console.log(presupuesto);
     idSelect.parents('.js-select').addClass('selected');
     if (presupuesto == 'EUR 728') {
         $('#Table5').attr({
