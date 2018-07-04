@@ -15,11 +15,11 @@ class Login extends CI_Controller {
 	public function index(){
         /*$combo     = $this->M_usuario->getPaises();
         $htmlCombo = '';*/
-        $htmlPaises = '';
-        $paises = $this->M_usuario->getPaisesPartner();
-        foreach ($paises as $val) {
-           $htmlPaises .= '<option value="'.$val->pais.'">'.$val->pais.'</option>';
-        }
+        $htmlPaises = '<option value="Brazil">Brazil</option>';
+        // $paises = $this->M_usuario->getPaisesPartner();
+        // foreach ($paises as $val) {
+        //    $htmlPaises .= '<option value="Brazil">Brazil</option>';
+        // }
         /*foreach($combo as $key) {
             $htmlCombo .= '<option value="'.$key->Nombre.'">'.$key->Nombre.'</option>';
         }

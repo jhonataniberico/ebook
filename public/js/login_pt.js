@@ -26,13 +26,13 @@ function ingresar(){
 		data : {id_partner  : usuario,
             email       : email,
             pais        : pais},
-		url  : 'Login/ingresar',
+		url  : 'pt/Login/ingresar',
 		type : 'POST'
 	}).done(function(data){
 		try{
         data = JSON.parse(data);
         if(data.error == 0){
-          location.href = 'Home';
+          location.href = 'pt/Home';
           $('#usuario').val("");
           $('#password').val("");
         }else {
@@ -135,7 +135,7 @@ function registrar() {
             nombre     : nombre,
             apellido   : apellido,
             pais       : pais},
-    url  : 'Login/registrar',
+    url  : 'pt/Login/registrar',
     type : 'POST'
   }).done(function(data){
     try{
@@ -164,7 +164,7 @@ function getIdsPartner(){
   var pais = $('#pais').val();
   $.ajax({
     data : {pais : pais},
-    url  : 'Login/getIdsPartner',
+    url  : 'pt/Login/getIdsPartner',
     type : 'POST'
   }).done(function(data){
     try{
@@ -189,8 +189,8 @@ function getIdsPartner(){
 function cambiarIdioma(){
     var idioma = $('#idioma').val();
     if(idioma == 'Español'){
-        location.href = '../es/';
+        location.href = 'es';
     }else if(idioma == 'Portugués'){
-        location.href = '../pt/';
+        location.href = 'pt';
     }
 }
