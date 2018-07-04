@@ -48,7 +48,7 @@ class Login extends CI_Controller {
                                      'Pais_user'   => $username[0]->pais,
                                      'Email_user'  => $email,
                                      /*'Name_user'   => $username[0]->Usuario,*/
-                                     /*'partner_id'  => $username[0]->partner_id,*/
+                                     'partner_id'  => $id_partner,
                                      'Name_partner'=> $username[0]->nombre,
                                      /*'MDF_monto'   => $username[0]->monto,*/);
                     $this->session->set_userdata($session);
