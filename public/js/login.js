@@ -18,10 +18,10 @@ function ingresar(){
     msj('error', 'El formato de email es incorrecto');
     return;
   }
-  // if(validateEmailCorporative(email)){
-  //   msj('error', 'Ingrese su email corporativo');
-  //   return;
-  // }
+  if(validateEmailCorporative(email)){
+    msj('error', 'Ingrese su email corporativo');
+    return;
+  }
 	$.ajax({
 		data : {id_partner  : usuario,
             email       : email,
@@ -44,15 +44,6 @@ function ingresar(){
       }
 	});
 }
-$("#showpass").click(function(){
-	$(this).find('i').toggleClass("mdi-remove_red_eye mdi-visibility_off");
-    var input = $(this).parent().find('.mdl-textfield__input');
-    if (input.attr("type") == "password"){
-    	input.attr("type", "text");
-    }else{
-      input.attr("type", "password");
-    }
-});
 function soloLetras(e){
   key 	     = e.keyCode || e.which;
   tecla 	   = String.fromCharCode(key).toLowerCase();
@@ -83,7 +74,7 @@ function validateEmail(email){
     return re.test(email);
 }
 function validateEmailCorporative(email){
-    var re = /[a-z@]+(?=hotmail.com|yahoo.com)/;
+    var re = /[a-z@]+(?=hotmail.com|yahoo.com|gmail.com)/;
     return re.test(email);
 }
 function verificarDatos(e){
