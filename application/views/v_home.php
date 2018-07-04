@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 js-flex p-0">
-                        <div class="form-group js-input">
+                        <!-- <div class="form-group js-input">
                             <label for="nombre">Nombre</label>
                             <input type="email" class="form-control" id="nombre" readonly="readonly" value="<?php echo $nombre ?>">
                         </div>
@@ -61,7 +61,7 @@
                         <div class="form-group js-input">
                             <label for="email">email</label>
                             <input type="email" class="form-control" id="email" readonly="readonly" value="<?php echo $email ?>">
-                        </div>
+                        </div> -->
                         <div class="form-group js-input js-button--form">
                             <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Revise sus MDFs disponibles Aquí</a>
                         </div>

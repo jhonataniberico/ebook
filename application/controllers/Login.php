@@ -37,19 +37,20 @@ class Login extends CI_Controller {
             /*$verificaMail= $this->M_usuario->verificaMail($email);
             $verificaId  = $this->M_usuario->verificaId($email, $id_partner);
             $verificaPais= $this->M_usuario->verificaPais($email, $id_partner, $pais);*/
-			$username    = $this->M_usuario->verificarUsuario(intval($id_partner), $email, $pais);
+			//$username    = $this->M_usuario->verificarUsuario(intval($id_partner), $email, $pais);
+            $username      = $this->M_usuario->verificarUsuarioPartner($pais, intval($id_partner));
             if(count($username) != 0){
-                if($username[0]->partner_id == strval($id_partner) && $username[0]->Pais == $pais){
+                if($username[0]->id_partner == strval($id_partner) && $username[0]->pais == $pais){
                     $session = array('usuario'     => $id_partner,
                                      'Id_user'     => $username[0]->Id,
-                                     'Nombre_user' => $username[0]->Nombres,
-                                     'Apellid_user'=> $username[0]->Apellidos,
-                                     'Pais_user'   => $username[0]->Pais,
+                                     /*'Nombre_user' => $username[0]->nombres,
+                                     'Apellid_user'=> $username[0]->Apellidos,*/
+                                     'Pais_user'   => $username[0]->pais,
                                      'Email_user'  => $email,
-                                     'Name_user'   => $username[0]->Usuario,
-                                     'partner_id'  => $username[0]->partner_id,
-                                     'Name_partner'=> $username[0]->partner_name,
-                                     'MDF_monto'   => $username[0]->monto,);
+                                     /*'Name_user'   => $username[0]->Usuario,*/
+                                     /*'partner_id'  => $username[0]->partner_id,*/
+                                     'Name_partner'=> $username[0]->nombre,
+                                     /*'MDF_monto'   => $username[0]->monto,*/);
                     $this->session->set_userdata($session);
                     $data['error'] = EXIT_SUCCESS;
                 }
