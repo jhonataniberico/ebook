@@ -93,4 +93,19 @@ class M_usuario extends  CI_Model{
         $result = $this->db->query($sql);
         return $result->result();
     }
+    function getPaisesPartner() {
+        $sql = "SELECT * FROM partners GROUP BY pais";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function getPaisesByPartner($pais) {
+        $sql = "SELECT * FROM partners WHERE pais LIKE '".$pais."'";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+    function verificarUsuarioPartner($pais, $patner_id){
+        $sql = "SELECT * FROM partners WHERE pais LIKE '".$pais."' AND id_partner LIKE '".$patner_id."'";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }

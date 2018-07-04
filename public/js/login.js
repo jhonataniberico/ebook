@@ -157,3 +157,29 @@ function registrar() {
       }
   });
 }
+function getIdsPartner(){
+  var pais = $('#pais').val();
+  $.ajax({
+    data : {pais : pais},
+    url  : 'Login/getIdsPartner',
+    type : 'POST'
+  }).done(function(data){
+    try{
+        data = JSON.parse(data);
+        if(data.error == 0){
+          componentHandler.upgradeAllRegistered();
+          $('#divusuario').html('');
+          $('#divusuario').append(data.paises);
+           if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+                $('select').selectpicker('mobile');
+            } else {
+                $('select').selectpicker();
+            }
+        }else {
+          return;
+        }
+      }catch(err){
+        msj('error',err.message);
+      }
+  });
+}

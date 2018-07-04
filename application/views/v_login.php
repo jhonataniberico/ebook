@@ -68,20 +68,28 @@
                             <div class="col-xs-12 p-0">
                                 <p>Acceso Partners</p>
                             </div>
-                            <div class="col-xs-12 js-input p-0">
-                                <input type="text" id="email" class="form-control" placeholder="Email" onkeyup="verificarDatos(event);">
-                            </div>
-                            <div class="col-xs-12 js-input p-0">
-                                <input type="text" id="usuario" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
-                            </div>
-                            <div class="col-xs-12 js-input js-select p-0">
-                                <select class="selectpicker" id="pais" name="pais" title="País">
-                                    <?php echo $combo; ?>
+                            <div class="col-xs-12 js-input js-select p-0" id="divpais">
+                                <select class="selectpicker" id="pais" name="pais" title="País" onchange="getIdsPartner()">
+                                    <?php echo $paises; ?>
                                     <!-- <option value="Peru">Peru</option>
                                     <option value="Colombia">Colombia</option>
                                     <option value="Brasil">Brasil</option> -->
                                 </select>
                             </div>
+                            <div class="col-xs-12 js-input js-select p-0" id="divusuario">
+                                <select class="selectpicker" id="usuario" name="usuario" title="Partner ID">
+                                    
+                                    <!-- <option value="Peru">Peru</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Brasil">Brasil</option> -->
+                                </select>
+                            </div>
+                            <div class="col-xs-12 js-input p-0">
+                                <input type="text" id="email" class="form-control" placeholder="Email" onkeyup="verificarDatos(event);">
+                            </div>
+                            <!-- <div class="col-xs-12 js-input p-0">
+                                <input type="text" id="usuario" class="form-control" placeholder="Partner ID" onkeyup="verificarDatos(event);">
+                            </div> -->
                             <div class="col-xs-12 mdl-card__actions text-right p-r-0">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Login</button>
                             </div>
