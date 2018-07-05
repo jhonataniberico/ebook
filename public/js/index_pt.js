@@ -43,7 +43,6 @@ function getTable(id){
     } else if (presupuesto == 'Budget entre 5K - 10K Euros'){
         presupuesto = 'Budget 5K - 10K Euros';
     }
-    console.log(presupuesto);
     idSelect.parents('.js-select').addClass('selected');
     if (presupuesto == 'EUR 728') {
         $('#Table5').attr({
