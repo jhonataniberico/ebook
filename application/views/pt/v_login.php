@@ -47,7 +47,7 @@
                     <div class="js-bar__children"></div>
                     <div class="js-bar__children"></div>
                 </div>
-                <div class="js-fondo__imagen"></div>
+                <div class="js-fondo__imagen js-pt"></div>
             </div>
         </section> 
         <!-- Modal -->

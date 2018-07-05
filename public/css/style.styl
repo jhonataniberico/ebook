@@ -161,9 +161,12 @@ img
 	background url(../img/fondo/fondo-datos.jpg) no-repeat center center
 	background-size cover
 .js-fondo__imagen
+	absolute()
 	background url(../img/fondo/fondo-imagen.jpg) no-repeat center center
 	background-size cover
-	absolute()
+	&.js-pt
+		background url(../img/fondo/fondo-imagen-pt.jpg) no-repeat center center
+		background-size cover
 	&:AFTER
 		content ''
 		background-color #000000
