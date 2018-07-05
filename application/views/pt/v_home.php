@@ -28,7 +28,7 @@
             <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
             <div class="js-user">
                 <p>Diretório de Serviços SAP LAC</p>
-                <a onclick="cerrarCesion()">Logout</a>
+                <a onclick="cerrarCesion()">fechar Sessão</a>
             </div>
         </div>
         <section id="principal" class="js-section m-t-50">
