@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 p-0">
-                                <p>Acceso Partners</p>
+                                <p>Parceiros de Acesso</p>
                             </div>
                             <div class="col-xs-12 js-input js-select p-0" id="divpais">
                                 <select class="selectpicker" id="pais" name="pais" title="País" onchange="getIdsPartner()">
@@ -80,7 +80,7 @@
                                 <input type="text" id="email" class="form-control" placeholder="Email" onkeyup="verificarDatos(event);">
                             </div>
                             <div class="col-xs-12 mdl-card__actions text-right p-r-0">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Login</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" onclick="ingresar()">Acessar</button>
                             </div>
                         </div>
                         <div class="mdl-card__menu">
