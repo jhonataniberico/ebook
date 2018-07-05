@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 p-0">
-                                <p>Parceiros de Acesso</p>
+                                <p>Acesso de Parceiros</p>
                             </div>
                             <div class="col-xs-12 js-input js-select p-0" id="divpais">
                                 <select class="selectpicker" id="pais" name="pais" title="País" onchange="getIdsPartner()">
