@@ -18,7 +18,9 @@ class Login extends CI_Controller {
         $htmlPaises = '';
         $paises = $this->M_usuario->getPaisesPartner();
         foreach ($paises as $val) {
-           $htmlPaises .= '<option value="'.$val->pais.'">'.$val->pais.'</option>';
+            if ($val->pais != 'Brazil') {
+                $htmlPaises .= '<option value="'.$val->pais.'">'.$val->pais.'</option>';
+            }
         }
         /*foreach($combo as $key) {
             $htmlCombo .= '<option value="'.$key->Nombre.'">'.$key->Nombre.'</option>';
