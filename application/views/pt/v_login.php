@@ -58,7 +58,7 @@
                         <div class="mdl-card__supporting-text">
                             <div class="col-xs-12 p-0 js-login">
                                 <div class="col-xs-8 p-l-0">
-                                    <h2>Directorio de Servicios para Partners SAP LAC</h2>
+                                    <h2>Diretório de serviços de parceiros SAP LAC</h2>
                                 </div>
                                 <div class="col-xs-4 p-0 text-center">
                                     <img src="<?php echo RUTA_IMG?>cards/login.png">
