@@ -13,17 +13,7 @@ class Login extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        /*$combo     = $this->M_usuario->getPaises();
-        $htmlCombo = '';*/
         $htmlPaises = '<option value="Brazil">Brazil</option>';
-        // $paises = $this->M_usuario->getPaisesPartner();
-        // foreach ($paises as $val) {
-        //    $htmlPaises .= '<option value="Brazil">Brazil</option>';
-        // }
-        /*foreach($combo as $key) {
-            $htmlCombo .= '<option value="'.$key->Nombre.'">'.$key->Nombre.'</option>';
-        }
-        $data['combo'] = $htmlCombo;*/
         $data['paises'] = $htmlPaises;
 		$this->load->view('pt/v_login', $data);
 	}
@@ -34,10 +24,6 @@ class Login extends CI_Controller {
 			$id_partner  = $this->input->post('id_partner');
             $email       = $this->input->post('email');
             $pais        = $this->input->post('pais');
-            /*$verificaMail= $this->M_usuario->verificaMail($email);
-            $verificaId  = $this->M_usuario->verificaId($email, $id_partner);
-            $verificaPais= $this->M_usuario->verificaPais($email, $id_partner, $pais);*/
-			//$username    = $this->M_usuario->verificarUsuario(intval($id_partner), $email, $pais);
             $username      = $this->M_usuario->verificarUsuarioPartner($pais, intval($id_partner));
             if(count($username) != 0){
                 if($username[0]->id_partner == strval($id_partner) && $username[0]->pais == $pais){
@@ -54,17 +40,7 @@ class Login extends CI_Controller {
                     $this->session->set_userdata($session);
                     $data['error'] = EXIT_SUCCESS;
                 }
-			}/*else{
-                if(count($verificaMail) == 0){
-                    $data['msj'] = 'Email no registrado';
-                } else if(count($verificaId) == 0) {
-                    $data['msj'] = 'El Usuario/Partner ID es incorrecto';
-                }else if (count($verificaPais) == 0) {
-                    $data['msj'] = 'Pais incorrecto';
-                } else {
-                    $data['msj'] = 'Datos incorrectos';    
-                } 
-            }*/
+			}
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();
         }
@@ -115,10 +91,6 @@ class Login extends CI_Controller {
                $htmlPaises .= '<option value="'.$val->id_partner.'">'.$val->id_partner.' - '.$val->nombre.'</option>';
             }
             $htmlPaises .= '</select>';
-            /*foreach($combo as $key) {
-                $htmlCombo .= '<option value="'.$key->Nombre.'">'.$key->Nombre.'</option>';
-            }
-            $data['combo'] = $htmlCombo;*/
             $data['paises'] = $htmlPaises;
             $data['error'] = EXIT_SUCCESS;
         }catch(Exception $e) {
