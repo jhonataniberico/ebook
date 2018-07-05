@@ -59,7 +59,7 @@
             <div class="js-container js-container--responsive">
                 <div class="col-xs-12 js-question--number">
                     <div class="js-help">
-                        <p>Necesitas ayuda&#63;</p>
+                        <p>precisa de ajuda&#63;</p>
                         <a href="mailto:julia.maciel@sap.com?cc=marina.mariotto@sap.com" class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-email"></i></a>
                     </div>
                     <div class="js-partner">
