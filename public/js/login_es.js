@@ -186,11 +186,19 @@ function getIdsPartner(){
       }
   });
 }
+// function cambiarIdioma(){
+//     var idioma = $('#idioma').val();
+//     if(idioma == 'Español'){
+//         location.href = 'http://www.sap-latam.com/ebook/pbc/es';
+//     }else if(idioma == 'Portugués'){
+//         location.href = 'http://www.sap-latam.com/ebook/pbc/pt';
+//     }
+// }
 function cambiarIdioma(){
     var idioma = $('#idioma').val();
     if(idioma == 'Español'){
-        location.href = 'http://www.sap-latam.com/ebook/pbc/es';
+        location.href = '../es/';
     }else if(idioma == 'Portugués'){
-        location.href = 'http://www.sap-latam.com/ebook/pbc/pt';
+        location.href = '../pt/';
     }
 }
