@@ -107,7 +107,7 @@
             }
             $(window).load(function(){
                 var URLactual = window.location;
-                if(URLactual['href'] != 'http://www.sap-latam.com/ebook/pbc/es/'){
+                if(URLactual['href'] != 'http://www.sap-latam.com/ebook/pbc/es/' || URLactual['href'] == 'http://www.sap-latam.com/ebook/pbc' || URLactual['href'] == 'http://www.sap-latam.com/ebook'){
                     location.href = 'http://www.sap-latam.com/ebook/pbc/es/';
                 }
             });
