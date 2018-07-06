@@ -105,6 +105,12 @@
             } else {
                 $('select').selectpicker();
             }
+            $(window).load(function(){
+                var URLactual = window.location;
+                if(URLactual['href'] != 'http://www.sap-latam.com/ebook/pbc/pt/'){
+                    location.href = 'http://www.sap-latam.com/ebook/pbc/pt/';
+                }
+            });
         </script>
     </body>
 </html>
