@@ -67,7 +67,8 @@ class M_usuario extends  CI_Model{
         return $result->row()->Id;
     }
     function getPaisesPartner() {
-        $sql = "SELECT *, nombre as partner FROM partners GROUP BY pais";
+        $sql = "SELECT *, nombre as partner FROM partners ";
+        // -- $sql = "SELECT *, nombre as partner FROM partners GROUP BY pais";
         $result = $this->db->query($sql);
         return $result->result();
     }
@@ -78,6 +79,14 @@ class M_usuario extends  CI_Model{
     }
     function verificarUsuarioPartner($pais, $patner_id){
         $sql = "SELECT * FROM partners WHERE pais LIKE '".$pais."' AND id_partner LIKE '".$patner_id."'";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+
+     function getPaisesAgregados() {
+        $sql = "SELECT P.pais FROM partners P GROUP BY P.pais";
+        // -- $sql = "SELECT *, nombre as partner FROM partners GROUP BY pais";
         $result = $this->db->query($sql);
         return $result->result();
     }

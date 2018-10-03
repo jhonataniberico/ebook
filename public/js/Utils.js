@@ -28,6 +28,7 @@ function modal(idModal){
 	$('#'+idModal).modal('toggle');
 }
 function msj(tipo, msj, cabecera){
+	toast.remove();
 	if (tipo == 'error'){
 		toastr.error(msj, cabecera, {
 			closeButton: true,
@@ -57,14 +58,8 @@ function msj(tipo, msj, cabecera){
 	}
 }
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-	$('select').selectpicker('mobile');
-} else {
-    $('select').selectpicker();
-    $('#buttonCard1').click(function() {
-		$('.logo-bottom').addClass('dnone');
-	});
-	$('#buttonCard5').click(function() {
-		$('.chat').addClass('dnone');
-	});
-}
+
+
+$('.solo-numero').on('input', function () { 
+    this.value = this.value.replace(/[^0-9]/g,'');
+});

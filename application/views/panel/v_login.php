@@ -1,205 +1,94 @@
 <!DOCTYPE html> 
 <html>
-    <head>
-    	<meta charset="ISO-8859-1">
-        <meta http-equiv="X-UA-Compatible"  content="IE=edge">
-        <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <meta name="description"            content="SAP Partner Marketing, Directorio de Servicios">
-        <meta name="keywords"               content="SAP Partner Marketing">
-        <meta name="robots"                 content="Index,Follow">
-        <meta name="date"                   content="May 7, 2018"/>
-        <meta name="language"               content="es">
-        <meta name="theme-color"            content="#000000">
-    	<title>SAP Partner Marketing | Directorio de Servicios</title>
-        <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
-    	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
-    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
-    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
-    </head>
-    <body>
-        <div class="js-header">
-            <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
-            <div class="js-user">
-                <p>Directorio de Servicios SAP LAC</p>
-                <a onclick="cerrarCesion()">Logout</a>
+<head>
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+    <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description"            content="SAP Partner Marketing, Directorio de Servicios">
+    <meta name="keywords"               content="SAP Partner Marketing">
+    <meta name="robots"                 content="Index,Follow">
+    <meta name="date"                   content="May 7, 2018"/>
+    <meta name="language"               content="es">
+    <meta name="theme-color"            content="#000000">
+    <title>SAP Partner Marketing | Directorio de Servicios</title>
+    <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/logo_favicon.png">
+    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_CSS?>animate.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
+    <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
+</head>
+<body>
+    
+ <?php 
+  ?>
+    <section id="principal">
+        <div id="home" class="js-window">
+            <div class="js-header">
+                <img src="<?php echo RUTA_IMG?>logo/logo-sap__run.png">
+                <!--     <div class="js-idioma">
+                        <select class="selectpicker" id="idioma"  name="idioma" onchange="cambiarIdioma()">
+                            <option value="Español">Espa&ntilde;ol</option>
+                            <option value="Inglés" disabled="true">English</option>
+                            <option value="Portugués">Portugu&ecirc;s</option>
+                        </select>
+                    </div> -->
+                </div>
+                <div class="js-title">
+                    <p></p>
+                    <h1><strong>SAP Partner<!-- Directorio de Servicios --></strong></h1>
+                    <span></span>
+                    <button class="btn " data-toggle="modal" data-target="#ModalLogin">Ingresar</button>
+                </div>
+                <div class="js-bar">
+                    <div class="js-bar__children"></div>
+                    <div class="js-bar__children"></div>
+                    <div class="js-bar__children"></div>
+                </div>
+                <div class="js-fondo__imagen" style="background-image: url('<?php echo RUTA_IMG?>fondo/fondoadmin.jpg')"></div>
+            </div>
+        </section> 
+        <!-- Modal -->
+        <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="js-card-login">
+                        <div class="mdl-card__supporting-text">
+                            <div class="col-xs-12 p-0 js-login">
+                                <div class="col-xs-8 p-l-0">
+                                    <h2>Administración de Partners</h2>
+                                </div>
+                                <div class="col-xs-4 p-0 text-center">
+                                    <img src="<?php echo RUTA_IMG?>cards/login.png">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 p-0">
+                                <p>Acceso Administrador</p>
+                            </div>
+                            <form id="frmLogin" autocomplete="off">
+                                <div class="col-xs-12 js-input p-0">
+                                    <input type="text" id="user" name="user" class="form-control" placeholder="User" autofocus="">
+                                </div>
+                                <div class="col-xs-12 js-input p-0">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" >
+                                </div>
+                                <div class="col-xs-12 mdl-card__actions text-right p-r-0">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button" type="submit">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-js-button mdl-button--icon" data-dismiss="modal"><i class="mdi mdi-close"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <section id="principal" class="js-section m-t-50">
-            <div class="js-fondo-datos"></div>
-            <div class="js-container">
-                <div class="js-carousel">
-                    <div class="col-xs-12 js-flex p-0">
-                        <div class="form-group js-input">
-                            <label for="partner">Partner ID</label>
-                            <input type="email" class="form-control" id="partner" readonly="readonly" value="<?php echo $partner ?>">
-                        </div>
-                        <div class="form-group js-input">
-                            <label for="name_partner">Partner Name</label>
-                            <input type="email" class="form-control" id="name_partner" readonly="readonly" value="<?php echo $name_partner ?>">
-                        </div>
-                        <div class="form-group js-input">
-                            <label for="pais">País</label>
-                            <input type="email" class="form-control" id="pais" readonly="readonly" value="<?php echo $pais ?>">
-                        </div>
-                        <div class="form-group js-input js-button--form">
-                            <a href="https://pwp.sap.com/sap/bc/bsp/sap/crm_ui_start/default.htm?sap-language=EN" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Revise sus MDFs disponibles Aquí</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="js-section">
-            <div class="js-container js-container--responsive">
-                <div class="col-xs-12 js-question--number">
-                    <div class="js-help">
-                        <p>Necesitas ayuda&#63;</p>
-                        <a href="mailto:julia.maciel@sap.com?cc=marina.mariotto@sap.com" class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-email"></i></a>
-                    </div>
-                    <div class="js-partner">
-                        <p><span>Pa&iacute;s: </span> <?php echo $pais ?></p>
-                    </div>
-                    <div class="js-filter">
-                        <ul class="breadcrumb">
-                            <li><a id="servicioFilter">Servicio</a></li>
-                            <li><a id="presupuestoFilter">Presupuesto</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="js-carousel">
-                    <div class="js-servicio js-flex">
-                        <div class="js-card--large__content">
-                            <div class="js-card--large__content-tipo">
-                                <img src="<?php echo RUTA_IMG?>cards/servicio.png">
-                            </div>
-                            <div class="js-card--large__content-name">
-                                <small>¿Que tipo de servicio deseas realizar&#63;</small>
-                            </div>
-                        </div>
-                        <div class="js-flex opacity-done js-right">
-                            <div class="js-card--large__content">
-                                <div class="js-card--large__content-tipo">
-                                    <img src="<?php echo RUTA_IMG?>cards/inversion.png">
-                                </div>
-                                <div class="js-card--large__content-name">
-                                    <small>¿Qué presupuesto maneja para su inversi&oacute;n&#63;</small>
-                                </div>
-                            </div>
-                            <img class="js-flecha" src="<?php echo RUTA_IMG?>cards/flecha.png" onclick="obtenerServicios();">
-                        </div>
-                    </div>
-                    <div class="js-cards">
-                        <div class="js-flex js-absolute js-left js-width">
-                            <div class="js-card__servicio">
-                                <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/optimization.png">
-                                    <p>Digital Optimization</p>
-                                </div>
-                                <button id="button1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                            </div>
-                            <div class="js-card__servicio">
-                                <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/generation.png">
-                                    <p>Demand Generation</p>
-                                </div>
-                                <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                            </div>
-                            <div class="js-card__servicio">
-                                <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/content.png">
-                                    <p>Digital Content</p>
-                                </div>
-                                <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                            </div>
-                            <div class="js-card__servicio">
-                                <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/strategy.png">
-                                    <p>Marketing Strategy</p>
-                                </div>
-                                <button id="button4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                            </div>
-                            <div class="js-card__servicio">
-                                <div class="js-card__servicio--contenido">
-                                    <img src="<?php echo RUTA_IMG?>cards/solution.png">
-                                    <p>Partner Solution Packages (Package4Growth)</p>
-                                </div>
-                                <button id="button5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                            </div>
-                            <?php if($pais == 'Colombia') {?>
-                                <div class="js-card__servicio">
-                                    <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/innovation.png">
-                                        <p>Innovation Program4Partners</p>
-                                    </div>
-                                    <button id="button6" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getServicios(this.id)">Seleccione</button>
-                                </div>
-                            <?php } ?>
-                        </div>
-                        <div id="cardPresupuesto" class="opacity-done js-right">
-                            <div id="cardServicios" class="js-flex js-width">
-                                <div class="js-card__servicio" id="PEBenefit">
-                                    <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/benefit.png">
-                                        <p>Gratuito</p>
-                                    </div>
-                                    <button id="Table1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
-                                </div>
-                                <div class="js-card__servicio" id="low">
-                                    <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/5k.png">
-                                        <p>Budget < 5K Euros</p>
-                                    </div>
-                                    <button id="Table2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
-                                </div>
-                                <div class="js-card__servicio" id="medium">
-                                    <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/10k.png">
-                                        <p>Budget 5K - 10K Euros</p>
-                                    </div>
-                                    <button id="Table3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
-                                </div>
-                                <div class="js-card__servicio" id="high">
-                                    <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/15k.png">
-                                        <p>Budget > 10K Euros</p>
-                                    </div>
-                                    <button id="Table4" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</button>
-                                </div>
-                                <div class="js-card__servicio" id="cardEur">
-                                    <div class="js-card__servicio--contenido">
-                                        <img src="<?php echo RUTA_IMG?>cards/728.png">
-                                        <p>EUR 728</p>
-                                    </div>
-                                    <a id="Table5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="getTable(this.id)">Seleccione</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table-responsive opacity-done">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Los paquetes disponibles en su pa&iacute;s son:</th>
-                                </tr>
-                            </thead>
-                            <tbody class="tabla"></tbody>                                
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="js-button--flat">
-            <a href="mailto:julia.maciel@sap.com?cc=marina.mariotto@sap.com" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect js-button--animation"><i class="mdi mdi-email"></i></a>
-        </div>
-        <form action="home/exportarExcel" id="exportarExcel" name="exportarExcel" method="post">
-            <input type="hidden" name="mi_archivo">
-        </form>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -208,16 +97,21 @@
         <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>index_es.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>loginPanel.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
-                $('.bootstrap-select').addClass('open');
-            })
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
             } else {
                 $('select').selectpicker();
             }
+
+            // $(window).load(function(){
+            //     var URLactual = window.location;
+            //     if(URLactual['href'] != 'http://www.sap-latam.com/ebook/pbc/es/' || URLactual['href'] == 'http://www.sap-latam.com/ebook/pbc' || URLactual['href'] == 'http://www.sap-latam.com/ebook'){
+            //         location.href = 'http://www.sap-latam.com/ebook/pbc/es/';
+            //     }
+            // });
+
         </script>
     </body>
-</html>
+    </html>

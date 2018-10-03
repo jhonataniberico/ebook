@@ -92,7 +92,7 @@ defined('RUTA_JS')      OR define('RUTA_JS'     , 'http://'.(isset($_SERVER['HTT
 defined('RUTA_PLUGINS') OR define('RUTA_PLUGINS', 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/ebook/public/plugins/');
 
 //MENSAJES DE ERROR,CONFIRMACION Y EDICION
-defined('MSJ_INS') OR define('MSJ_INS', 'Se Registr&oacute; Correctamente');
+defined('MSJ_INS') OR define('MSJ_INS', 'Se Registró Correctamente');
 defined('MSJ_UPT') OR define('MSJ_UPT', 'Se Edit&oacute; Correctamente');
 defined('MSJ_DEL') OR define('MSJ_DEL', 'Se Elimin&oacute; Correctamente');
 defined('MSJ_ANL') OR define('MSJ_ANL', 'Se Anul&oacute; Correctamente');
